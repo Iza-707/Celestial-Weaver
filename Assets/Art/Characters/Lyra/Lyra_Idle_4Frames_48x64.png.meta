@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 479cc7b694d6d214d9c4aebfe57895c2
+guid: 1260d152a91ef084f9f27fc5b047d1c3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5787787703702188013
-    second: Gemini_Generated_Image_wrhndawrhndawrhn_0
+      213: -7497582764240035097
+    second: Lyra_Idle_4Frames_48x64_0
+  - first:
+      213: 25083050120821227
+    second: Lyra_Idle_4Frames_48x64_1
+  - first:
+      213: 4637615657876939630
+    second: Lyra_Idle_4Frames_48x64_2
+  - first:
+      213: 1273210081000774764
+    second: Lyra_Idle_4Frames_48x64_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,177 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lyra_Idle_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 421
-        width: 316
-        height: 421
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfb1f6692e02d964688180fffce4b74d
-      internalID: -1491057284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lyra_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 421
-        width: 316
-        height: 421
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d5a03d5502a0f9449013db4d9445852
-      internalID: -1035785063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lyra_Idle_2
-      rect:
-        serializedVersion: 2
-        x: 632
-        y: 421
-        width: 316
-        height: 421
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a800fac2f0ffd3d45868f4f12256e502
-      internalID: -967472994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lyra_Idle_3
-      rect:
-        serializedVersion: 2
-        x: 948
-        y: 421
-        width: 316
-        height: 421
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29581f1dac560934ab8f565721fbf393
-      internalID: -1552946240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lyra_Idle_4
+      name: Lyra_Idle_4Frames_48x64_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 316
-        height: 421
+        width: 48
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 489faccbd3a8e1d4f98e7fface9204ec
-      internalID: -1179634
+      spriteID: 7e2a167233c33f790800000000000000
+      internalID: -7497582764240035097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lyra_Idle_5
+      name: Lyra_Idle_4Frames_48x64_1
       rect:
         serializedVersion: 2
-        x: 316
+        x: 48
         y: 0
-        width: 316
-        height: 421
+        width: 48
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e841ae6961210a04ab4e29f9b7910a3f
-      internalID: -1919638999
+      spriteID: be9b554b6ec195000800000000000000
+      internalID: 25083050120821227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lyra_Idle_6
+      name: Lyra_Idle_4Frames_48x64_2
       rect:
         serializedVersion: 2
-        x: 632
+        x: 96
         y: 0
-        width: 316
-        height: 421
+        width: 48
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 659968ddd7df89649af7081a0f3eeacd
-      internalID: 945403110
+      spriteID: e636b84aede1c5040800000000000000
+      internalID: 4637615657876939630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lyra_Idle_7
+      name: Lyra_Idle_4Frames_48x64_3
       rect:
         serializedVersion: 2
-        x: 948
+        x: 144
         y: 0
-        width: 316
-        height: 421
+        width: 48
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2ebc0a9e09cbd9c48988323a5e133d13
-      internalID: 84865495
+      spriteID: c6c5f7aa2d95ba110800000000000000
+      internalID: 1273210081000774764
       vertices: []
       indices: 
       edges: []
@@ -292,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 559a0928748d6e64da66f10e25f3b402
+    spriteID: 075740bd3d319c4469d2abe93b6cea95
     internalID: 0
     vertices: []
     indices: 
@@ -302,16 +223,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":316.0,"y":421.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":48.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Lyra_Idle_0: -1491057284
-      Lyra_Idle_1: -1035785063
-      Lyra_Idle_2: -967472994
-      Lyra_Idle_3: -1552946240
-      Lyra_Idle_4: -1179634
-      Lyra_Idle_5: -1919638999
-      Lyra_Idle_6: 945403110
-      Lyra_Idle_7: 84865495
+      Lyra_Idle_4Frames_48x64_0: -7497582764240035097
+      Lyra_Idle_4Frames_48x64_1: 25083050120821227
+      Lyra_Idle_4Frames_48x64_2: 4637615657876939630
+      Lyra_Idle_4Frames_48x64_3: 1273210081000774764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
