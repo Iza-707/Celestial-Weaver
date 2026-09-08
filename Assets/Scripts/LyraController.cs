@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class LyraController : MonoBehaviour
 {
     [Header("Movement")]
@@ -18,10 +19,15 @@ public class LyraController : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+
     }
 
     void Update()
@@ -29,6 +35,7 @@ public class LyraController : MonoBehaviour
         CheckGround();
         Move();
         Jump();
+        UpdateAnimationStates();
         CheckFall();
     }
 
@@ -46,6 +53,14 @@ public class LyraController : MonoBehaviour
             horizontal * moveSpeed,
             rb.linearVelocity.y
         );
+
+        if (horizontal < 0)
+            spriteRenderer.flipX = true;
+
+        if (horizontal > 0)
+            spriteRenderer.flipX = false;
+
+        animator.SetBool("IsRunning", horizontal != 0);
     }
 
     void Jump()
@@ -56,6 +71,33 @@ public class LyraController : MonoBehaviour
                 rb.linearVelocity.x,
                 jumpForce
             );
+
+            animator.SetBool("IsJumping", true);
+            animator.SetBool("IsFalling", false);
+        }
+    }
+
+    void UpdateAnimationStates()
+    {
+        animator.SetBool("IsRunning", rb.linearVelocity.x != 0);
+
+        if (isGrounded)
+        {
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsFalling", false);
+        }
+        else
+        {
+            if (rb.linearVelocity.y > 0.1f)
+            {
+                animator.SetBool("IsJumping", true);
+                animator.SetBool("IsFalling", false);
+            }
+            else if (rb.linearVelocity.y < -0.1f)
+            {
+                animator.SetBool("IsJumping", false);
+                animator.SetBool("IsFalling", true);
+            }
         }
     }
 
