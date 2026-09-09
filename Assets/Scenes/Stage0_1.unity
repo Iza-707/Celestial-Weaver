@@ -5599,7 +5599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1675003433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6331,6 +6331,8 @@ MonoBehaviour:
   musicVolumeSlider: {fileID: 1524663603}
   sfxVolumeSlider: {fileID: 185996342}
   fullscreenToggle: {fileID: 1735484935}
+  settingsPanel: {fileID: 1527949856}
+  pausePanel: {fileID: 1675003432}
 --- !u!4 &1876635642
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class PauseSettingsController : MonoBehaviour
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider sfxVolumeSlider;
     [SerializeField] private Toggle fullscreenToggle;
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject pausePanel;
 
     private const string MasterVolumeKey = "MasterVolume";
     private const string MusicVolumeKey = "MusicVolume";
@@ -44,6 +46,9 @@ public class PauseSettingsController : MonoBehaviour
         PlayerPrefs.Save();
 
         ApplyFullscreen();
+
+        settingsPanel.SetActive(false);
+        pausePanel.SetActive(true);
     }
 
     public void ApplyFullscreen()
