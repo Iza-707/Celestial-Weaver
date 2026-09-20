@@ -7,14 +7,11 @@ public class StarPenUI : MonoBehaviour
     public GameObject starPenIndicator;
     public Slider lightEnergyGauge;
 
-    [Header("Energy")]
-    public float maxEnergy = 100f;
-
-    private float currentEnergy;
+    private StarPenController starPenController;
 
     void Start()
     {
-        currentEnergy = maxEnergy;
+        starPenController = FindAnyObjectByType<StarPenController>();
 
         UpdateUI();
     }
@@ -38,8 +35,14 @@ public class StarPenUI : MonoBehaviour
         {
             lightEnergyGauge.gameObject.SetActive(unlocked);
 
-            lightEnergyGauge.maxValue = maxEnergy;
-            lightEnergyGauge.value = currentEnergy;
+            if (starPenController != null)
+            {
+                lightEnergyGauge.maxValue =
+                    starPenController.maxEnergy;
+
+                lightEnergyGauge.value =
+                    starPenController.CurrentEnergy;
+            }
         }
     }
 }

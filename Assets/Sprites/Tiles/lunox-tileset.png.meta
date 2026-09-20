@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 4f5d969d27fb4aa4696d8d29966d9a05
+guid: ef2f6bfb35ec2f54f81ec7b4aa1c1f79
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -698617467471894270
     second: lunox-tileset_0
-  - first:
-      213: 8366537122467989344
-    second: lunox-tileset_1
-  - first:
-      213: -4472109754979328323
-    second: lunox-tileset_2
-  - first:
-      213: -6296505983846176876
-    second: lunox-tileset_3
-  - first:
-      213: -4409281304123702663
-    second: lunox-tileset_4
-  - first:
-      213: -2231265458458366321
-    second: lunox-tileset_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -90,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -163,10 +148,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 067c2d06f29eb1470800000000000000
-      internalID: 8366537122467989344
+      spriteID: 437aa0ea33ac6324d98bde2b7ba1a898
+      internalID: -2062579831
       vertices: []
       indices: 
       edges: []
@@ -185,10 +170,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dbed5e14fdfdfe1c0800000000000000
-      internalID: -4472109754979328323
+      spriteID: ca0d7de557a53244aa12a35a3f28bacc
+      internalID: -1408594720
       vertices: []
       indices: 
       edges: []
@@ -207,10 +192,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4972ab20b215e98a0800000000000000
-      internalID: -6296505983846176876
+      spriteID: 4e493f79fac003e45bd90302d47f3110
+      internalID: 974320911
       vertices: []
       indices: 
       edges: []
@@ -229,10 +214,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9728fe8e3061fc2c0800000000000000
-      internalID: -4409281304123702663
+      spriteID: 8d08641d863f48049a55c5bdd6853a80
+      internalID: 1648628552
       vertices: []
       indices: 
       edges: []
@@ -251,10 +236,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f8e6df423e3f801e0800000000000000
-      internalID: -2231265458458366321
+      spriteID: cd007d998f16f184fa5ed049e75b54c1
+      internalID: 329920401
       vertices: []
       indices: 
       edges: []
@@ -275,8 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edb2f4523e6e7a74f8bb8a3a3df13f2e
-      internalID: -160724411
+      spriteID: 2772c0e8f399d7043a4ca27b6776fc72
+      internalID: -545051812
       vertices: []
       indices: 
       edges: []
@@ -297,8 +282,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37e9de65265a6b843977ab08f048b6e3
-      internalID: 426410805
+      spriteID: 92b9efaeb784cee479e489ac0560a2d5
+      internalID: -1999154339
       vertices: []
       indices: 
       edges: []
@@ -319,140 +304,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ba99b5672b9994d83db2835342be01
-      internalID: -1733485777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lunox-tileset_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a8ac0cc08523504bab8790086e97312
-      internalID: 1972653583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lunox-tileset_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40e06a4e986967e4f82658f130e404ab
-      internalID: -197654627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lunox-tileset_12
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2cde3f64772cf2e49bce598e7b310475
-      internalID: -1996218233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lunox-tileset_14
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88e4e63a43ebfbd45aafc852f06c00e8
-      internalID: -1411764358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lunox-tileset_16
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e93ba3ff78edf14e9435901519141a6
-      internalID: -1782414373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lunox-tileset_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 112
-        width: 64
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dbf5d9d230031e4b89399e3b276d35d
-      internalID: 848130464
+      spriteID: 2fbe6eff70a42b24498db9541d8b7ae5
+      internalID: 885739400
       vertices: []
       indices: 
       edges: []
@@ -473,8 +326,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d5f09c0b6aa8f24eb4248d35b08c217
-      internalID: 1201609420
+      spriteID: 9d4a87958042c0646bcff1a0499f5e48
+      internalID: -318543993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422210682ea86714a96f3795bab35fad
+      internalID: 1215557759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980140e217c46ab48899840b8f3c5711
+      internalID: 1828441460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7a82350121fe0468d795b1c95e0353
+      internalID: 1096172373
       vertices: []
       indices: 
       edges: []
@@ -495,8 +414,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e1ad4aa12569974da72a1c3f1054844
-      internalID: -1840338861
+      spriteID: 9092d8cc9b12bc149a2a9ee2b4f0771b
+      internalID: 820565050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28108f097a6a0b4486b3d53ac011be5
+      internalID: -464272296
       vertices: []
       indices: 
       edges: []
@@ -517,20 +458,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ac2168af0f804b43b1e500c7c7d6f8f
-      internalID: -1223367257
+      spriteID: 107d9d1d3adead249a1b1a5b28408df9
+      internalID: 832153841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lunox-tileset_21
+      name: lunox-tileset_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 150
-        width: 96
-        height: 10
+        x: 64
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,8 +480,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d432baeb63ce50949b611db85cc9451e
-      internalID: 1332417618
+      spriteID: 24655c1c620ac2f42a883d45c5af28eb
+      internalID: 1923409738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dacfe0ecce3684bbd1055ccce2a2a0
+      internalID: -1478664300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecaf164150e34e4aaa47c29301dee17
+      internalID: 87624491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f590802c69c270644ab7c225ff4b8a39
+      internalID: 670215070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666592a4ec3cb08459ec7f81c711fd8f
+      internalID: -1297536371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d851f5eab5a6cd4f8f0de7d981ff3a6
+      internalID: 1513426902
       vertices: []
       indices: 
       edges: []
@@ -550,9 +601,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 112
-        width: 64
-        height: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,8 +612,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ddb923b6e0ee847983b2586fa722a7
-      internalID: 710838216
+      spriteID: 146658b94d71ca94eaa318cbea2cea3f
+      internalID: 1313479745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4152e38d99b2349bfe498ba230af9c
+      internalID: -693371784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae4fe9e2d83dae4d9adc279816e209a
+      internalID: -276503870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ca7532af94c924a8e8341441985259
+      internalID: 2027706113
       vertices: []
       indices: 
       edges: []
@@ -573,7 +690,7 @@ TextureImporter:
         serializedVersion: 2
         x: 160
         y: 112
-        width: 32
+        width: 31
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -583,8 +700,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feeebdce10373ef49b37a62496c0dc9e
-      internalID: 1131369482
+      spriteID: a3dd20f6a9ce6664fb92ca5698ab7d69
+      internalID: 1870917506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_30
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 112
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233d535b28aebf94cba7741694010618
+      internalID: 999182477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-tileset_31
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 112
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc13c10245145524fbf408afe5c8fa49
+      internalID: -1097937894
       vertices: []
       indices: 
       edges: []
@@ -593,7 +754,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 971637c1f8f63ee40aed6233a1483b35
+    spriteID: 5feb2c64ec99bcd43b52dd894245eb6a
     internalID: 0
     vertices: []
     indices: 
@@ -606,35 +767,37 @@ TextureImporter:
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       lunox-tileset_0: -698617467471894270
-      lunox-tileset_1: 8366537122467989344
-      lunox-tileset_10: 1972653583
-      lunox-tileset_11: -197654627
-      lunox-tileset_12: -1996218233
-      lunox-tileset_13: -1840338861
-      lunox-tileset_14: -1411764358
-      lunox-tileset_15: -1223367257
-      lunox-tileset_16: -1782414373
-      lunox-tileset_17: -263268359
-      lunox-tileset_18: -1433407395
-      lunox-tileset_19: 848130464
-      lunox-tileset_2: -4472109754979328323
-      lunox-tileset_20: 1250841888
-      lunox-tileset_21: 1332417618
-      lunox-tileset_22: 710838216
-      lunox-tileset_23: -1554927941
-      lunox-tileset_24: -498521537
-      lunox-tileset_25: 405484134
-      lunox-tileset_26: 1366046673
-      lunox-tileset_27: 80453728
-      lunox-tileset_28: -835622148
-      lunox-tileset_29: 1131369482
-      lunox-tileset_3: -6296505983846176876
-      lunox-tileset_4: -4409281304123702663
-      lunox-tileset_5: -2231265458458366321
-      lunox-tileset_6: -160724411
-      lunox-tileset_7: 426410805
-      lunox-tileset_8: -1733485777
-      lunox-tileset_9: 1201609420
+      lunox-tileset_1: -2062579831
+      lunox-tileset_10: 1215557759
+      lunox-tileset_11: 1828441460
+      lunox-tileset_12: 1096172373
+      lunox-tileset_13: 820565050
+      lunox-tileset_14: -464272296
+      lunox-tileset_15: 832153841
+      lunox-tileset_16: 1923409738
+      lunox-tileset_17: -1478664300
+      lunox-tileset_18: 87624491
+      lunox-tileset_19: 670215070
+      lunox-tileset_2: -1408594720
+      lunox-tileset_20: -1297536371
+      lunox-tileset_21: 1513426902
+      lunox-tileset_22: 1313479745
+      lunox-tileset_23: -693371784
+      lunox-tileset_24: -1361119540
+      lunox-tileset_25: 659359545
+      lunox-tileset_26: -744885683
+      lunox-tileset_27: -276503870
+      lunox-tileset_28: 2027706113
+      lunox-tileset_29: 1870917506
+      lunox-tileset_3: 974320911
+      lunox-tileset_30: 999182477
+      lunox-tileset_31: -1097937894
+      lunox-tileset_4: 1648628552
+      lunox-tileset_5: 329920401
+      lunox-tileset_6: -545051812
+      lunox-tileset_7: -1999154339
+      lunox-tileset_8: 885739400
+      lunox-tileset_9: -318543993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

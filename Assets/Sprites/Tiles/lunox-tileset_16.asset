@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: lunox-tileset_16
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: -1782414373, guid: 4f5d969d27fb4aa4696d8d29966d9a05, type: 3}
+  m_Sprite: {fileID: 1923409738, guid: ef2f6bfb35ec2f54f81ec7b4aa1c1f79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
