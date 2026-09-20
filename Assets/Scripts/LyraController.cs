@@ -124,6 +124,16 @@ public class LyraController : MonoBehaviour
     void Respawn()
     {
         rb.linearVelocity = Vector2.zero;
-        transform.position = respawnPoint.position;
+
+        if (GameManager.Instance != null &&
+            GameManager.Instance.HasCheckpoint())
+        {
+            transform.position =
+                GameManager.Instance.GetRespawnPosition();
+        }
+        else if (respawnPoint != null)
+        {
+            transform.position = respawnPoint.position;
+        }
     }
 }

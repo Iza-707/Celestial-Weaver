@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
+  - Background
   - 
   - 
   - 
@@ -40,6 +40,30 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Farbackground
+    uniqueID: 909413909
+    locked: 0
+  - name: Midbackground
+    uniqueID: 2040465729
+    locked: 0
+  - name: BackgroundDetails
+    uniqueID: 3590933989
+    locked: 0
+  - name: Ground
+    uniqueID: 3415715577
+    locked: 0
+  - name: Player
+    uniqueID: 1595807361
+    locked: 0
+  - name: Effects
+    uniqueID: 2094710055
+    locked: 0
+  - name: Foreground
+    uniqueID: 362277199
+    locked: 0
+  - name: UI
+    uniqueID: 1348929785
     locked: 0
   m_RenderingLayers:
   - Default

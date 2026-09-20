@@ -1,0 +1,1239 @@
+fileFormatVersion: 2
+guid: c63c30cc933bffb439db0b6f9bc65c6a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5956822460774472872
+    second: Scene_Transition_0
+  - first:
+      213: 5073822712660311306
+    second: Scene_Transition_1
+  - first:
+      213: 690361443971808275
+    second: Scene_Transition_2
+  - first:
+      213: 3647298390707110215
+    second: Scene_Transition_3
+  - first:
+      213: 5162939871996356631
+    second: Scene_Transition_4
+  - first:
+      213: 8004250362522791405
+    second: Scene_Transition_5
+  - first:
+      213: 2035772899055301475
+    second: Scene_Transition_6
+  - first:
+      213: 1882417270029430917
+    second: Scene_Transition_7
+  - first:
+      213: 3054356551615804977
+    second: Scene_Transition_8
+  - first:
+      213: -846275278196778461
+    second: Scene_Transition_9
+  - first:
+      213: 4534833779386770867
+    second: Scene_Transition_10
+  - first:
+      213: -5897015678854607119
+    second: Scene_Transition_11
+  - first:
+      213: 2267430800968378030
+    second: Scene_Transition_12
+  - first:
+      213: -4433710035209115334
+    second: Scene_Transition_13
+  - first:
+      213: -5640519799893779297
+    second: Scene_Transition_14
+  - first:
+      213: 3484586250247081343
+    second: Scene_Transition_15
+  - first:
+      213: 5268440021137989974
+    second: Scene_Transition_16
+  - first:
+      213: 4597732895385419424
+    second: Scene_Transition_17
+  - first:
+      213: -1756738970334764410
+    second: Scene_Transition_18
+  - first:
+      213: -59642082513922463
+    second: Scene_Transition_19
+  - first:
+      213: 8877112794953748354
+    second: Scene_Transition_20
+  - first:
+      213: -4297732545051165383
+    second: Scene_Transition_21
+  - first:
+      213: 7890410839168626405
+    second: Scene_Transition_22
+  - first:
+      213: -988297264595530183
+    second: Scene_Transition_23
+  - first:
+      213: 8550905336256635169
+    second: Scene_Transition_24
+  - first:
+      213: -357186658479431554
+    second: Scene_Transition_25
+  - first:
+      213: -2281392992498078925
+    second: Scene_Transition_26
+  - first:
+      213: 5732395341257857041
+    second: Scene_Transition_27
+  - first:
+      213: 6428255532673627110
+    second: Scene_Transition_28
+  - first:
+      213: 6672636401532186508
+    second: Scene_Transition_29
+  - first:
+      213: -59840110521582016
+    second: Scene_Transition_30
+  - first:
+      213: 7068281450074189197
+    second: Scene_Transition_31
+  - first:
+      213: -1858876436639213061
+    second: Scene_Transition_32
+  - first:
+      213: 7340292723588496576
+    second: Scene_Transition_33
+  - first:
+      213: -6341901546318722099
+    second: Scene_Transition_34
+  - first:
+      213: -7737686564141231825
+    second: Scene_Transition_35
+  - first:
+      213: 7586330871005890385
+    second: Scene_Transition_36
+  - first:
+      213: -2783026274197078109
+    second: Scene_Transition_37
+  - first:
+      213: -3070702839645059103
+    second: Scene_Transition_38
+  - first:
+      213: 8590057787762948444
+    second: Scene_Transition_39
+  - first:
+      213: -1009889274417628115
+    second: Scene_Transition_40
+  - first:
+      213: 3832568393213099931
+    second: Scene_Transition_41
+  - first:
+      213: 1484575816712739389
+    second: Scene_Transition_42
+  - first:
+      213: -815442127881633874
+    second: Scene_Transition_43
+  - first:
+      213: 6579837336005539796
+    second: Scene_Transition_44
+  - first:
+      213: 8721006285968360458
+    second: Scene_Transition_45
+  - first:
+      213: 8376873565381972617
+    second: Scene_Transition_46
+  - first:
+      213: 9117793704257298589
+    second: Scene_Transition_47
+  - first:
+      213: -7245959513813618720
+    second: Scene_Transition_48
+  - first:
+      213: -2064353690146448400
+    second: Scene_Transition_49
+  - first:
+      213: -5167686297059023158
+    second: Scene_Transition_50
+  - first:
+      213: -7517672060823526900
+    second: Scene_Transition_51
+  - first:
+      213: -5881064534071853265
+    second: Scene_Transition_52
+  - first:
+      213: 9131710945253014305
+    second: Scene_Transition_53
+  - first:
+      213: -4631783074227783205
+    second: Scene_Transition_54
+  - first:
+      213: -9073536618089682108
+    second: Scene_Transition_55
+  - first:
+      213: 7133104551996742565
+    second: Scene_Transition_56
+  - first:
+      213: 3847640050606220844
+    second: Scene_Transition_57
+  - first:
+      213: -8626249872103061268
+    second: Scene_Transition_58
+  - first:
+      213: 8783459873385852328
+    second: Scene_Transition_59
+  - first:
+      213: -6867809592606221268
+    second: Scene_Transition_60
+  - first:
+      213: 7639850401383424552
+    second: Scene_Transition_61
+  - first:
+      213: -4684109429780596777
+    second: Scene_Transition_62
+  - first:
+      213: 8627947526391087637
+    second: Scene_Transition_63
+  - first:
+      213: 5675677873460956776
+    second: Scene_Transition_64
+  - first:
+      213: -247295604057263023
+    second: Scene_Transition_65
+  - first:
+      213: 4452979092471472827
+    second: Scene_Transition_66
+  - first:
+      213: -1212249553590855214
+    second: Scene_Transition_67
+  - first:
+      213: -1842707105537090932
+    second: Scene_Transition_68
+  - first:
+      213: 2519053645632680027
+    second: Scene_Transition_69
+  - first:
+      213: -2298186898415240827
+    second: Scene_Transition_70
+  - first:
+      213: 4241740247242538050
+    second: Scene_Transition_71
+  - first:
+      213: 5422055774673868393
+    second: Scene_Transition_72
+  - first:
+      213: 1969086579555129169
+    second: Scene_Transition_73
+  - first:
+      213: 341945579864632113
+    second: Scene_Transition_74
+  - first:
+      213: 6618877080215030469
+    second: Scene_Transition_75
+  - first:
+      213: -6687603043084202205
+    second: Scene_Transition_76
+  - first:
+      213: -4730617994947859476
+    second: Scene_Transition_77
+  - first:
+      213: -3064050871735414015
+    second: Scene_Transition_78
+  - first:
+      213: 618027097215717668
+    second: Scene_Transition_79
+  - first:
+      213: 4248513580571358745
+    second: Scene_Transition_80
+  - first:
+      213: 4079050404513049930
+    second: Scene_Transition_81
+  - first:
+      213: 7137882995111355790
+    second: Scene_Transition_82
+  - first:
+      213: -6433429827688090508
+    second: Scene_Transition_83
+  - first:
+      213: -4599524895227582401
+    second: Scene_Transition_84
+  - first:
+      213: -2208580609077611598
+    second: Scene_Transition_85
+  - first:
+      213: -6839295210260027598
+    second: Scene_Transition_86
+  - first:
+      213: -6476418048057920434
+    second: Scene_Transition_87
+  - first:
+      213: 3953795615970248008
+    second: Scene_Transition_88
+  - first:
+      213: -4312146518325067527
+    second: Scene_Transition_89
+  - first:
+      213: 1902327498499433401
+    second: Scene_Transition_90
+  - first:
+      213: -1008878710609860598
+    second: Scene_Transition_91
+  - first:
+      213: -8826465955184807839
+    second: Scene_Transition_92
+  - first:
+      213: 8107958018768659410
+    second: Scene_Transition_93
+  - first:
+      213: 2703884184144038521
+    second: Scene_Transition_94
+  - first:
+      213: -2752377675304713879
+    second: Scene_Transition_95
+  - first:
+      213: 736160875291470559
+    second: Scene_Transition_96
+  - first:
+      213: 4571956685835694099
+    second: Scene_Transition_97
+  - first:
+      213: 4867952852396531924
+    second: Scene_Transition_98
+  - first:
+      213: -3075231398797723042
+    second: Scene_Transition_99
+  - first:
+      213: 4447943759431349492
+    second: Scene_Transition_100
+  - first:
+      213: 4992867771137656837
+    second: Scene_Transition_101
+  - first:
+      213: -7146201227236469058
+    second: Scene_Transition_102
+  - first:
+      213: -7051895379731350440
+    second: Scene_Transition_103
+  - first:
+      213: -8141561535531702086
+    second: Scene_Transition_104
+  - first:
+      213: 4928682455225413197
+    second: Scene_Transition_105
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scene_Transition_0
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3334
+        width: 1024
+        height: 698
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8acd78ca772eaa250800000000000000
+      internalID: 5956822460774472872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_1
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3332
+        width: 1024
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d3d69ffd6d96640800000000000000
+      internalID: 5073822712660311306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_2
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3332
+        width: 1024
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31cb09a5318a49900800000000000000
+      internalID: 690361443971808275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_3
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3332
+        width: 1024
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74183f7ef8ecd9230800000000000000
+      internalID: 3647298390707110215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_4
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3332
+        width: 1024
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7182b0b857276a740800000000000000
+      internalID: 5162939871996356631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_5
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3332
+        width: 1024
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded667fdb4fc41f60800000000000000
+      internalID: 8004250362522791405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2662
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363fe8b6aa4804c10800000000000000
+      internalID: 2035772899055301475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_7
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2662
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5803a2b9880bf1a10800000000000000
+      internalID: 1882417270029430917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2660
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136727cd911436a20800000000000000
+      internalID: 3054356551615804977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_9
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2660
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ad2e44e1d6144f0800000000000000
+      internalID: -846275278196778461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_10
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2660
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b56ac7bb47feee30800000000000000
+      internalID: 4534833779386770867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_11
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2660
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe46fadb77992ea0800000000000000
+      internalID: -5897015678854607119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_12
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2660
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6ef74dc48877f10800000000000000
+      internalID: 2267430800968378030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1988
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39a64ab63c4872c0800000000000000
+      internalID: -4433710035209115334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1988
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c16c27029d8b1b0800000000000000
+      internalID: -5640519799893779297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_15
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1988
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d00338bbcbb5030800000000000000
+      internalID: 3484586250247081343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_16
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1988
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651a16c29424d1940800000000000000
+      internalID: 5268440021137989974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_17
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1988
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae739165bd6ecf30800000000000000
+      internalID: 4597732895385419424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_18
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1988
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6826c1ec63fce97e0800000000000000
+      internalID: -1756738970334764410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_19
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 1988
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166d71a87db1c2ff0800000000000000
+      internalID: -59642082513922463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1316
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f0b46dd07d13b70800000000000000
+      internalID: 8877112794953748354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1316
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93df69845036b54c0800000000000000
+      internalID: -4297732545051165383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1316
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eea9806ade508d60800000000000000
+      internalID: 7890410839168626405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_23
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1316
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e0b43cfdcd842f0800000000000000
+      internalID: -988297264595530183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_24
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1316
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121a193491beaa670800000000000000
+      internalID: 8550905336256635169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_25
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1316
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7023d660a40b0bf0800000000000000
+      internalID: -357186658479431554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_26
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 1316
+        width: 1024
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b2611292dd650e0800000000000000
+      internalID: -2281392992498078925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 574
+        width: 1024
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11857cbf03f8d8f40800000000000000
+      internalID: 5732395341257857041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 574
+        width: 1024
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3737e3950c53950800000000000000
+      internalID: 6428255532673627110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_29
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 574
+        width: 1024
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8faaac3477f99c50800000000000000
+      internalID: 6672636401532186508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_30
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 574
+        width: 1024
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e7a0d8cb76b2ff0800000000000000
+      internalID: -59840110521582016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_31
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 574
+        width: 1024
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8da72c8784971260800000000000000
+      internalID: 7068281450074189197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_32
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 574
+        width: 1023
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf996c8cab1f336e0800000000000000
+      internalID: -1858876436639213061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene_Transition_33
+      rect:
+        serializedVersion: 2
+        x: 6143
+        y: 574
+        width: 1025
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc70e07755fdd560800000000000000
+      internalID: 7340292723588496576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0db864eb143f27840afaceaab08d445b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":6.0},"gridSpriteSize":{"x":1024.0,"y":672.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Scene_Transition_0: 5956822460774472872
+      Scene_Transition_1: 5073822712660311306
+      Scene_Transition_10: 4534833779386770867
+      Scene_Transition_11: -5897015678854607119
+      Scene_Transition_12: 2267430800968378030
+      Scene_Transition_13: -4433710035209115334
+      Scene_Transition_14: -5640519799893779297
+      Scene_Transition_15: 3484586250247081343
+      Scene_Transition_16: 5268440021137989974
+      Scene_Transition_17: 4597732895385419424
+      Scene_Transition_18: -1756738970334764410
+      Scene_Transition_19: -59642082513922463
+      Scene_Transition_2: 690361443971808275
+      Scene_Transition_20: 8877112794953748354
+      Scene_Transition_21: -4297732545051165383
+      Scene_Transition_22: 7890410839168626405
+      Scene_Transition_23: -988297264595530183
+      Scene_Transition_24: 8550905336256635169
+      Scene_Transition_25: -357186658479431554
+      Scene_Transition_26: -2281392992498078925
+      Scene_Transition_27: 5732395341257857041
+      Scene_Transition_28: 6428255532673627110
+      Scene_Transition_29: 6672636401532186508
+      Scene_Transition_3: 3647298390707110215
+      Scene_Transition_30: -59840110521582016
+      Scene_Transition_31: 7068281450074189197
+      Scene_Transition_32: -1858876436639213061
+      Scene_Transition_33: 7340292723588496576
+      Scene_Transition_34: -6341901546318722099
+      Scene_Transition_35: -7737686564141231825
+      Scene_Transition_36: 7586330871005890385
+      Scene_Transition_37: -2783026274197078109
+      Scene_Transition_38: -3070702839645059103
+      Scene_Transition_39: 8590057787762948444
+      Scene_Transition_4: 5162939871996356631
+      Scene_Transition_40: -1009889274417628115
+      Scene_Transition_5: 8004250362522791405
+      Scene_Transition_6: 2035772899055301475
+      Scene_Transition_7: 1882417270029430917
+      Scene_Transition_8: 3054356551615804977
+      Scene_Transition_9: -846275278196778461
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

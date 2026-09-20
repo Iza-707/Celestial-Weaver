@@ -2401,7 +2401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be4e42bccd8ee74eac40324badafab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  starPenUnlocked: 0
+  starPenUnlocked: 1
 --- !u!4 &1062430421
 Transform:
   m_ObjectHideFlags: 0
