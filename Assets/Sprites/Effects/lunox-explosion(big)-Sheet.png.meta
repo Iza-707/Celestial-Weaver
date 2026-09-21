@@ -1,0 +1,569 @@
+fileFormatVersion: 2
+guid: 1c1345c348a55f543809140b99464655
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2102952596238946342
+    second: lunox-explosion(big)-Sheet_0
+  - first:
+      213: 4694197053950096229
+    second: lunox-explosion(big)-Sheet_1
+  - first:
+      213: 6520304382496041436
+    second: lunox-explosion(big)-Sheet_2
+  - first:
+      213: 6353566394488224965
+    second: lunox-explosion(big)-Sheet_3
+  - first:
+      213: -630393896482628934
+    second: lunox-explosion(big)-Sheet_4
+  - first:
+      213: -7200060749945951737
+    second: lunox-explosion(big)-Sheet_5
+  - first:
+      213: -1588844182001404708
+    second: lunox-explosion(big)-Sheet_6
+  - first:
+      213: -7964504535986369562
+    second: lunox-explosion(big)-Sheet_7
+  - first:
+      213: 7662638585295794526
+    second: lunox-explosion(big)-Sheet_8
+  - first:
+      213: -7403933187750600033
+    second: lunox-explosion(big)-Sheet_9
+  - first:
+      213: -3621271385919230928
+    second: lunox-explosion(big)-Sheet_10
+  - first:
+      213: -2481247175233544803
+    second: lunox-explosion(big)-Sheet_11
+  - first:
+      213: -7741120360574207830
+    second: lunox-explosion(big)-Sheet_12
+  - first:
+      213: -4393235482311074419
+    second: lunox-explosion(big)-Sheet_13
+  - first:
+      213: 4738614281043886943
+    second: lunox-explosion(big)-Sheet_14
+  - first:
+      213: -5986839025683226906
+    second: lunox-explosion(big)-Sheet_15
+  - first:
+      213: -8324923507573450992
+    second: lunox-explosion(big)-Sheet_16
+  - first:
+      213: 6535261645990353765
+    second: lunox-explosion(big)-Sheet_17
+  - first:
+      213: 6823390467472378051
+    second: lunox-explosion(big)-Sheet_18
+  - first:
+      213: 2150238764912630548
+    second: lunox-explosion(big)-Sheet_19
+  - first:
+      213: 5592330582945545992
+    second: lunox-explosion(big)-Sheet_20
+  - first:
+      213: -4509474919444431997
+    second: lunox-explosion(big)-Sheet_21
+  - first:
+      213: -3970055285516279609
+    second: lunox-explosion(big)-Sheet_22
+  - first:
+      213: -6070233566719752946
+    second: lunox-explosion(big)-Sheet_23
+  - first:
+      213: -6266535252083723404
+    second: lunox-explosion(big)-Sheet_24
+  - first:
+      213: -2734810843368542299
+    second: lunox-explosion(big)-Sheet_25
+  - first:
+      213: -3296210531000058826
+    second: lunox-explosion(big)-Sheet_26
+  - first:
+      213: 1429429337597070749
+    second: lunox-explosion(big)-Sheet_27
+  - first:
+      213: -7347907440874025500
+    second: lunox-explosion(big)-Sheet_28
+  - first:
+      213: 180234915284344718
+    second: lunox-explosion(big)-Sheet_29
+  - first:
+      213: -1985890180092171131
+    second: lunox-explosion(big)-Sheet_30
+  - first:
+      213: 2553108967584066123
+    second: lunox-explosion(big)-Sheet_31
+  - first:
+      213: 5956602596745157043
+    second: lunox-explosion(big)-Sheet_32
+  - first:
+      213: 1327188038522108865
+    second: lunox-explosion(big)-Sheet_33
+  - first:
+      213: 2642393533173405995
+    second: lunox-explosion(big)-Sheet_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf21b171cfc0d2e0800000000000000
+      internalID: -2102952596238946342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56371628953252140800000000000000
+      internalID: 4694197053950096229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd969123a46cc7a50800000000000000
+      internalID: 6520304382496041436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc745029f66c2850800000000000000
+      internalID: 6353566394488224965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba149357146047f0800000000000000
+      internalID: -630393896482628934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a2d3e35ee341c90800000000000000
+      internalID: -7200060749945951737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd43c5072aa43f9e0800000000000000
+      internalID: -1588844182001404708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb8b808255687190800000000000000
+      internalID: -7964504535986369562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51f1c6e139275a60800000000000000
+      internalID: 7662638585295794526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9266635ef1ff3990800000000000000
+      internalID: -7403933187750600033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c6ffe5cd8aebdc0800000000000000
+      internalID: -3621271385919230928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d534027d6d09dd0800000000000000
+      internalID: -2481247175233544803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa83e68db04029490800000000000000
+      internalID: -7741120360574207830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8dd43eea971803c0800000000000000
+      internalID: -4393235482311074419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lunox-explosion(big)-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53c6351590f2c140800000000000000
+      internalID: 4738614281043886943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 76e2c705d97e8e5439cbc53c385c5a06
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      lunox-explosion(big)-Sheet_0: -2102952596238946342
+      lunox-explosion(big)-Sheet_1: 4694197053950096229
+      lunox-explosion(big)-Sheet_10: -3621271385919230928
+      lunox-explosion(big)-Sheet_11: -2481247175233544803
+      lunox-explosion(big)-Sheet_12: -7741120360574207830
+      lunox-explosion(big)-Sheet_13: -4393235482311074419
+      lunox-explosion(big)-Sheet_14: 4738614281043886943
+      lunox-explosion(big)-Sheet_2: 6520304382496041436
+      lunox-explosion(big)-Sheet_3: 6353566394488224965
+      lunox-explosion(big)-Sheet_4: -630393896482628934
+      lunox-explosion(big)-Sheet_5: -7200060749945951737
+      lunox-explosion(big)-Sheet_6: -1588844182001404708
+      lunox-explosion(big)-Sheet_7: -7964504535986369562
+      lunox-explosion(big)-Sheet_8: 7662638585295794526
+      lunox-explosion(big)-Sheet_9: -7403933187750600033
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
