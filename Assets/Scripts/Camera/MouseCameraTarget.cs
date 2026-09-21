@@ -6,7 +6,7 @@ public class MouseCameraTarget : MonoBehaviour
     [Header("Target")]
     public Transform player;
 
-    [Header("Mouse Look-Ahead")]
+    [Header("Desktop Mouse Look-Ahead")]
     public float mouseInfluence = 0.25f;
     public float maxOffset = 3f;
     public float followSpeed = 5f;
@@ -16,29 +16,42 @@ public class MouseCameraTarget : MonoBehaviour
         if (player == null)
             return;
 
-        if (Mouse.current == null)
-            return;
+        Vector3 targetPosition;
 
-        if (Camera.main == null)
-            return;
+        // MOBILE
+        // MobileInputProvider exists when the mobile controls are active.
+        // On mobile, simply follow Lyra.
+        if (MobileInputProvider.Instance != null)
+        {
+            targetPosition = player.position;
+        }
+        // DESKTOP
+        else
+        {
+            targetPosition = player.position;
 
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(
-            Mouse.current.position.ReadValue()
-        );
+            if (Mouse.current != null && Camera.main != null)
+            {
+                Vector3 mousePosition =
+                    Camera.main.ScreenToWorldPoint(
+                        Mouse.current.position.ReadValue()
+                    );
 
-        mousePosition.z = 0f;
+                mousePosition.z = 0f;
 
-        Vector2 mouseDirection =
-            mousePosition - player.position;
+                Vector2 mouseDirection =
+                    mousePosition - player.position;
 
-        mouseDirection = Vector2.ClampMagnitude(
-            mouseDirection,
-            maxOffset
-        );
+                mouseDirection =
+                    Vector2.ClampMagnitude(
+                        mouseDirection,
+                        maxOffset
+                    );
 
-        Vector3 targetPosition =
-            player.position +
-            (Vector3)(mouseDirection * mouseInfluence);
+                targetPosition +=
+                    (Vector3)(mouseDirection * mouseInfluence);
+            }
+        }
 
         targetPosition.z = transform.position.z;
 
