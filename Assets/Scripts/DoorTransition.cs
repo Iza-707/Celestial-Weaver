@@ -12,7 +12,11 @@ public class DoorTransition : MonoBehaviour
     {
         if (playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
+            if(SceneScript.Instance != null) {
+            SceneScript.Instance.NextScene(nextSceneName);
+            } else {
             SceneManager.LoadScene(nextSceneName);
+            }
         }
     }
 

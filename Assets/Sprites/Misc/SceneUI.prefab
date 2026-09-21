@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6539454112475209155}
   - component: {fileID: 6740833277540910238}
+  - component: {fileID: 40066493040007317}
   - component: {fileID: 1846428294756528501}
   - component: {fileID: 7711155032443191023}
   m_Layer: 5
@@ -46,6 +47,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4100618061148767863}
   m_CullTransparentMesh: 0
+--- !u!114 &40066493040007317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4100618061148767863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 725fd04630afb5d4d9b167d6ad381958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneScript
+  anim: {fileID: 7711155032443191023}
+  nextScene: 
 --- !u!114 &1846428294756528501
 MonoBehaviour:
   m_ObjectHideFlags: 0
