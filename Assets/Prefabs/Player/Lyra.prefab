@@ -147,7 +147,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1.95
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aec989de6b1a0e748b1e9ee84c223749, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -216,6 +216,7 @@ MonoBehaviour:
     m_Bits: 8
   respawnPoint: {fileID: 0}
   fallLimit: -10
+  deathEffect: {fileID: 1162817160226121773, guid: 8a4192867b77b7b4eb1333c97b58c5dd, type: 3}
 --- !u!95 &8728500887168867830
 Animator:
   serializedVersion: 7
