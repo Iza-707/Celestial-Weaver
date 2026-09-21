@@ -12,9 +12,8 @@ public class MobileInputProvider : MonoBehaviour
 
     [SerializeField] private float _joystickRadius = 100f;
 
-    // Fixed position on the left side of the screen.
-    [Range(0.1f, 0.5f)]
-    [SerializeField] private float _leftScreenLimit = 0.5f;
+    [Header("Joystick Touch Area")]
+    [SerializeField] private RectTransform _moveTouchArea;
 
     public Vector2 MoveInput { get; private set; }
 
@@ -57,10 +56,14 @@ public class MobileInputProvider : MonoBehaviour
             {
                 case TouchPhase.Began:
 
-                    // Only accept touches on the left side
-                    // as movement input.
                     if (_moveTouchId == -1 &&
-                        pos.x <= Screen.width * _leftScreenLimit)
+                        _moveTouchArea != null &&
+                        RectTransformUtility.RectangleContainsScreenPoint(
+                            _moveTouchArea,
+                            pos,
+                            null
+                            )
+                        )
                     {
                         _moveTouchId = id;
                     }

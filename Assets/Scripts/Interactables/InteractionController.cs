@@ -58,6 +58,21 @@ public class InteractionController : MonoBehaviour
 
         currentInteractable = closestInteractable;
 
+        // Mobile action button
+        if (MobileActionButton.Instance != null)
+        {
+            if (currentInteractable != null)
+            {
+                MobileActionButton.Instance.SetInteractable(
+                    currentInteractable
+                );
+            }
+            else
+            {
+                MobileActionButton.Instance.SetJumpMode();
+            }
+        }
+
         UpdatePrompt();
     }
 

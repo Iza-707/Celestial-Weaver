@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class StarPenUI : MonoBehaviour
 {
     [Header("UI")]
-    public GameObject starPenIndicator;
+    public GameObject starPenIndicator_Draw;
+    public GameObject starPenIndicator_Erase;
     public Slider lightEnergyGauge;
 
     private StarPenController starPenController;
@@ -28,8 +29,11 @@ public class StarPenUI : MonoBehaviour
 
         bool unlocked = GameManager.Instance.starPenUnlocked;
 
-        if (starPenIndicator != null)
-            starPenIndicator.SetActive(unlocked);
+        if (starPenIndicator_Draw != null)
+            starPenIndicator_Draw.SetActive(unlocked);
+
+        if (starPenIndicator_Erase != null)
+            starPenIndicator_Erase.SetActive(unlocked);
 
         if (lightEnergyGauge != null)
         {
