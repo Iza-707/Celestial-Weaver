@@ -19,10 +19,10 @@ public class LyraController : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    private bool mobileJumpPressed = false;
+
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-
-    private bool mobileJumpPressed = false;
 
     void Start()
     {
@@ -48,14 +48,9 @@ public class LyraController : MonoBehaviour
     {
         float horizontal = 0f;
 
-        // Mobile joystick input
-        if (MobileInputProvider.Instance != null)
+        // Keyboard
+        if (Keyboard.current != null)
         {
-            horizontal = MobileInputProvider.Instance.MoveInput.x;
-        }
-        else
-        {
-            // Desktop keyboard input
             if (Keyboard.current.aKey.isPressed)
                 horizontal = -1f;
 
@@ -63,24 +58,31 @@ public class LyraController : MonoBehaviour
                 horizontal = 1f;
         }
 
+        // Mobile joystick
+        if (MobileInputProvider.Instance != null)
+        {
+            float mobileHorizontal =
+                MobileInputProvider.Instance.MoveInput.x;
+
+            if (Mathf.Abs(mobileHorizontal) > 0.1f)
+                horizontal = mobileHorizontal;
+        }
+
         rb.linearVelocity = new Vector2(
             horizontal * moveSpeed,
             rb.linearVelocity.y
         );
 
-        if (horizontal < -0.1f)
+        if (horizontal < 0)
             spriteRenderer.flipX = true;
 
-        if (horizontal > 0.1f)
+        if (horizontal > 0)
             spriteRenderer.flipX = false;
 
-        animator.SetBool(
-            "IsRunning",
-            Mathf.Abs(horizontal) > 0.1f
-        );
+        animator.SetBool("IsRunning", Mathf.Abs(horizontal) > 0.1f);
     }
 
-  void Jump()
+    void Jump()
     {
         bool keyboardJump =
             Keyboard.current != null &&
@@ -102,6 +104,7 @@ public class LyraController : MonoBehaviour
             Debug.Log("JUMP!");
         }
 
+        // Reset the mobile input after checking it
         mobileJumpPressed = false;
     }
 
