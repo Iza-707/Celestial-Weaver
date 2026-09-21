@@ -16,6 +16,7 @@ public class LyraController : MonoBehaviour
     [Header("Respawn")]
     public Transform respawnPoint;
     public float fallLimit = -10f;
+    public GameObject deathEffect;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -124,6 +125,7 @@ public class LyraController : MonoBehaviour
     void Respawn()
     {
         rb.linearVelocity = Vector2.zero;
+        Instantiate(deathEffect, transform.position, transform.rotation);
 
         if (GameManager.Instance != null &&
             GameManager.Instance.HasCheckpoint())

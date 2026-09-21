@@ -1,0 +1,1445 @@
+fileFormatVersion: 2
+guid: 085ceee9f03f20e43a4c020f8b163767
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1388970654892690943
+    second: transition-squares-Sheet_0
+  - first:
+      213: -4014860669685232301
+    second: transition-squares-Sheet_1
+  - first:
+      213: -1344912330556333689
+    second: transition-squares-Sheet_2
+  - first:
+      213: -5015506945974336449
+    second: transition-squares-Sheet_3
+  - first:
+      213: -401046000167039693
+    second: transition-squares-Sheet_4
+  - first:
+      213: -146351571023214559
+    second: transition-squares-Sheet_5
+  - first:
+      213: -5163412686216763614
+    second: transition-squares-Sheet_6
+  - first:
+      213: -6349513826716390238
+    second: transition-squares-Sheet_7
+  - first:
+      213: -4363282149457530396
+    second: transition-squares-Sheet_8
+  - first:
+      213: -2068856358041445037
+    second: transition-squares-Sheet_9
+  - first:
+      213: 562191665930121584
+    second: transition-squares-Sheet_10
+  - first:
+      213: 3088177288329855062
+    second: transition-squares-Sheet_11
+  - first:
+      213: 1869991394313082185
+    second: transition-squares-Sheet_12
+  - first:
+      213: 7640635160781454739
+    second: transition-squares-Sheet_13
+  - first:
+      213: -6394595823589052243
+    second: transition-squares-Sheet_14
+  - first:
+      213: -8356493925104316039
+    second: transition-squares-Sheet_15
+  - first:
+      213: 5796049531571073406
+    second: transition-squares-Sheet_16
+  - first:
+      213: 6391839737332678413
+    second: transition-squares-Sheet_17
+  - first:
+      213: -509039411876590109
+    second: transition-squares-Sheet_18
+  - first:
+      213: -4662637819575343900
+    second: transition-squares-Sheet_19
+  - first:
+      213: 7167255125958228721
+    second: transition-squares-Sheet_20
+  - first:
+      213: -8491649149689617997
+    second: transition-squares-Sheet_21
+  - first:
+      213: 2554991990424305872
+    second: transition-squares-Sheet_22
+  - first:
+      213: 2850808356679641089
+    second: transition-squares-Sheet_23
+  - first:
+      213: -939780498739722739
+    second: transition-squares-Sheet_24
+  - first:
+      213: -7175677905011653601
+    second: transition-squares-Sheet_25
+  - first:
+      213: -3640233373844313091
+    second: transition-squares-Sheet_26
+  - first:
+      213: 3355662209897001951
+    second: transition-squares-Sheet_27
+  - first:
+      213: -2230761276669241610
+    second: transition-squares-Sheet_28
+  - first:
+      213: -6253851349733690466
+    second: transition-squares-Sheet_29
+  - first:
+      213: -8858570675495333061
+    second: transition-squares-Sheet_30
+  - first:
+      213: -1717354857644711513
+    second: transition-squares-Sheet_31
+  - first:
+      213: -2551032696008691153
+    second: transition-squares-Sheet_32
+  - first:
+      213: 5595382727332041908
+    second: transition-squares-Sheet_33
+  - first:
+      213: 2728863027053262788
+    second: transition-squares-Sheet_34
+  - first:
+      213: -1223804389304134450
+    second: transition-squares-Sheet_35
+  - first:
+      213: 9185531336075826335
+    second: transition-squares-Sheet_36
+  - first:
+      213: 7696478188565749193
+    second: transition-squares-Sheet_37
+  - first:
+      213: -5996568299312160661
+    second: transition-squares-Sheet_38
+  - first:
+      213: -4744082662875664970
+    second: transition-squares-Sheet_39
+  - first:
+      213: -6847537527782692335
+    second: transition-squares-Sheet_40
+  - first:
+      213: -2642327661322729045
+    second: transition-squares-Sheet_41
+  - first:
+      213: 5080327709857038594
+    second: transition-squares-Sheet_42
+  - first:
+      213: 3080678117421593237
+    second: transition-squares-Sheet_43
+  - first:
+      213: 1265378787573226408
+    second: transition-squares-Sheet_44
+  - first:
+      213: -7241455576251772501
+    second: transition-squares-Sheet_45
+  - first:
+      213: -7116172391003211051
+    second: transition-squares-Sheet_46
+  - first:
+      213: -8806216978371526093
+    second: transition-squares-Sheet_47
+  - first:
+      213: 7385448442969297509
+    second: transition-squares-Sheet_48
+  - first:
+      213: 1104365094153317737
+    second: transition-squares-Sheet_49
+  - first:
+      213: -8018321966684132728
+    second: transition-squares-Sheet_50
+  - first:
+      213: 5353647648498128122
+    second: transition-squares-Sheet_51
+  - first:
+      213: 510043126193759678
+    second: transition-squares-Sheet_52
+  - first:
+      213: -2786742122622162201
+    second: transition-squares-Sheet_53
+  - first:
+      213: 1046516932186333910
+    second: transition-squares-Sheet_54
+  - first:
+      213: 6961906859553730052
+    second: transition-squares-Sheet_55
+  - first:
+      213: -7420434262057905788
+    second: transition-squares-Sheet_56
+  - first:
+      213: -573833839644880501
+    second: transition-squares-Sheet_57
+  - first:
+      213: 1039304822856879352
+    second: transition-squares-Sheet_58
+  - first:
+      213: -3983567104894884129
+    second: transition-squares-Sheet_59
+  - first:
+      213: -259905818636985281
+    second: transition-squares-Sheet_60
+  - first:
+      213: -8501120705025093658
+    second: transition-squares-Sheet_61
+  - first:
+      213: -1659218251220187582
+    second: transition-squares-Sheet_62
+  - first:
+      213: 1155649857163748687
+    second: transition-squares-Sheet_63
+  - first:
+      213: 780189999399822163
+    second: transition-squares-Sheet_64
+  - first:
+      213: -8386348805423912364
+    second: transition-squares-Sheet_65
+  - first:
+      213: -6012701913059950791
+    second: transition-squares-Sheet_66
+  - first:
+      213: 2208382747135755354
+    second: transition-squares-Sheet_67
+  - first:
+      213: -8154425870058803599
+    second: transition-squares-Sheet_68
+  - first:
+      213: -6225198376165093332
+    second: transition-squares-Sheet_69
+  - first:
+      213: -3415888465924296236
+    second: transition-squares-Sheet_70
+  - first:
+      213: 2419360414670633858
+    second: transition-squares-Sheet_71
+  - first:
+      213: -8124960836702607906
+    second: transition-squares-Sheet_72
+  - first:
+      213: 4573525671720530904
+    second: transition-squares-Sheet_73
+  - first:
+      213: 2250000608247720199
+    second: transition-squares-Sheet_74
+  - first:
+      213: 6316305700663236783
+    second: transition-squares-Sheet_75
+  - first:
+      213: 799951335968542348
+    second: transition-squares-Sheet_76
+  - first:
+      213: -4377820140477521687
+    second: transition-squares-Sheet_77
+  - first:
+      213: -790686524886346718
+    second: transition-squares-Sheet_78
+  - first:
+      213: 142330227750674705
+    second: transition-squares-Sheet_79
+  - first:
+      213: 8512742132938532177
+    second: transition-squares-Sheet_80
+  - first:
+      213: 13151723592667222
+    second: transition-squares-Sheet_81
+  - first:
+      213: -8221950866402102409
+    second: transition-squares-Sheet_82
+  - first:
+      213: 8092740181478979387
+    second: transition-squares-Sheet_83
+  - first:
+      213: -4664148737711787562
+    second: transition-squares-Sheet_84
+  - first:
+      213: 1508140614792263578
+    second: transition-squares-Sheet_85
+  - first:
+      213: 5064549707444303380
+    second: transition-squares-Sheet_86
+  - first:
+      213: -8787956873471808166
+    second: transition-squares-Sheet_87
+  - first:
+      213: -2571129077916354971
+    second: transition-squares-Sheet_88
+  - first:
+      213: -6076548941160364341
+    second: transition-squares-Sheet_89
+  - first:
+      213: -7738558670196965356
+    second: transition-squares-Sheet_90
+  - first:
+      213: -8808690054217451240
+    second: transition-squares-Sheet_91
+  - first:
+      213: 2697132835103617375
+    second: transition-squares-Sheet_92
+  - first:
+      213: 2207632264262559185
+    second: transition-squares-Sheet_93
+  - first:
+      213: 327314828403583530
+    second: transition-squares-Sheet_94
+  - first:
+      213: -5549408505664956425
+    second: transition-squares-Sheet_95
+  - first:
+      213: 4828468671809947420
+    second: transition-squares-Sheet_96
+  - first:
+      213: 8999419949601837907
+    second: transition-squares-Sheet_97
+  - first:
+      213: -629154845047516559
+    second: transition-squares-Sheet_98
+  - first:
+      213: -6966211601099679997
+    second: transition-squares-Sheet_99
+  - first:
+      213: 4791779101908991666
+    second: transition-squares-Sheet_100
+  - first:
+      213: 3127530480945257407
+    second: transition-squares-Sheet_101
+  - first:
+      213: 2667968714579648652
+    second: transition-squares-Sheet_102
+  - first:
+      213: 6875177378756888944
+    second: transition-squares-Sheet_103
+  - first:
+      213: -1313172522361862542
+    second: transition-squares-Sheet_104
+  - first:
+      213: 7455410972025358251
+    second: transition-squares-Sheet_105
+  - first:
+      213: -5761859188010516877
+    second: transition-squares-Sheet_106
+  - first:
+      213: 2340033886153946776
+    second: transition-squares-Sheet_107
+  - first:
+      213: 7397244513807434587
+    second: transition-squares-Sheet_108
+  - first:
+      213: 6549542468742669959
+    second: transition-squares-Sheet_109
+  - first:
+      213: 4461544910478778508
+    second: transition-squares-Sheet_110
+  - first:
+      213: -5349699808139917063
+    second: transition-squares-Sheet_111
+  - first:
+      213: 3102474016450399465
+    second: transition-squares-Sheet_112
+  - first:
+      213: 33093355350906570
+    second: transition-squares-Sheet_113
+  - first:
+      213: 7956044320104701930
+    second: transition-squares-Sheet_114
+  - first:
+      213: 5478124947131206065
+    second: transition-squares-Sheet_115
+  - first:
+      213: -6167339401908670468
+    second: transition-squares-Sheet_116
+  - first:
+      213: -4056836402473563100
+    second: transition-squares-Sheet_117
+  - first:
+      213: -3929618934625413152
+    second: transition-squares-Sheet_118
+  - first:
+      213: 1930856249231000026
+    second: transition-squares-Sheet_119
+  - first:
+      213: -1273899630157721151
+    second: transition-squares-Sheet_120
+  - first:
+      213: -8956729413300672594
+    second: transition-squares-Sheet_121
+  - first:
+      213: -1214342577241554023
+    second: transition-squares-Sheet_122
+  - first:
+      213: 5208498205113573266
+    second: transition-squares-Sheet_123
+  - first:
+      213: -1455651515954296845
+    second: transition-squares-Sheet_124
+  - first:
+      213: 7959856535463436572
+    second: transition-squares-Sheet_125
+  - first:
+      213: -2507780899170054044
+    second: transition-squares-Sheet_126
+  - first:
+      213: 8377828012207165188
+    second: transition-squares-Sheet_127
+  - first:
+      213: 3980822036785747782
+    second: transition-squares-Sheet_128
+  - first:
+      213: -5437333320377486061
+    second: transition-squares-Sheet_129
+  - first:
+      213: -7310017490839851772
+    second: transition-squares-Sheet_130
+  - first:
+      213: 977629989838603810
+    second: transition-squares-Sheet_131
+  - first:
+      213: 7423364174674590093
+    second: transition-squares-Sheet_132
+  - first:
+      213: 7499517645198501202
+    second: transition-squares-Sheet_133
+  - first:
+      213: -5310572414473358388
+    second: transition-squares-Sheet_134
+  - first:
+      213: -367920078605980325
+    second: transition-squares-Sheet_135
+  - first:
+      213: 400147778078943793
+    second: transition-squares-Sheet_136
+  - first:
+      213: -3201807693622397169
+    second: transition-squares-Sheet_137
+  - first:
+      213: 2638244304460653952
+    second: transition-squares-Sheet_138
+  - first:
+      213: 5241208654501032444
+    second: transition-squares-Sheet_139
+  - first:
+      213: 3296286646220895786
+    second: transition-squares-Sheet_140
+  - first:
+      213: 285284627157887582
+    second: transition-squares-Sheet_141
+  - first:
+      213: 7865273860148443613
+    second: transition-squares-Sheet_142
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: transition-squares-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102fda76c8269bce0800000000000000
+      internalID: -1388970654892690943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d89b81e795848c0800000000000000
+      internalID: -4014860669685232301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781a52b6c59e55de0800000000000000
+      internalID: -1344912330556333689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3402b48107556ab0800000000000000
+      internalID: -5015506945974336449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33dc375a9c23f6af0800000000000000
+      internalID: -401046000167039693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12847d4850e08fdf0800000000000000
+      internalID: -146351571023214559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227ed41d48fd758b0800000000000000
+      internalID: -5163412686216763614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac6326d0def1e7a0800000000000000
+      internalID: -6349513826716390238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1f7c2b0028273c0800000000000000
+      internalID: -4363282149457530396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d91a78a12f943e0800000000000000
+      internalID: -2068856358041445037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071337f675e4dc700800000000000000
+      internalID: 562191665930121584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6508452c1e86bda20800000000000000
+      internalID: 3088177288329855062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9459117f34b83f910800000000000000
+      internalID: 1869991394313082185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39dfcb8623df80a60800000000000000
+      internalID: 7640635160781454739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da037cc7af4d147a0800000000000000
+      internalID: -6394595823589052243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971927abc05c70c80800000000000000
+      internalID: -8356493925104316039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71fcd51754bf6050800000000000000
+      internalID: 5796049531571073406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0fb0fc206064b850800000000000000
+      internalID: 6391839737332678413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed0c661a578fe8f0800000000000000
+      internalID: -509039411876590109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4e8e75b9bfa4fb0800000000000000
+      internalID: -4662637819575343900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa76553094377360800000000000000
+      internalID: 7167255125958228721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1a08bc61a972a80800000000000000
+      internalID: -8491649149689617997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d08539ada7257320800000000000000
+      internalID: 2554991990424305872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108ea9e981b109720800000000000000
+      internalID: 2850808356679641089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0687c59d9a35f2f0800000000000000
+      internalID: -939780498739722739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f144929b6feda6c90800000000000000
+      internalID: -7175677905011653601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbec74880b4b7dc0800000000000000
+      internalID: -3640233373844313091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3fc173005b19e20800000000000000
+      internalID: 3355662209897001951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6de6d107eba01e0800000000000000
+      internalID: -2230761276669241610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93b60de45bd539a0800000000000000
+      internalID: -6253851349733690466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b339865c7e8001580800000000000000
+      internalID: -8858570675495333061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1abcc1bdaba28e0800000000000000
+      internalID: -1717354857644711513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22bef76749e89cd0800000000000000
+      internalID: -2551032696008691153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b49bf4e1fac6ad40800000000000000
+      internalID: 5595382727332041908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7f438077eded520800000000000000
+      internalID: 2728863027053262788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec496f4546c240fe0800000000000000
+      internalID: -1223804389304134450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94d4084510997f70800000000000000
+      internalID: 9185531336075826335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cdd00382226fca60800000000000000
+      internalID: 7696478188565749193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transition-squares-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60612827e8e7cca0800000000000000
+      internalID: -5996568299312160661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2a6c1dc0bb4babe4f99340cb547c37f5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":288.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      transition-squares-Sheet_0: -1388970654892690943
+      transition-squares-Sheet_1: -4014860669685232301
+      transition-squares-Sheet_10: 562191665930121584
+      transition-squares-Sheet_11: 3088177288329855062
+      transition-squares-Sheet_12: 1869991394313082185
+      transition-squares-Sheet_13: 7640635160781454739
+      transition-squares-Sheet_14: -6394595823589052243
+      transition-squares-Sheet_15: -8356493925104316039
+      transition-squares-Sheet_16: 5796049531571073406
+      transition-squares-Sheet_17: 6391839737332678413
+      transition-squares-Sheet_18: -509039411876590109
+      transition-squares-Sheet_19: -4662637819575343900
+      transition-squares-Sheet_2: -1344912330556333689
+      transition-squares-Sheet_20: 7167255125958228721
+      transition-squares-Sheet_21: -8491649149689617997
+      transition-squares-Sheet_22: 2554991990424305872
+      transition-squares-Sheet_23: 2850808356679641089
+      transition-squares-Sheet_24: -939780498739722739
+      transition-squares-Sheet_25: -7175677905011653601
+      transition-squares-Sheet_26: -3640233373844313091
+      transition-squares-Sheet_27: 3355662209897001951
+      transition-squares-Sheet_28: -2230761276669241610
+      transition-squares-Sheet_29: -6253851349733690466
+      transition-squares-Sheet_3: -5015506945974336449
+      transition-squares-Sheet_30: -8858570675495333061
+      transition-squares-Sheet_31: -1717354857644711513
+      transition-squares-Sheet_32: -2551032696008691153
+      transition-squares-Sheet_33: 5595382727332041908
+      transition-squares-Sheet_34: 2728863027053262788
+      transition-squares-Sheet_35: -1223804389304134450
+      transition-squares-Sheet_36: 9185531336075826335
+      transition-squares-Sheet_37: 7696478188565749193
+      transition-squares-Sheet_38: -5996568299312160661
+      transition-squares-Sheet_4: -401046000167039693
+      transition-squares-Sheet_5: -146351571023214559
+      transition-squares-Sheet_6: -5163412686216763614
+      transition-squares-Sheet_7: -6349513826716390238
+      transition-squares-Sheet_8: -4363282149457530396
+      transition-squares-Sheet_9: -2068856358041445037
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
