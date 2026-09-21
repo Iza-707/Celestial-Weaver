@@ -23,6 +23,8 @@ public class LyraController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    private bool mobileJumpPressed = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -47,29 +49,48 @@ public class LyraController : MonoBehaviour
     {
         float horizontal = 0f;
 
-        if (Keyboard.current.aKey.isPressed)
-            horizontal = -1f;
+        // Mobile joystick input
+        if (MobileInputProvider.Instance != null)
+        {
+            horizontal = MobileInputProvider.Instance.MoveInput.x;
+        }
+        else
+        {
+            // Desktop keyboard input
+            if (Keyboard.current.aKey.isPressed)
+                horizontal = -1f;
 
-        if (Keyboard.current.dKey.isPressed)
-            horizontal = 1f;
+            if (Keyboard.current.dKey.isPressed)
+                horizontal = 1f;
+        }
 
         rb.linearVelocity = new Vector2(
             horizontal * moveSpeed,
             rb.linearVelocity.y
         );
 
-        if (horizontal < 0)
+        if (horizontal < -0.1f)
             spriteRenderer.flipX = true;
 
-        if (horizontal > 0)
+        if (horizontal > 0.1f)
             spriteRenderer.flipX = false;
 
-        animator.SetBool("IsRunning", horizontal != 0);
+        animator.SetBool(
+            "IsRunning",
+            Mathf.Abs(horizontal) > 0.1f
+        );
     }
 
-    void Jump()
+  void Jump()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
+        bool keyboardJump =
+            Keyboard.current != null &&
+            Keyboard.current.spaceKey.wasPressedThisFrame;
+
+        bool jumpPressed =
+            keyboardJump || mobileJumpPressed;
+
+        if (jumpPressed && isGrounded)
         {
             rb.linearVelocity = new Vector2(
                 rb.linearVelocity.x,
@@ -78,7 +99,16 @@ public class LyraController : MonoBehaviour
 
             animator.SetBool("IsJumping", true);
             animator.SetBool("IsFalling", false);
+
+            Debug.Log("JUMP!");
         }
+
+        mobileJumpPressed = false;
+    }
+
+    public void MobileJump()
+    {
+        mobileJumpPressed = true;
     }
 
     void UpdateAnimationStates()
