@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 
 public class LyraController : MonoBehaviour
@@ -16,6 +17,8 @@ public class LyraController : MonoBehaviour
     [Header("Respawn")]
     public Transform respawnPoint;
     public float fallLimit = -10f;
+    private bool isDead = false;
+    private Coroutine blinkCoroutine;
     public GameObject deathEffect;
 
     private Rigidbody2D rb;
@@ -36,6 +39,9 @@ public class LyraController : MonoBehaviour
     void Update()
     {
         if (Time.timeScale == 0f)
+        return;
+
+        if (isDead)
         return;
         
         CheckGround();
@@ -150,15 +156,69 @@ public class LyraController : MonoBehaviour
     void CheckFall()
     {
         if (transform.position.y < fallLimit)
-        {
-            Respawn();
-        }
+            Die();
     }
 
-    void Respawn()
+    public void Die()
     {
+        if (isDead)
+            return;
+
+        isDead = true;
+
         rb.linearVelocity = Vector2.zero;
-        Instantiate(deathEffect, transform.position, transform.rotation);
+
+        // Fade Lyra out
+        StartCoroutine(FadeOut());
+
+        // Play death explosion
+        Instantiate(
+            deathEffect,
+            transform.position,
+            transform.rotation
+        );
+
+        StartCoroutine(RespawnAfterDeath());
+    }
+
+    private IEnumerator FadeOut()
+    {
+        float duration = 0.15f;
+        float elapsed = 0f;
+
+        Color originalColor = spriteRenderer.color;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+
+            float alpha = Mathf.Lerp(
+                1f,
+                0f,
+                elapsed / duration
+            );
+
+            spriteRenderer.color = new Color(
+                originalColor.r,
+                originalColor.g,
+                originalColor.b,
+                alpha
+            );
+
+            yield return null;
+        }
+
+        spriteRenderer.color = new Color(
+            originalColor.r,
+            originalColor.g,
+            originalColor.b,
+            0f
+        );
+    }
+
+    private IEnumerator RespawnAfterDeath()
+    {
+        yield return new WaitForSeconds(0.7f);
 
         if (GameManager.Instance != null &&
             GameManager.Instance.HasCheckpoint())
@@ -170,5 +230,47 @@ public class LyraController : MonoBehaviour
         {
             transform.position = respawnPoint.position;
         }
+
+        rb.linearVelocity = Vector2.zero;
+
+        yield return StartCoroutine(BlinkIn());
+
+        isDead = false;
+    }
+
+    private IEnumerator BlinkIn()
+    {
+        Color originalColor = spriteRenderer.color;
+
+        int blinks = 3;
+        float blinkTime = 0.08f;
+
+        for (int i = 0; i < blinks; i++)
+        {
+            spriteRenderer.color = new Color(
+                originalColor.r,
+                originalColor.g,
+                originalColor.b,
+                0f
+            );
+
+            yield return new WaitForSeconds(blinkTime);
+
+            spriteRenderer.color = new Color(
+                originalColor.r,
+                originalColor.g,
+                originalColor.b,
+                1f
+            );
+
+            yield return new WaitForSeconds(blinkTime);
+        }
+
+        spriteRenderer.color = new Color(
+            originalColor.r,
+            originalColor.g,
+            originalColor.b,
+            1f
+        );
     }
 }
