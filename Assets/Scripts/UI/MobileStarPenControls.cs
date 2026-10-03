@@ -58,8 +58,16 @@ public class MobileStarPenControls : MonoBehaviour
             colors.normalColor = EraseMode
                 ? Color.white
                 : new Color(1f, 1f, 1f, 0.5f);
-
-            eraseButton.colors = colors;
         }
+    }
+
+    public bool IsDrawMode()
+    {
+        return DrawMode;
+    }
+
+    public bool IsEraseMode()
+    {
+        return EraseMode;
     }
 }

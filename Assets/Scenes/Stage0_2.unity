@@ -474,6 +474,17 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0.5, z: -10}
+--- !u!114 &284345119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8575274474348127130, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+  m_PrefabInstance: {fileID: 6839384974728832079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &330519264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,6 +3417,25 @@ Sprite:
   m_Bones: []
   m_ScriptableObjects: []
   m_SpriteID: 
+--- !u!1 &993472010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8105327966809679816, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+  m_PrefabInstance: {fileID: 6839384974728832079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &993472018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993472010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d0926424d55134f9ff8625c6cb6f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobileStarPenControls
+  drawButton: {fileID: 284345119}
+  eraseButton: {fileID: 1709607392}
 --- !u!1 &1039123833
 GameObject:
   m_ObjectHideFlags: 0
@@ -11989,6 +12019,17 @@ Transform:
   - {fileID: 330519265}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1709607392 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7045807796956550376, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+  m_PrefabInstance: {fileID: 6839384974728832079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!114 &1773282294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12508,7 +12549,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8105327966809679816, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 993472018}
   m_SourcePrefab: {fileID: 100100000, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
