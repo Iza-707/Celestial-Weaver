@@ -2,21 +2,33 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class DoorTransition : MonoBehaviour
+public class DoorTransition : MonoBehaviour, IInteractable
 {
     [SerializeField] private string nextSceneName;
 
+    public string InteractionPrompt => "[E] Enter";
+
     private bool playerInRange;
 
-    void Update()
+    private void Update()
     {
-        if (playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
+        if (playerInRange &&
+            Keyboard.current != null &&
+            Keyboard.current.eKey.wasPressedThisFrame)
         {
-            if(SceneScript.Instance != null) {
+            Interact();
+        }
+    }
+
+    public void Interact()
+    {
+        if (SceneScript.Instance != null)
+        {
             SceneScript.Instance.NextScene(nextSceneName);
-            } else {
+        }
+        else
+        {
             SceneManager.LoadScene(nextSceneName);
-            }
         }
     }
 

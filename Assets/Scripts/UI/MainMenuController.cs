@@ -3,22 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    [Header("New Game")]
+    [SerializeField] private string newGameScene = "Stage0_1";
+
+    [Header("Continue")]
+    [SerializeField] private string defaultContinueScene = "Stage0_1";
+
     public void NewGame()
     {
-        if(SceneScript.Instance != null) {
-            SceneScript.Instance.NextScene("Stage0_1");
-        } else {
-            SceneManager.LoadScene("Stage0_1");
+        PlayerPrefs.DeleteKey("LastGameplayScene");
+        PlayerPrefs.Save();
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.starPenUnlocked = false;
         }
+
+        //change this to cinematic scene later if we have one
+        SceneManager.LoadScene(newGameScene);
     }
 
     public void ContinueGame()
     {
-        if(SceneScript.Instance != null) {
-            SceneScript.Instance.NextScene("Stage0_1");
-        } else {
-        SceneManager.LoadScene("Stage0_1");
-        }
+        string lastScene =
+            PlayerPrefs.GetString(
+                "LastGameplayScene",
+                defaultContinueScene
+            );
+
+        SceneManager.LoadScene(lastScene);
     }
 
     public void QuitGame()
