@@ -1,5 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
+
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
+using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 public class StarPenController : MonoBehaviour
 {
@@ -25,7 +29,11 @@ public class StarPenController : MonoBehaviour
     private float strokeEnergySpent = 0f;
     private Vector3 lastDrawPosition;
 
-    void Start()
+    // Mobile touch tracking
+    private int drawTouchId = -1;
+    private int eraseTouchId = -1;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         lyraController = GetComponent<LyraController>();
@@ -33,7 +41,17 @@ public class StarPenController : MonoBehaviour
         currentEnergy = maxEnergy;
     }
 
-    void Update()
+    private void OnEnable()
+    {
+        EnhancedTouchSupport.Enable();
+    }
+
+    private void OnDisable()
+    {
+        EnhancedTouchSupport.Disable();
+    }
+
+    private void Update()
     {
         if (GameManager.Instance == null)
             return;
@@ -43,34 +61,77 @@ public class StarPenController : MonoBehaviour
 
         ToggleStarPen();
 
-        if (isStarPenActive)
+        if (!isStarPenActive)
+        {
+            if (currentStroke != null)
+                EndStroke();
+
+            return;
+        }
+
+        // Mobile / simulated touch
+        if (TouchSimulationToggle.IsSimulationEnabled)
+        {
+            MobileDraw();
+            MobileErase();
+        }
+        // Desktop
+        else
         {
             Draw();
             Erase();
         }
     }
 
-    void ToggleStarPen()
+    private void ToggleStarPen()
     {
-        if (Keyboard.current.qKey.wasPressedThisFrame)
+        // Desktop keyboard toggle
+        if (Keyboard.current != null &&
+            Keyboard.current.qKey.wasPressedThisFrame)
         {
-
             isStarPenActive = !isStarPenActive;
 
             Debug.Log(
                 isStarPenActive
-                ? "Star-Pen Mode ON"
-                : "Star-Pen Mode OFF"
+                    ? "Star-Pen Mode ON"
+                    : "Star-Pen Mode OFF"
             );
+        }
+
+        // Mobile button toggle
+        if (MobileStarPenControls.Instance != null)
+        {
+            // Nothing here yet.
+            // Your StarPen button should call MobileToggleStarPen().
         }
     }
 
-    void Draw()
+    public void MobileToggleStarPen()
+    {
+        if (GameManager.Instance == null ||
+            !GameManager.Instance.starPenUnlocked)
+            return;
+
+        isStarPenActive = !isStarPenActive;
+
+        Debug.Log(
+            isStarPenActive
+                ? "Mobile Star-Pen ON"
+                : "Mobile Star-Pen OFF"
+        );
+    }
+
+    // =========================================================
+    // DESKTOP
+    // =========================================================
+
+    private void Draw()
     {
         if (Mouse.current == null)
-        return;
+            return;
 
-        bool isDrawing = Mouse.current.leftButton.isPressed;
+        bool isDrawing =
+            Mouse.current.leftButton.isPressed;
 
         if (isDrawing)
         {
@@ -78,11 +139,17 @@ public class StarPenController : MonoBehaviour
                 return;
 
             if (currentStroke == null)
-            {
-                StartStroke();
-            }
+                StartStroke(
+                    Camera.main.ScreenToWorldPoint(
+                        Mouse.current.position.ReadValue()
+                    )
+                );
 
-            ContinueStroke();
+            ContinueStroke(
+                Camera.main.ScreenToWorldPoint(
+                    Mouse.current.position.ReadValue()
+                )
+            );
         }
         else if (currentStroke != null)
         {
@@ -90,92 +157,222 @@ public class StarPenController : MonoBehaviour
         }
     }
 
-    void StartStroke()
+    private void Erase()
     {
-        GameObject strokeObject = new GameObject("Light Construct");
-        
-        int groundLayer = LayerMask.NameToLayer("Ground");
-        
-        if (groundLayer != -1)
+        if (Mouse.current == null)
+            return;
+
+        if (!Mouse.current.rightButton.isPressed)
+            return;
+
+        Vector3 mousePosition =
+            Camera.main.ScreenToWorldPoint(
+                Mouse.current.position.ReadValue()
+            );
+
+        mousePosition.z = 0f;
+
+        EraseAtPosition(mousePosition);
+    }
+
+    // =========================================================
+    // MOBILE
+    // =========================================================
+
+    private void MobileDraw()
+    {
+        if (MobileStarPenControls.Instance == null)
+            return;
+
+        if (!MobileStarPenControls.Instance.DrawMode)
         {
-            strokeObject.layer = groundLayer;
+            if (currentStroke != null)
+                EndStroke();
+
+            drawTouchId = -1;
+            return;
         }
 
-        LightConstruct construct = strokeObject.AddComponent<LightConstruct>();
+        foreach (var touch in Touch.activeTouches)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                if (drawTouchId == -1)
+                {
+                    drawTouchId = touch.touchId;
+                }
+            }
 
-        currentStroke = strokeObject.AddComponent<LineRenderer>();
-        
-        EdgeCollider2D edgeCollider = strokeObject.AddComponent<EdgeCollider2D>();
+            if (touch.touchId != drawTouchId)
+                continue;
+
+            if (touch.phase == TouchPhase.Moved ||
+                touch.phase == TouchPhase.Stationary)
+            {
+                if (currentEnergy <= 0f)
+                    continue;
+
+                Vector3 worldPosition =
+                    Camera.main.ScreenToWorldPoint(
+                        touch.screenPosition
+                    );
+
+                worldPosition.z = 0f;
+
+                if (currentStroke == null)
+                    StartStroke(worldPosition);
+
+                ContinueStroke(worldPosition);
+            }
+
+            if (touch.phase == TouchPhase.Ended ||
+                touch.phase == TouchPhase.Canceled)
+            {
+                EndStroke();
+                drawTouchId = -1;
+            }
+        }
+    }
+
+    private void MobileErase()
+    {
+        if (MobileStarPenControls.Instance == null)
+            return;
+
+        if (!MobileStarPenControls.Instance.EraseMode)
+        {
+            eraseTouchId = -1;
+            return;
+        }
+
+        foreach (var touch in Touch.activeTouches)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                if (eraseTouchId == -1)
+                {
+                    eraseTouchId = touch.touchId;
+                }
+            }
+
+            if (touch.touchId != eraseTouchId)
+                continue;
+
+            if (touch.phase == TouchPhase.Moved ||
+                touch.phase == TouchPhase.Stationary)
+            {
+                Vector3 worldPosition =
+                    Camera.main.ScreenToWorldPoint(
+                        touch.screenPosition
+                    );
+
+                worldPosition.z = 0f;
+
+                EraseAtPosition(worldPosition);
+            }
+
+            if (touch.phase == TouchPhase.Ended ||
+                touch.phase == TouchPhase.Canceled)
+            {
+                eraseTouchId = -1;
+            }
+        }
+    }
+
+    // =========================================================
+    // SHARED DRAWING
+    // =========================================================
+
+    private void StartStroke(Vector3 screenWorldPosition)
+    {
+        GameObject strokeObject =
+            new GameObject("Light Construct");
+
+        int groundLayer =
+            LayerMask.NameToLayer("Ground");
+
+        if (groundLayer != -1)
+            strokeObject.layer = groundLayer;
+
+        LightConstruct construct =
+            strokeObject.AddComponent<LightConstruct>();
+
+        currentStroke =
+            strokeObject.AddComponent<LineRenderer>();
+
+        EdgeCollider2D edgeCollider =
+            strokeObject.AddComponent<EdgeCollider2D>();
 
         edgeCollider.edgeRadius = 0.15f;
         edgeCollider.isTrigger = false;
+
         currentCollider = edgeCollider;
+
         currentStroke.positionCount = 0;
         currentStroke.startWidth = 0.15f;
         currentStroke.endWidth = 0.15f;
-
         currentStroke.material = drawingMaterial;
-
         currentStroke.useWorldSpace = true;
-        
+
         currentStroke.sortingLayerName = "Effects";
         currentStroke.sortingOrder = 10;
 
         strokeEnergySpent = 0f;
 
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(
-            Mouse.current.position.ReadValue()
-        );
-
-        mousePosition.z = 0f;
-
-        Vector2 direction = mousePosition - transform.position;
+        Vector2 direction =
+            screenWorldPosition - transform.position;
 
         if (direction.magnitude > drawDistance)
         {
-            direction = direction.normalized * drawDistance;
+            direction =
+                direction.normalized * drawDistance;
         }
 
-        lastDrawPosition = transform.position + (Vector3)direction;
+        lastDrawPosition =
+            transform.position + (Vector3)direction;
 
         currentStroke.positionCount = 1;
-        currentStroke.SetPosition(0, lastDrawPosition);
+
+        currentStroke.SetPosition(
+            0,
+            lastDrawPosition
+        );
     }
 
-    void ContinueStroke()
+    private void ContinueStroke(Vector3 screenWorldPosition)
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(
-            Mouse.current.position.ReadValue()
-        );
+        if (currentStroke == null)
+            return;
 
-        mousePosition.z = 0f;
-
-        Vector2 direction = mousePosition - transform.position;
+        Vector2 direction =
+            screenWorldPosition - transform.position;
 
         if (direction.magnitude > drawDistance)
         {
-            direction = direction.normalized * drawDistance;
+            direction =
+                direction.normalized * drawDistance;
         }
 
-        Vector3 drawPosition = transform.position + (Vector3)direction;
+        Vector3 drawPosition =
+            transform.position + (Vector3)direction;
 
-        float distanceMoved = Vector3.Distance(
-            lastDrawPosition,
-            drawPosition
-        );
+        float distanceMoved =
+            Vector3.Distance(
+                lastDrawPosition,
+                drawPosition
+            );
 
         if (distanceMoved < 0.05f)
             return;
 
-        float energyCost = distanceMoved * energyPerUnit;
+        float energyCost =
+            distanceMoved * energyPerUnit;
 
         if (currentEnergy <= 0f)
             return;
 
         if (energyCost > currentEnergy)
-        {
             energyCost = currentEnergy;
-        }
 
         currentEnergy -= energyCost;
         strokeEnergySpent += energyCost;
@@ -192,16 +389,19 @@ public class StarPenController : MonoBehaviour
         lastDrawPosition = drawPosition;
     }
 
-    void UpdateCollider()
+    private void UpdateCollider()
     {
-        if (currentStroke == null || currentCollider == null)
+        if (currentStroke == null ||
+            currentCollider == null)
             return;
 
-        Vector3[] positions = new Vector3[currentStroke.positionCount];
+        Vector3[] positions =
+            new Vector3[currentStroke.positionCount];
 
         currentStroke.GetPositions(positions);
 
-        Vector2[] colliderPoints = new Vector2[positions.Length];
+        Vector2[] colliderPoints =
+            new Vector2[positions.Length];
 
         for (int i = 0; i < positions.Length; i++)
         {
@@ -211,7 +411,7 @@ public class StarPenController : MonoBehaviour
         currentCollider.points = colliderPoints;
     }
 
-    void EndStroke()
+    private void EndStroke()
     {
         if (currentStroke != null)
         {
@@ -219,9 +419,7 @@ public class StarPenController : MonoBehaviour
                 currentStroke.GetComponent<LightConstruct>();
 
             if (construct != null)
-            {
                 construct.energySpent = strokeEnergySpent;
-            }
         }
 
         currentStroke = null;
@@ -229,26 +427,15 @@ public class StarPenController : MonoBehaviour
         strokeEnergySpent = 0f;
     }
 
-    void Erase()
+    private void EraseAtPosition(Vector3 worldPosition)
     {
-        if (Mouse.current == null)
-            return;
-
-        if (!Mouse.current.rightButton.isPressed)
-            return;
-
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(
-            Mouse.current.position.ReadValue()
-        );
-
-        mousePosition.z = 0f;
-
         float eraseRadius = 0.25f;
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            mousePosition,
-            eraseRadius
-        );
+        Collider2D[] hits =
+            Physics2D.OverlapCircleAll(
+                worldPosition,
+                eraseRadius
+            );
 
         foreach (Collider2D hit in hits)
         {
@@ -263,10 +450,11 @@ public class StarPenController : MonoBehaviour
 
             currentEnergy += construct.energySpent;
 
-            currentEnergy = Mathf.Min(
-                currentEnergy,
-                maxEnergy
-            );
+            currentEnergy =
+                Mathf.Min(
+                    currentEnergy,
+                    maxEnergy
+                );
 
             Destroy(hit.gameObject);
         }
