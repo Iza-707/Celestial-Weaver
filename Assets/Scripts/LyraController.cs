@@ -27,6 +27,7 @@ public class LyraController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private bool movementLocked = false;
 
     void Start()
     {
@@ -43,6 +44,12 @@ public class LyraController : MonoBehaviour
 
         if (isDead)
         return;
+
+        if (movementLocked)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         
         CheckGround();
         Move();
@@ -272,5 +279,14 @@ public class LyraController : MonoBehaviour
             originalColor.b,
             1f
         );
+    }
+    public void SetMovementLocked(bool locked)
+    {
+        movementLocked = locked;
+
+        if (locked)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
     }
 }

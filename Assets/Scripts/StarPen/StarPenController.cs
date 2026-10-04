@@ -19,6 +19,7 @@ public class StarPenController : MonoBehaviour
     public float CurrentEnergy => currentEnergy;
 
     private bool isStarPenActive = false;
+    private bool constellationTracingMode = false;
 
     private Rigidbody2D rb;
     private LyraController lyraController;
@@ -283,6 +284,17 @@ public class StarPenController : MonoBehaviour
     // SHARED DRAWING
     // =========================================================
 
+
+    public void SetConstellationTracingMode(bool enabled)
+    {
+        constellationTracingMode = enabled;
+
+        Debug.Log(
+            enabled
+                ? "Star-Pen: Constellation Tracing Mode"
+                : "Star-Pen: Normal Mode"
+        );
+    }
     private void StartStroke(Vector3 screenWorldPosition)
     {
         GameObject strokeObject =
@@ -309,27 +321,43 @@ public class StarPenController : MonoBehaviour
         currentCollider = edgeCollider;
 
         currentStroke.positionCount = 0;
-        currentStroke.startWidth = 0.15f;
-        currentStroke.endWidth = 0.15f;
+        if (constellationTracingMode)
+        {
+            currentStroke.startWidth = 0.25f;
+            currentStroke.endWidth = 0.25f;
+        }
+        else
+        {
+            currentStroke.startWidth = 0.15f;
+            currentStroke.endWidth = 0.15f;
+        }
+
         currentStroke.material = drawingMaterial;
         currentStroke.useWorldSpace = true;
 
         currentStroke.sortingLayerName = "Effects";
-        currentStroke.sortingOrder = 10;
+        currentStroke.sortingOrder = 100;
 
         strokeEnergySpent = 0f;
 
-        Vector2 direction =
-            screenWorldPosition - transform.position;
-
-        if (direction.magnitude > drawDistance)
+        if (constellationTracingMode)
         {
-            direction =
-                direction.normalized * drawDistance;
+            lastDrawPosition = screenWorldPosition;
         }
+        else
+        {
+            Vector2 direction =
+                screenWorldPosition - transform.position;
 
-        lastDrawPosition =
-            transform.position + (Vector3)direction;
+            if (direction.magnitude > drawDistance)
+            {
+                direction =
+                    direction.normalized * drawDistance;
+            }
+
+            lastDrawPosition =
+                transform.position + (Vector3)direction;
+        }
 
         currentStroke.positionCount = 1;
 
@@ -344,17 +372,26 @@ public class StarPenController : MonoBehaviour
         if (currentStroke == null)
             return;
 
-        Vector2 direction =
-            screenWorldPosition - transform.position;
+        Vector3 drawPosition;
 
-        if (direction.magnitude > drawDistance)
+        if (constellationTracingMode)
         {
-            direction =
-                direction.normalized * drawDistance;
+            drawPosition = screenWorldPosition;
         }
+        else
+        {
+            Vector2 direction =
+                screenWorldPosition - transform.position;
 
-        Vector3 drawPosition =
-            transform.position + (Vector3)direction;
+            if (direction.magnitude > drawDistance)
+            {
+                direction =
+                    direction.normalized * drawDistance;
+            }
+
+            drawPosition =
+                transform.position + (Vector3)direction;
+        }
 
         float distanceMoved =
             Vector3.Distance(

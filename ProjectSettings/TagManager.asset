@@ -53,6 +53,15 @@ TagManager:
   - name: BackgroundDetails
     uniqueID: 3590933989
     locked: 0
+  - name: StarAnchor
+    uniqueID: 3989997841
+    locked: 0
+  - name: FallenStar
+    uniqueID: 1994509691
+    locked: 0
+  - name: ConstellationAltar
+    uniqueID: 1004824013
+    locked: 0
   - name: Player
     uniqueID: 1595807361
     locked: 0
