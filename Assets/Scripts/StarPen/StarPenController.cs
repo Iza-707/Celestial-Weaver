@@ -18,8 +18,15 @@ public class StarPenController : MonoBehaviour
     private float currentEnergy;
     public float CurrentEnergy => currentEnergy;
 
+    [Header("Constellation Tracing Energy")]
+    public float constellationTraceMaxEnergy = 100f;
+
+    private float constellationTraceEnergy;
+    public float ConstellationTraceEnergy => constellationTraceEnergy;
+
     private bool isStarPenActive = false;
     private bool constellationTracingMode = false;
+    private AriesTraceController ariesTraceController;
 
     private Rigidbody2D rb;
     private LyraController lyraController;
@@ -34,12 +41,16 @@ public class StarPenController : MonoBehaviour
     private int drawTouchId = -1;
     private int eraseTouchId = -1;
 
+    
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         lyraController = GetComponent<LyraController>();
 
         currentEnergy = maxEnergy;
+        constellationTraceEnergy = constellationTraceMaxEnergy;
+        
     }
 
     private void OnEnable()
@@ -136,8 +147,7 @@ public class StarPenController : MonoBehaviour
 
         if (isDrawing)
         {
-            if (currentEnergy <= 0f)
-                return;
+            if (!constellationTracingMode && currentEnergy <= 0f)return;
 
             if (currentStroke == null)
                 StartStroke(
@@ -289,6 +299,18 @@ public class StarPenController : MonoBehaviour
     {
         constellationTracingMode = enabled;
 
+        if (enabled)
+        {
+            constellationTraceEnergy = constellationTraceMaxEnergy;
+
+            ariesTraceController =
+                FindAnyObjectByType<AriesTraceController>();
+        }
+        else
+        {
+            ariesTraceController = null;
+        }
+
         Debug.Log(
             enabled
                 ? "Star-Pen: Constellation Tracing Mode"
@@ -342,6 +364,20 @@ public class StarPenController : MonoBehaviour
 
         if (constellationTracingMode)
         {
+            screenWorldPosition.z = 0f;
+
+            if (ariesTraceController != null)
+            {
+                if (!ariesTraceController.TryGetSnappedPosition(
+                    screenWorldPosition,
+                    out Vector3 snappedPosition))
+                {
+                    return;
+                }
+
+                screenWorldPosition = snappedPosition;
+            }
+
             lastDrawPosition = screenWorldPosition;
         }
         else
@@ -376,7 +412,27 @@ public class StarPenController : MonoBehaviour
 
         if (constellationTracingMode)
         {
+            screenWorldPosition.z = 0f;
+
+        if (ariesTraceController != null)
+        {
+            if (!ariesTraceController.TryGetSnappedPosition(
+                screenWorldPosition,
+                out Vector3 snappedPosition))
+            {
+                return;
+            }
+
+            screenWorldPosition = snappedPosition;
+
+            ariesTraceController.CheckTracePosition(screenWorldPosition);
+        }
+
             drawPosition = screenWorldPosition;
+            if (ariesTraceController != null)
+            {
+                ariesTraceController.CheckTracePosition(drawPosition);
+            }
         }
         else
         {
@@ -402,16 +458,29 @@ public class StarPenController : MonoBehaviour
         if (distanceMoved < 0.05f)
             return;
 
-        float energyCost =
-            distanceMoved * energyPerUnit;
+        float energyCost = distanceMoved * energyPerUnit;
 
-        if (currentEnergy <= 0f)
+        if (constellationTracingMode)
+        {
+            if (constellationTraceEnergy <= 0f)
+                return;
+
+            if (energyCost > constellationTraceEnergy)
+                energyCost = constellationTraceEnergy;
+
+            constellationTraceEnergy -= energyCost;
+        }
+        else
+        {
+            if (!constellationTracingMode && currentEnergy <= 0f)
             return;
 
-        if (energyCost > currentEnergy)
-            energyCost = currentEnergy;
+            if (energyCost > currentEnergy)
+                energyCost = currentEnergy;
 
-        currentEnergy -= energyCost;
+            currentEnergy -= energyCost;
+        }
+
         strokeEnergySpent += energyCost;
 
         currentStroke.positionCount++;
