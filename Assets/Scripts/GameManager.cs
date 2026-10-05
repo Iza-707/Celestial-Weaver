@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
     private bool hasCheckpoint = false;
 
     [Header("Light Energy Progression")]
-    public float maxLightEnergy = 30f;
+    public float maxLightEnergy = StartingMaxLightEnergy;
     public float constellationEnergyIncrease = 10f;
+    
+    public const float StartingMaxLightEnergy = 30f;
 
     [Header("Constellation Progress")]
     public bool cancerRestored = false;

@@ -20,6 +20,10 @@ public class MainMenuController : MonoBehaviour
             GameManager.Instance.starPenUnlocked = false;
             GameManager.Instance.hasReachedMainHall = false;
 
+            //Reset Light Energy Progression
+            GameManager.Instance.maxLightEnergy = 30f;
+            GameManager.Instance.maxLightEnergy = GameManager.StartingMaxLightEnergy;
+
             // Reset constellation progression
             GameManager.Instance.cancerRestored = false;
             GameManager.Instance.taurusRestored = false;
