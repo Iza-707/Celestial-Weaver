@@ -118,6 +118,11 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
 
         Debug.Log("Constellation completed!");
 
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.IncreaseMaxLightEnergy();
+        }
+
         StartCoroutine(FinishConstellationSequence());
     }
 

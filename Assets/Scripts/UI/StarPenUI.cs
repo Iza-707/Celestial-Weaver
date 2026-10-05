@@ -42,7 +42,7 @@ public class StarPenUI : MonoBehaviour
             if (starPenController != null)
             {
                 lightEnergyGauge.maxValue =
-                    starPenController.maxEnergy;
+                    starPenController.MaxEnergyValue;
 
                 lightEnergyGauge.value =
                     starPenController.CurrentEnergy;

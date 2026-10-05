@@ -289,4 +289,12 @@ public class LyraController : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Hazard"))
+        {
+            Die();
+        }
+    }
 }

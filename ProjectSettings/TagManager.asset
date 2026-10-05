@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Interactable
   - Background
-  - 
+  - Hazard
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Midbackground
     uniqueID: 2040465729
+    locked: 0
+  - name: Hazard_Spikes
+    uniqueID: 2041491731
     locked: 0
   - name: Ground
     uniqueID: 3415715577

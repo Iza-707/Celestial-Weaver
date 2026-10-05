@@ -9,6 +9,17 @@ public class GameManager : MonoBehaviour
     private Vector3 currentRespawnPosition;
     private bool hasCheckpoint = false;
 
+    [Header("Light Energy Progression")]
+    public float maxLightEnergy = 30f;
+    public float constellationEnergyIncrease = 10f;
+
+    public void IncreaseMaxLightEnergy()
+    {
+        maxLightEnergy += constellationEnergyIncrease;
+
+        Debug.Log("Maximum Light Energy increased to: " + maxLightEnergy);
+    }
+
     private void Awake()
     {
         if (Instance != null && Instance != this)

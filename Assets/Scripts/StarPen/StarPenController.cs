@@ -12,11 +12,21 @@ public class StarPenController : MonoBehaviour
     public float drawDistance = 5f;
 
     [Header("Energy")]
-    public float maxEnergy = 30f;
+    private float MaxEnergy
+    {
+        get
+        {
+            if (GameManager.Instance != null)
+                return GameManager.Instance.maxLightEnergy;
+
+            return 30f;
+        }
+    }
     public float energyPerUnit = 20f;
 
     private float currentEnergy;
     public float CurrentEnergy => currentEnergy;
+    public float MaxEnergyValue => MaxEnergy;
 
     private bool isStarPenActive = false;
     private bool constellationTracingMode = false;
@@ -42,7 +52,7 @@ public class StarPenController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         lyraController = GetComponent<LyraController>();
 
-        currentEnergy = maxEnergy;
+        currentEnergy = MaxEnergy;
         
     }
 
@@ -545,7 +555,7 @@ public class StarPenController : MonoBehaviour
             currentEnergy =
                 Mathf.Min(
                     currentEnergy,
-                    maxEnergy
+                    MaxEnergy
                 );
 
             Destroy(hit.gameObject);
