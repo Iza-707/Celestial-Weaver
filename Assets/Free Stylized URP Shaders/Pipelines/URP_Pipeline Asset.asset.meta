@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1a88f82d0b461154194d7000545d1f70
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 353190
+  packageName: Free Stylized URP Shaders
+  packageVersion: 1.0
+  assetPath: Assets/Free Stylized URP Shaders/Pipelines/URP_Pipeline Asset.asset
+  uploadId: 927774

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 60eeea4f54f014e818c1811277cbe2f7
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 353190
+  packageName: Free Stylized URP Shaders
+  packageVersion: 1.0
+  assetPath: Assets/Free Stylized URP Shaders/Shaders/Shader_StylizedFX_Unlit_U6.shader
+  uploadId: 927774

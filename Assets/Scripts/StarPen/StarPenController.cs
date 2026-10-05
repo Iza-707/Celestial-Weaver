@@ -18,12 +18,6 @@ public class StarPenController : MonoBehaviour
     private float currentEnergy;
     public float CurrentEnergy => currentEnergy;
 
-    [Header("Constellation Tracing Energy")]
-    public float constellationTraceMaxEnergy = 100f;
-
-    private float constellationTraceEnergy;
-    public float ConstellationTraceEnergy => constellationTraceEnergy;
-
     private bool isStarPenActive = false;
     private bool constellationTracingMode = false;
     private AriesTraceController ariesTraceController;
@@ -49,7 +43,6 @@ public class StarPenController : MonoBehaviour
         lyraController = GetComponent<LyraController>();
 
         currentEnergy = maxEnergy;
-        constellationTraceEnergy = constellationTraceMaxEnergy;
         
     }
 
@@ -301,8 +294,6 @@ public class StarPenController : MonoBehaviour
 
         if (enabled)
         {
-            constellationTraceEnergy = constellationTraceMaxEnergy;
-
             ariesTraceController =
                 FindAnyObjectByType<AriesTraceController>();
         }
@@ -334,13 +325,20 @@ public class StarPenController : MonoBehaviour
         currentStroke =
             strokeObject.AddComponent<LineRenderer>();
 
-        EdgeCollider2D edgeCollider =
-            strokeObject.AddComponent<EdgeCollider2D>();
+        if (!constellationTracingMode)
+        {
+            EdgeCollider2D edgeCollider =
+                strokeObject.AddComponent<EdgeCollider2D>();
 
-        edgeCollider.edgeRadius = 0.15f;
-        edgeCollider.isTrigger = false;
+            edgeCollider.edgeRadius = 0.15f;
+            edgeCollider.isTrigger = false;
 
-        currentCollider = edgeCollider;
+            currentCollider = edgeCollider;
+        }
+        else
+        {
+            currentCollider = null;
+        }
 
         currentStroke.positionCount = 0;
         if (constellationTracingMode)
@@ -414,21 +412,20 @@ public class StarPenController : MonoBehaviour
         {
             screenWorldPosition.z = 0f;
 
-        if (ariesTraceController != null)
-        {
-            if (!ariesTraceController.TryGetSnappedPosition(
-                screenWorldPosition,
-                out Vector3 snappedPosition))
+            if (ariesTraceController != null)
             {
-                return;
+                if (!ariesTraceController.TryGetSnappedPosition(
+                    screenWorldPosition,
+                    out Vector3 snappedPosition))
+                {
+                    return;
+                }
+
+                screenWorldPosition = snappedPosition;
             }
 
-            screenWorldPosition = snappedPosition;
-
-            ariesTraceController.CheckTracePosition(screenWorldPosition);
-        }
-
             drawPosition = screenWorldPosition;
+
             if (ariesTraceController != null)
             {
                 ariesTraceController.CheckTracePosition(drawPosition);
@@ -460,28 +457,17 @@ public class StarPenController : MonoBehaviour
 
         float energyCost = distanceMoved * energyPerUnit;
 
-        if (constellationTracingMode)
+        if (!constellationTracingMode)
         {
-            if (constellationTraceEnergy <= 0f)
+            if (currentEnergy <= 0f)
                 return;
-
-            if (energyCost > constellationTraceEnergy)
-                energyCost = constellationTraceEnergy;
-
-            constellationTraceEnergy -= energyCost;
-        }
-        else
-        {
-            if (!constellationTracingMode && currentEnergy <= 0f)
-            return;
 
             if (energyCost > currentEnergy)
                 energyCost = currentEnergy;
 
             currentEnergy -= energyCost;
+            strokeEnergySpent += energyCost;
         }
-
-        strokeEnergySpent += energyCost;
 
         currentStroke.positionCount++;
 

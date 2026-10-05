@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7e0ef475cd33d4ad4bf01ee424e9aa1f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 353190
+  packageName: Free Stylized URP Shaders
+  packageVersion: 1.0
+  assetPath: Assets/Free Stylized URP Shaders/Material/Mat_HoloShield.mat
+  uploadId: 927774
