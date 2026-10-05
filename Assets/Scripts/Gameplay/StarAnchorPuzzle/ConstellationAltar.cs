@@ -144,7 +144,7 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
         if (GameManager.Instance != null)
         {
             GameManager.Instance.IncreaseMaxLightEnergy();
-            GameManager.Instance.CompleteConstellation(constellationID);
+            GameManager.Instance.RestoreConstellation(constellationID);
 
         }
 

@@ -15,8 +15,14 @@ public class CataloguePanelController : MonoBehaviour
     [SerializeField] private Button[] levelButtons;
     [SerializeField] private TMP_Text[] levelLabels;
 
-    [Header("Level Scenes")]
-    [SerializeField] private string[] levelScenes;
+    [Header("Zodiac Scenes")]
+    [SerializeField] private string[] zodiacScenes;
+
+    [Header("Navigation Scenes")]
+    [SerializeField] private string[] navigationScenes;
+
+    [Header("Legends & Myths Scenes")]
+    [SerializeField] private string[] legendsScenes;
 
     private string currentCatalogue;
 
@@ -53,7 +59,6 @@ public class CataloguePanelController : MonoBehaviour
         switch (catalogueName)
         {
             case "ZODIAC CATALOGUE":
-
                 levels = new string[]
                 {
                     "CANCER",
@@ -67,12 +72,9 @@ public class CataloguePanelController : MonoBehaviour
                     IsCompleted("CANCER"),
                     IsCompleted("TAURUS")
                 };
-
                 break;
 
-
             case "NAVIGATION CATALOGUE":
-
                 levels = new string[]
                 {
                     "URSA MINOR",
@@ -86,12 +88,9 @@ public class CataloguePanelController : MonoBehaviour
                     IsCompleted("URSA MINOR"),
                     IsCompleted("URSA MAJOR")
                 };
-
                 break;
 
-
             case "LEGENDS & MYTHS":
-
                 levels = new string[]
                 {
                     "CASSIOPEIA",
@@ -105,12 +104,9 @@ public class CataloguePanelController : MonoBehaviour
                     IsCompleted("CASSIOPEIA"),
                     IsCompleted("CEPHEUS")
                 };
-
                 break;
 
-
             default:
-
                 levels = new string[]
                 {
                     "LEVEL 1",
@@ -124,7 +120,6 @@ public class CataloguePanelController : MonoBehaviour
                     false,
                     false
                 };
-
                 break;
         }
 
@@ -190,17 +185,37 @@ public class CataloguePanelController : MonoBehaviour
 
     public void SelectLevel(int index)
     {
-        if (levelScenes == null ||
+        string[] selectedScenes = null;
+
+        switch (currentCatalogue)
+        {
+            case "ZODIAC CATALOGUE":
+                selectedScenes = zodiacScenes;
+                break;
+
+            case "NAVIGATION CATALOGUE":
+                selectedScenes = navigationScenes;
+                break;
+
+            case "LEGENDS & MYTHS":
+                selectedScenes = legendsScenes;
+                break;
+        }
+
+        if (selectedScenes == null ||
             index < 0 ||
-            index >= levelScenes.Length)
+            index >= selectedScenes.Length)
         {
             Debug.LogWarning(
-                "Invalid level index: " + index
+                "Invalid level index for " +
+                currentCatalogue +
+                ": " +
+                index
             );
             return;
         }
 
-        if (string.IsNullOrEmpty(levelScenes[index]))
+        if (string.IsNullOrEmpty(selectedScenes[index]))
         {
             Debug.LogWarning(
                 "No scene assigned for level index: " +
@@ -211,7 +226,7 @@ public class CataloguePanelController : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        SceneManager.LoadScene(levelScenes[index]);
+        SceneManager.LoadScene(selectedScenes[index]);
     }
 
     public void CloseCatalogue()

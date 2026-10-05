@@ -23,5 +23,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainHall.unity
     guid: 560eec103fb189b448c84a2da4064c21
+  - enabled: 1
+    path: Assets/Scenes/Stage1_X/Stage1_1.unity
+    guid: 143477045ebce294fad6b299ad848958
+  - enabled: 1
+    path: Assets/Scenes/Stage1_X/Stage1_2.unity
+    guid: 391f452a9903cd54cb094beba231a290
+  - enabled: 1
+    path: Assets/Scenes/Stage1_X/Stage1_3.unity
+    guid: 502b5b1099a23114598e4aba51932e68
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -10,7 +10,9 @@ public class DoorTransition : MonoBehaviour, IInteractable
     [SerializeField] private GameObject openDoorVisual;
     
     [Header("Exit Settings")]
-[SerializeField] private bool requireCompletion = false;
+    [SerializeField] private bool requireCompletion = false;
+    [Header("Level Progression")]
+    [SerializeField] private string completionID = "";
 
     private bool isUnlocked = false;
     private bool playerInRange = false;
@@ -62,6 +64,11 @@ public class DoorTransition : MonoBehaviour, IInteractable
         {
             Debug.Log("The dungeon door is locked.");
             return;
+        }
+
+        if (GameManager.Instance != null && !string.IsNullOrEmpty(completionID))
+        {
+            GameManager.Instance.CompleteLevel(completionID);
         }
 
         Debug.Log("Entering next area...");
