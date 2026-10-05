@@ -49,6 +49,15 @@ public class DoorTransition : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+            // Catalogue doors open the catalogue UI instead of changing scenes
+        if (gameObject.CompareTag("Zodiac_Catalogue") ||
+            gameObject.CompareTag("Navigation_Catalogue") ||
+            gameObject.CompareTag("Legends_Catalogue"))
+        {
+            OpenCataloguePanel();
+            return;
+        }
+
         if (!isUnlocked && requireCompletion)
         {
             Debug.Log("The dungeon door is locked.");
@@ -91,4 +100,29 @@ public class DoorTransition : MonoBehaviour, IInteractable
             playerInRange = false;
         }
     }
+
+    private void OpenCataloguePanel()
+{
+    if (CataloguePanelController.Instance == null)
+        return;
+
+    switch (gameObject.tag)
+    {
+        case "Zodiac_Catalogue":
+            CataloguePanelController.Instance.OpenCatalogue("ZODIAC CATALOGUE");
+            break;
+
+        case "Navigation_Catalogue":
+            CataloguePanelController.Instance.OpenCatalogue("NAVIGATION CATALOGUE");
+            break;
+
+        case "Legends_Catalogue":
+            CataloguePanelController.Instance.OpenCatalogue("LEGENDS & MYTHS");
+            break;
+
+        default:
+            Debug.LogWarning("Unknown catalogue door tag: " + gameObject.tag);
+            break;
+    }
+}
 }

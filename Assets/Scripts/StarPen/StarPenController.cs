@@ -30,8 +30,7 @@ public class StarPenController : MonoBehaviour
 
     private bool isStarPenActive = false;
     private bool constellationTracingMode = false;
-    private AriesTraceController ariesTraceController;
-
+    private ConstellationTraceController traceController;
     private Rigidbody2D rb;
     private LyraController lyraController;
 
@@ -304,12 +303,12 @@ public class StarPenController : MonoBehaviour
 
         if (enabled)
         {
-            ariesTraceController =
-                FindAnyObjectByType<AriesTraceController>();
+            traceController =
+                FindAnyObjectByType<ConstellationTraceController>();
         }
         else
         {
-            ariesTraceController = null;
+            traceController = null;
         }
 
         Debug.Log(
@@ -374,9 +373,9 @@ public class StarPenController : MonoBehaviour
         {
             screenWorldPosition.z = 0f;
 
-            if (ariesTraceController != null)
+            if (traceController != null)
             {
-                if (!ariesTraceController.TryGetSnappedPosition(
+                if (!traceController.TryGetSnappedPosition(
                     screenWorldPosition,
                     out Vector3 snappedPosition))
                 {
@@ -422,9 +421,9 @@ public class StarPenController : MonoBehaviour
         {
             screenWorldPosition.z = 0f;
 
-            if (ariesTraceController != null)
+            if (traceController != null)
             {
-                if (!ariesTraceController.TryGetSnappedPosition(
+                if (!traceController.TryGetSnappedPosition(
                     screenWorldPosition,
                     out Vector3 snappedPosition))
                 {
@@ -436,9 +435,9 @@ public class StarPenController : MonoBehaviour
 
             drawPosition = screenWorldPosition;
 
-            if (ariesTraceController != null)
+            if (traceController != null)
             {
-                ariesTraceController.CheckTracePosition(drawPosition);
+                traceController.CheckTracePosition(drawPosition);
             }
         }
         else

@@ -4,9 +4,13 @@ using System.Collections;
 
 public class ConstellationAltar : MonoBehaviour, IInteractable
 {
+    [Header("Constellation")]
+    [SerializeField] private string constellationID = "Aries";
+    [SerializeField] private ConstellationTraceController traceController;
+
     [Header("Camera")]
     [SerializeField] private CinemachineCamera cinemachineCamera;
-    [SerializeField] private Transform ariesCameraTarget;
+    [SerializeField] private Transform cameraTarget;
     [SerializeField] private Transform defaultCameraTarget;
     [SerializeField] private float overviewOrthographicSize = 12f;
 
@@ -14,7 +18,6 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
     [SerializeField] private GameObject dormantVisual;
     [SerializeField] private GameObject readyVisual;
     [SerializeField] private GameObject completedVisual;
-    [SerializeField] private AriesTraceController ariesTraceController;
 
     [Header("Timing")]
     [SerializeField] private float overviewHoldTime = 3f;
@@ -63,7 +66,10 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
         if (readyVisual != null)
             readyVisual.SetActive(true);
 
-        Debug.Log("Constellation Altar is ready!");
+        Debug.Log(
+            constellationID +
+            " Constellation Altar is ready!"
+        );
     }
 
     public void Interact()
@@ -73,15 +79,30 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
 
         if (!isReady)
         {
-            Debug.Log("The altar is dormant. Restore all stars first.");
+            Debug.Log(
+                "The altar is dormant. Restore all stars first."
+            );
+            return;
+        }
+
+        if (traceController == null)
+        {
+            Debug.LogError(
+                "No ConstellationTraceController assigned to " +
+                gameObject.name
+            );
             return;
         }
 
         isTracing = true;
 
-        Debug.Log("Constellation tracing begins!");
+        Debug.Log(
+            constellationID +
+            " constellation tracing begins!"
+        );
 
-        LyraController lyra = FindAnyObjectByType<LyraController>();
+        LyraController lyra =
+            FindAnyObjectByType<LyraController>();
 
         if (lyra != null)
             lyra.SetMovementLocked(true);
@@ -94,8 +115,7 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
 
         StartCoroutine(MoveAndZoomCamera());
 
-        if (ariesTraceController != null)
-            ariesTraceController.BeginTracing();
+        traceController.BeginTracing();
     }
 
     public void CompleteConstellation()
@@ -116,11 +136,16 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
         if (completedVisual != null)
             completedVisual.SetActive(true);
 
-        Debug.Log("Constellation completed!");
+        Debug.Log(
+            constellationID +
+            " constellation completed!"
+        );
 
         if (GameManager.Instance != null)
         {
             GameManager.Instance.IncreaseMaxLightEnergy();
+            GameManager.Instance.CompleteConstellation(constellationID);
+
         }
 
         StartCoroutine(FinishConstellationSequence());
@@ -140,7 +165,8 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
 
     private IEnumerator MoveAndZoomCamera()
     {
-        if (cinemachineCamera == null || ariesCameraTarget == null)
+        if (cinemachineCamera == null ||
+            cameraTarget == null)
             yield break;
 
         float startSize =
@@ -149,22 +175,25 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
         float duration = 1.5f;
         float elapsed = 0f;
 
-        cinemachineCamera.Follow = ariesCameraTarget;
+        cinemachineCamera.Follow = cameraTarget;
 
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
 
-            float t = Mathf.Clamp01(elapsed / duration);
+            float t =
+                Mathf.Clamp01(elapsed / duration);
+
             t = Mathf.SmoothStep(0f, 1f, t);
 
             var lens = cinemachineCamera.Lens;
 
-            lens.OrthographicSize = Mathf.Lerp(
-                startSize,
-                overviewOrthographicSize,
-                t
-            );
+            lens.OrthographicSize =
+                Mathf.Lerp(
+                    startSize,
+                    overviewOrthographicSize,
+                    t
+                );
 
             cinemachineCamera.Lens = lens;
 
@@ -174,16 +203,21 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
 
     private IEnumerator FinishConstellationSequence()
     {
-        // Keep the overview camera for 3 seconds
-        yield return new WaitForSeconds(overviewHoldTime);
+        // Keep the overview camera for a few seconds
+        yield return new WaitForSeconds(
+            overviewHoldTime
+        );
 
-        // Return camera to normal Lyra camera target
+        // Return camera to normal Lyra target
         if (cinemachineCamera != null &&
             defaultCameraTarget != null)
         {
-            cinemachineCamera.Follow = defaultCameraTarget;
+            cinemachineCamera.Follow =
+                defaultCameraTarget;
 
-            float startSize = cinemachineCamera.Lens.OrthographicSize;
+            float startSize =
+                cinemachineCamera.Lens.OrthographicSize;
+
             float targetSize = 5f;
 
             float duration = 1.5f;
@@ -193,26 +227,33 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
             {
                 elapsed += Time.deltaTime;
 
-                float t = Mathf.Clamp01(elapsed / duration);
+                float t =
+                    Mathf.Clamp01(elapsed / duration);
+
                 t = Mathf.SmoothStep(0f, 1f, t);
 
                 var lens = cinemachineCamera.Lens;
 
-                lens.OrthographicSize = Mathf.Lerp(
-                    startSize,
-                    targetSize,
-                    t
-                );
+                lens.OrthographicSize =
+                    Mathf.Lerp(
+                        startSize,
+                        targetSize,
+                        t
+                    );
 
                 cinemachineCamera.Lens = lens;
 
                 yield return null;
             }
 
-            // Make sure it ends exactly at normal zoom
-            var finalLens = cinemachineCamera.Lens;
-            finalLens.OrthographicSize = targetSize;
-            cinemachineCamera.Lens = finalLens;
+            var finalLens =
+                cinemachineCamera.Lens;
+
+            finalLens.OrthographicSize =
+                targetSize;
+
+            cinemachineCamera.Lens =
+                finalLens;
         }
 
         // Restore normal Star-Pen mode
@@ -236,6 +277,9 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
         if (door != null)
             door.UnlockDoor();
 
-        Debug.Log("Aries restored. Exit door unlocked.");
+        Debug.Log(
+            constellationID +
+            " restored. Exit door unlocked."
+        );
     }
 }

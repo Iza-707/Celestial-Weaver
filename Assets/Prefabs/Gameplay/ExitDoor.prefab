@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -879251719
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 595942984570408481, guid: 1e8d470a3463ad54a938e390218565c5, type: 3}
@@ -170,7 +170,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -879251719
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3556067659875606679, guid: 1e8d470a3463ad54a938e390218565c5, type: 3}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 4196140739234076323}
   - component: {fileID: 3154231766613422001}
   - component: {fileID: 1413043364247346474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ExitDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

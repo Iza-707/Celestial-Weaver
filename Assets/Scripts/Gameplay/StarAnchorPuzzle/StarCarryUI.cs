@@ -7,7 +7,7 @@ public class StarCarryUI : MonoBehaviour
 
     private void Update()
     {
-        if (StarCarryManager.Instance == null)
+        if (StarCarryManager.Instance == null || holdingText == null)
             return;
 
         if (StarCarryManager.Instance.IsCarryingStar)

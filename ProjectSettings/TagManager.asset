@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Zodiac_Catalogue
+  - Navigation_Catalogue
+  - Legends_Catalogue
   layers:
   - Default
   - TransparentFX
@@ -64,6 +67,9 @@ TagManager:
     locked: 0
   - name: ConstellationAltar
     uniqueID: 1004824013
+    locked: 0
+  - name: Catalogue_Door
+    uniqueID: 4161349443
     locked: 0
   - name: Player
     uniqueID: 1595807361
