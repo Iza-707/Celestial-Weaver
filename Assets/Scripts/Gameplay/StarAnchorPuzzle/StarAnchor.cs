@@ -7,6 +7,7 @@ public class StarAnchor : MonoBehaviour, IInteractable
 
     [Header("Visual")]
     [SerializeField] private GameObject filledVisual;
+    [SerializeField] private ParticleSystem anchorGlow;
 
     private bool isFilled = false;
 
@@ -61,6 +62,14 @@ public class StarAnchor : MonoBehaviour, IInteractable
         isFilled = true;
 
         StarCarryManager.Instance.ClearStar();
+
+        if (anchorGlow != null)
+        {
+            anchorGlow.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmitting
+            );
+        }
 
         if (ConstellationManager.Instance != null)
         {
