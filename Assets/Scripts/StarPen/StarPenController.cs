@@ -97,8 +97,13 @@ public class StarPenController : MonoBehaviour
         }
     }
 
+
     private void ToggleStarPen()
     {
+        // Prevent turning off the StarPen during constellation tracing.
+        if (constellationTracingMode && isStarPenActive)
+            return;
+
         // Desktop keyboard toggle
         if (Keyboard.current != null &&
             Keyboard.current.qKey.wasPressedThisFrame)
@@ -111,19 +116,18 @@ public class StarPenController : MonoBehaviour
                     : "Star-Pen Mode OFF"
             );
         }
-
-        // Mobile button toggle
-        if (MobileStarPenControls.Instance != null)
-        {
-            // Nothing here yet.
-            // Your StarPen button should call MobileToggleStarPen().
-        }
     }
+
+
 
     public void MobileToggleStarPen()
     {
         if (GameManager.Instance == null ||
             !GameManager.Instance.starPenUnlocked)
+            return;
+
+        // Prevent turning off the StarPen during constellation tracing.
+        if (constellationTracingMode && isStarPenActive)
             return;
 
         isStarPenActive = !isStarPenActive;
@@ -134,6 +138,7 @@ public class StarPenController : MonoBehaviour
                 : "Mobile Star-Pen OFF"
         );
     }
+
 
     // =========================================================
     // DESKTOP
@@ -222,8 +227,8 @@ public class StarPenController : MonoBehaviour
             if (touch.phase == TouchPhase.Moved ||
                 touch.phase == TouchPhase.Stationary)
             {
-                if (currentEnergy <= 0f)
-                    continue;
+                if (!constellationTracingMode && currentEnergy <= 0f)
+                continue;
 
                 Vector3 worldPosition =
                     Camera.main.ScreenToWorldPoint(
