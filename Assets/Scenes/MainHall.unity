@@ -11695,6 +11695,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: maxLightEnergy
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
       propertyPath: starPenUnlocked
       value: 1
       objectReference: {fileID: 0}
