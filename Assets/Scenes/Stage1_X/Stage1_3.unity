@@ -44188,6 +44188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayUI_Mobile
       objectReference: {fileID: 0}
+    - target: {fileID: 8105327966809679816, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9017943249535076154, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: _simulateTouch
       value: 1
