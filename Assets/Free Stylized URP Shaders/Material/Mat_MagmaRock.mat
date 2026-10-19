@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mat_MagmaRock
+  m_Shader: {fileID: 4800000, guid: 2a7b9ce6a192f41aab3a77ba06e9b2ec, type: 3}
+  m_ValidKeywords:
+  - _RAMP_ON
+  m_InvalidKeywords:
+  - _ZWRITE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d9ab6f19577f14f428b812c396e6eb97, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: f99c9540e71b047a4827f7e7dcc0ad11, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Cull: 2
+    - _DepthFadeDistance: 5
+    - _DissolveAmount: 0.2
+    - _DissolveEdgeWidth: 0.1
+    - _DistortionStrength: 0.5
+    - _DstBlend: 0
+    - _FresnelPower: 1.5
+    - _MainTexUSpeed: 0
+    - _MainTexVSpeed: 0
+    - _NoiseUSpeed: -0.15
+    - _NoiseVSpeed: 0.1
+    - _RampSmoothness: 0.01
+    - _RampThreshold: 0.5
+    - _Smoothness: 1
+    - _SrcBlend: 1
+    - _UseDepthFade: 0
+    - _UseRamp: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
+    - _DissolveEdgeColor: {r: 23.96863, g: 2.4234798, b: 0, a: 1}
+    - _FresnelColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+    - _SpecularColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Zodiac_Catalogue
+  - Navigation_Catalogue
+  - Legends_Catalogue
   layers:
   - Default
   - TransparentFX
@@ -11,9 +14,9 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Interactable
+  - Background
+  - Hazard
   - 
   - 
   - 
@@ -40,6 +43,45 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Farbackground
+    uniqueID: 909413909
+    locked: 0
+  - name: Midbackground
+    uniqueID: 2040465729
+    locked: 0
+  - name: Hazard_Spikes
+    uniqueID: 2041491731
+    locked: 0
+  - name: Ground
+    uniqueID: 3415715577
+    locked: 0
+  - name: BackgroundDetails
+    uniqueID: 3590933989
+    locked: 0
+  - name: StarAnchor
+    uniqueID: 3989997841
+    locked: 0
+  - name: FallenStar
+    uniqueID: 1994509691
+    locked: 0
+  - name: ConstellationAltar
+    uniqueID: 1004824013
+    locked: 0
+  - name: Catalogue_Door
+    uniqueID: 4161349443
+    locked: 0
+  - name: Player
+    uniqueID: 1595807361
+    locked: 0
+  - name: Effects
+    uniqueID: 2094710055
+    locked: 0
+  - name: Foreground
+    uniqueID: 362277199
+    locked: 0
+  - name: UI
+    uniqueID: 1348929785
     locked: 0
   m_RenderingLayers:
   - Default

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ae8dd3d9b03df47e788eb3ad5aa803a2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 353190
+  packageName: Free Stylized URP Shaders
+  packageVersion: 1.0
+  assetPath: Assets/Free Stylized URP Shaders/Material/Mat_EnergyShell.mat
+  uploadId: 927774

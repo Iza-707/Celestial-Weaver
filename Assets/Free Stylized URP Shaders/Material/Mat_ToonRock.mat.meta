@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1b21fb5a9385e47ada7490c885906b28
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 353190
+  packageName: Free Stylized URP Shaders
+  packageVersion: 1.0
+  assetPath: Assets/Free Stylized URP Shaders/Material/Mat_ToonRock.mat
+  uploadId: 927774

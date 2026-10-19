@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: 27d1264796bfec14caae25f5d07f54bc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7938103684354203972
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_0
+  - first:
+      213: 7883910920595277453
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_1
+  - first:
+      213: -1383075854951633594
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_2
+  - first:
+      213: 2562701276407651928
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_3
+  - first:
+      213: -6831918920372947300
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_4
+  - first:
+      213: 2064331091215006019
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_5
+  - first:
+      213: 6309530039244503308
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_6
+  - first:
+      213: 322322042192975273
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_7
+  - first:
+      213: -3566261062926063429
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_8
+  - first:
+      213: -3743747158172286740
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_9
+  - first:
+      213: 1872203472928650218
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_10
+  - first:
+      213: -3678224304718813987
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_11
+  - first:
+      213: 1744891712548263166
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_12
+  - first:
+      213: -3043789650883933724
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_13
+  - first:
+      213: -2991852235260392785
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_14
+  - first:
+      213: -3806118911275973146
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_15
+  - first:
+      213: 6994946620196772869
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_16
+  - first:
+      213: -7594204092111308107
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_17
+  - first:
+      213: -3950444122676181979
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_18
+  - first:
+      213: -8637144709806445202
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_19
+  - first:
+      213: -8281434341617776184
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_20
+  - first:
+      213: -6660291463108737718
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_21
+  - first:
+      213: 2815536546331688727
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_22
+  - first:
+      213: -2379727521052697565
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_23
+  - first:
+      213: 5382509026877244843
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_24
+  - first:
+      213: -4976870129996962
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_25
+  - first:
+      213: -8106134338534842302
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_26
+  - first:
+      213: 769532533672033895
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_27
+  - first:
+      213: -4017430356419574806
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_28
+  - first:
+      213: -7230577791752331489
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_29
+  - first:
+      213: -7796436118030502957
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_30
+  - first:
+      213: -2119620864161745969
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_31
+  - first:
+      213: 2925271045037370585
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_32
+  - first:
+      213: -522451870636501835
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_33
+  - first:
+      213: -274223406238892229
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_34
+  - first:
+      213: -7108559977171134415
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_35
+  - first:
+      213: -8575167856551145858
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_36
+  - first:
+      213: 3536261059675959454
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_37
+  - first:
+      213: -5223118838442040526
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_38
+  - first:
+      213: 7154260024412570981
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_39
+  - first:
+      213: -3980559194364187102
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_40
+  - first:
+      213: 482172507145283330
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_41
+  - first:
+      213: 8598978848827322945
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_42
+  - first:
+      213: -8281196566852661576
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_43
+  - first:
+      213: 7724440772057673760
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_44
+  - first:
+      213: -860757751073900441
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_45
+  - first:
+      213: -787063094804813869
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_46
+  - first:
+      213: 7804218682829937268
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_47
+  - first:
+      213: -7078667738383085590
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_48
+  - first:
+      213: 5672673430212256154
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_49
+  - first:
+      213: -5365745222838029635
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_50
+  - first:
+      213: 142345967145849240
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_51
+  - first:
+      213: -4356803243941467187
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_52
+  - first:
+      213: 7134671927916394100
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_53
+  - first:
+      213: -574550666779357147
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_54
+  - first:
+      213: 1459495009981959398
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_55
+  - first:
+      213: 7230499314409011933
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_56
+  - first:
+      213: 5035664232305105687
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_57
+  - first:
+      213: -7141276986543124438
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_58
+  - first:
+      213: -3277148482320488573
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_59
+  - first:
+      213: -464320133009069739
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_60
+  - first:
+      213: -8138289554311011110
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_61
+  - first:
+      213: 1863242400947911175
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_62
+  - first:
+      213: -4084138763879886338
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_63
+  - first:
+      213: -8611844317205622293
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_64
+  - first:
+      213: -6493964044545008610
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_65
+  - first:
+      213: -1400129995897724243
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_66
+  - first:
+      213: -6512605535279835487
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_67
+  - first:
+      213: -4718816247906362047
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_68
+  - first:
+      213: 7470145198068666479
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_69
+  - first:
+      213: 6372936051545401714
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_70
+  - first:
+      213: 4496454253904754501
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_71
+  - first:
+      213: -4016137651858894056
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_72
+  - first:
+      213: -4816074280728832153
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_73
+  - first:
+      213: -7264116072002618143
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_74
+  - first:
+      213: -8023792775989293771
+    second: Glowing Fallen Star Pixel Sprite Sheet-1_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 683
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441e6283e3fc92e60800000000000000
+      internalID: 7938103684354203972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 683
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8687e62637496d60800000000000000
+      internalID: 7883910920595277453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 683
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d203876d35ecce0800000000000000
+      internalID: -1383075854951633594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 683
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ed7bdab3b809320800000000000000
+      internalID: 2562701276407651928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 683
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9676e060f52031a0800000000000000
+      internalID: -6831918920372947300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 683
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3493aaea03af5ac10800000000000000
+      internalID: 2064331091215006019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 683
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0933d03424ff8750800000000000000
+      internalID: 6309530039244503308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 683
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5d03c803e197400800000000000000
+      internalID: 322322042192975273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb82cf74578128ec0800000000000000
+      internalID: -3566261062926063429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 342
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0434c7bc98b0cc0800000000000000
+      internalID: -3743747158172286740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 342
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae33a27a3276bf910800000000000000
+      internalID: 1872203472928650218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 342
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4e601ab7254fcc0800000000000000
+      internalID: -3678224304718813987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 342
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef456f984c9173810800000000000000
+      internalID: 1744891712548263166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 342
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e98d00707942c5d0800000000000000
+      internalID: -3043789650883933724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_14
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 342
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa88d85e3eca76d0800000000000000
+      internalID: -2991852235260392785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_15
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 342
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5cf701403fd2bc0800000000000000
+      internalID: -3806118911275973146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50cd5a7e3ea031160800000000000000
+      internalID: 6994946620196772869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba33e13d97fb9690800000000000000
+      internalID: -7594204092111308107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5244bd230043d29c0800000000000000
+      internalID: -3950444122676181979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6da752e5a2b22880800000000000000
+      internalID: -8637144709806445202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9c62dd75f621d80800000000000000
+      internalID: -8281434341617776184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_21
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4546d8b334e193a0800000000000000
+      internalID: -6660291463108737718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_22
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ffa30529bc21720800000000000000
+      internalID: 2815536546331688727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing Fallen Star Pixel Sprite Sheet-1_23
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1
+        width: 192
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32cde6d8d6289fed0800000000000000
+      internalID: -2379727521052697565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0e5ac2194c2596544aff76a6001af74f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":3.0},"gridSpriteSize":{"x":192.0,"y":341.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Glowing Fallen Star Pixel Sprite Sheet-1_0: 7938103684354203972
+      Glowing Fallen Star Pixel Sprite Sheet-1_1: 7883910920595277453
+      Glowing Fallen Star Pixel Sprite Sheet-1_10: 1872203472928650218
+      Glowing Fallen Star Pixel Sprite Sheet-1_11: -3678224304718813987
+      Glowing Fallen Star Pixel Sprite Sheet-1_12: 1744891712548263166
+      Glowing Fallen Star Pixel Sprite Sheet-1_13: -3043789650883933724
+      Glowing Fallen Star Pixel Sprite Sheet-1_14: -2991852235260392785
+      Glowing Fallen Star Pixel Sprite Sheet-1_15: -3806118911275973146
+      Glowing Fallen Star Pixel Sprite Sheet-1_16: 6994946620196772869
+      Glowing Fallen Star Pixel Sprite Sheet-1_17: -7594204092111308107
+      Glowing Fallen Star Pixel Sprite Sheet-1_18: -3950444122676181979
+      Glowing Fallen Star Pixel Sprite Sheet-1_19: -8637144709806445202
+      Glowing Fallen Star Pixel Sprite Sheet-1_2: -1383075854951633594
+      Glowing Fallen Star Pixel Sprite Sheet-1_20: -8281434341617776184
+      Glowing Fallen Star Pixel Sprite Sheet-1_21: -6660291463108737718
+      Glowing Fallen Star Pixel Sprite Sheet-1_22: 2815536546331688727
+      Glowing Fallen Star Pixel Sprite Sheet-1_23: -2379727521052697565
+      Glowing Fallen Star Pixel Sprite Sheet-1_3: 2562701276407651928
+      Glowing Fallen Star Pixel Sprite Sheet-1_4: -6831918920372947300
+      Glowing Fallen Star Pixel Sprite Sheet-1_5: 2064331091215006019
+      Glowing Fallen Star Pixel Sprite Sheet-1_6: 6309530039244503308
+      Glowing Fallen Star Pixel Sprite Sheet-1_7: 322322042192975273
+      Glowing Fallen Star Pixel Sprite Sheet-1_8: -3566261062926063429
+      Glowing Fallen Star Pixel Sprite Sheet-1_9: -3743747158172286740
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
