@@ -44,6 +44,10 @@ public class StarPenController : MonoBehaviour
     private int drawTouchId = -1;
     private int eraseTouchId = -1;
 
+    // check if the application is running on a mobile platform
+    private bool IsMobilePlatform =>
+    Application.isMobilePlatform;
+
     
 
     private void Start()
@@ -84,7 +88,7 @@ public class StarPenController : MonoBehaviour
         }
 
         // Mobile / simulated touch
-        if (TouchSimulationToggle.IsSimulationEnabled)
+        if (IsMobilePlatform)
         {
             MobileDraw();
             MobileErase();

@@ -11,6 +11,10 @@ public class ConstellationTraceController : MonoBehaviour
     [Header("Tracing")]
     [SerializeField] private float pointReachDistance = 1.2f;
     [SerializeField] private float pathSnapDistance = 1.5f;
+    
+    [Header("Audio")]
+    [SerializeField] private AudioClip tracePointSFX;
+    [SerializeField] private AudioClip constellationRestoredSFX;
 
     private int currentPoint = 0;
     private bool isTracing = false;
@@ -45,6 +49,11 @@ public class ConstellationTraceController : MonoBehaviour
     {
         isTracing = false;
         completed = true;
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX(constellationRestoredSFX);
+        }
 
         Debug.Log(
             constellationID.ToUpper() +
@@ -161,6 +170,11 @@ public class ConstellationTraceController : MonoBehaviour
             );
 
             currentPoint++;
+            
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(tracePointSFX);
+            }
 
             if (currentPoint >= tracePoints.Length)
             {

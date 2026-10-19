@@ -57,7 +57,7 @@ public class PauseSettingsController : MonoBehaviour
     }
 
     private void LoadSettings()
-    {
+    {        
         masterVolumeSlider.value =
             PlayerPrefs.GetFloat(MasterVolumeKey, 1f);
 
@@ -71,5 +71,32 @@ public class PauseSettingsController : MonoBehaviour
             PlayerPrefs.GetInt(FullscreenKey, 1) == 1;
 
         ApplyFullscreen();
+        ApplyAudioSettings();
+
+    }
+
+    private void Awake()
+    {
+        masterVolumeSlider.onValueChanged.AddListener(
+            value => AudioManager.Instance?.SetMasterVolume(value)
+        );
+
+        musicVolumeSlider.onValueChanged.AddListener(
+            value => AudioManager.Instance?.SetMusicVolume(value)
+        );
+
+        sfxVolumeSlider.onValueChanged.AddListener(
+            value => AudioManager.Instance?.SetSFXVolume(value)
+        );
+    }
+
+    private void ApplyAudioSettings()
+    {
+        if (AudioManager.Instance == null)
+            return;
+
+        AudioManager.Instance.SetMasterVolume(masterVolumeSlider.value);
+        AudioManager.Instance.SetMusicVolume(musicVolumeSlider.value);
+        AudioManager.Instance.SetSFXVolume(sfxVolumeSlider.value);
     }
 }

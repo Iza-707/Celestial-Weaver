@@ -9,6 +9,13 @@ public class SceneScript : MonoBehaviour
     public Animator anim;
     public string nextScene;
 
+    [Header("Audio")]
+    public AudioClip transitionSFX;
+
+    [Range(0f, 1f)]
+    [SerializeField] private float transitionSFXVolume = 0.5f;
+    
+
     private void Awake()
     {
         Instance = this;
@@ -17,6 +24,9 @@ public class SceneScript : MonoBehaviour
     public void NextScene(string scene)
     {
         nextScene = scene;
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(transitionSFX, transitionSFXVolume);
 
         if (anim != null)
         {

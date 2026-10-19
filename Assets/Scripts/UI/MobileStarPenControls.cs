@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,8 @@ public class MobileStarPenControls : MonoBehaviour
 
         DrawMode = false;
         EraseMode = false;
+
+        UpdateButtonVisuals();
     }
 
     public void ToggleDraw()
@@ -58,6 +61,8 @@ public class MobileStarPenControls : MonoBehaviour
             colors.normalColor = EraseMode
                 ? Color.white
                 : new Color(1f, 1f, 1f, 0.5f);
+
+            eraseButton.colors = colors;
         }
     }
 

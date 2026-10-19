@@ -61,6 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneScript
   anim: {fileID: 7711155032443191023}
   nextScene: 
+  transitionSFX: {fileID: 8300000, guid: 274f8f47919148d498a8aafbb13ced77, type: 3}
+  transitionSFXVolume: 0.1
 --- !u!114 &1846428294756528501
 MonoBehaviour:
   m_ObjectHideFlags: 0

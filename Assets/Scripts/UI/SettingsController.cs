@@ -89,10 +89,37 @@ public class SettingsController : MonoBehaviour
         ) == 1;
 
         ApplyFullscreen();
+        ApplyAudioSettings();
+
     }
 
     public void ApplyFullscreen()
     {
         Screen.fullScreen = fullscreenToggle.isOn;
+    }
+
+    private void Awake()
+    {
+        masterVolumeSlider.onValueChanged.AddListener(
+            value => AudioManager.Instance?.SetMasterVolume(value)
+        );
+
+        musicVolumeSlider.onValueChanged.AddListener(
+            value => AudioManager.Instance?.SetMusicVolume(value)
+        );
+
+        sfxVolumeSlider.onValueChanged.AddListener(
+            value => AudioManager.Instance?.SetSFXVolume(value)
+        );
+    }
+
+    private void ApplyAudioSettings()
+    {
+        if (AudioManager.Instance == null)
+            return;
+
+        AudioManager.Instance.SetMasterVolume(masterVolumeSlider.value);
+        AudioManager.Instance.SetMusicVolume(musicVolumeSlider.value);
+        AudioManager.Instance.SetSFXVolume(sfxVolumeSlider.value);
     }
 }
