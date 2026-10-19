@@ -52116,7 +52116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121540618359801443, guid: 14c8e2e575724ea4f8df4038974a7097, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53881,7 +53881,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1413043364247346474, guid: 90b29e7d5d04e04408e2c648d2768463, type: 3}
       propertyPath: completionID
-      value: Ursa Minor
+      value: Cassiopeia
       objectReference: {fileID: 0}
     - target: {fileID: 1413043364247346474, guid: 90b29e7d5d04e04408e2c648d2768463, type: 3}
       propertyPath: nextSceneName

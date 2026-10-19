@@ -77083,7 +77083,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1413043364247346474, guid: 90b29e7d5d04e04408e2c648d2768463, type: 3}
       propertyPath: completionID
-      value: Ursa Major
+      value: Orion
       objectReference: {fileID: 0}
     - target: {fileID: 1413043364247346474, guid: 90b29e7d5d04e04408e2c648d2768463, type: 3}
       propertyPath: nextSceneName
