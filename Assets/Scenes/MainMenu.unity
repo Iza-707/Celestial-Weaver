@@ -5235,6 +5235,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: cancerRestored
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: taurusRestored
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: cepheusRestored
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: scorpioRestored
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: cassiopeiaRestored
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

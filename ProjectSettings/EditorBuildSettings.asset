@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage3_X/Stage3_2.unity
     guid: 1a5866b6cb8cb424fa45a9e23b092539
+  - enabled: 1
+    path: Assets/Scenes/Stage3_X/Stage3_3.unity
+    guid: 11b41e3434239114ab53ff0205b265df
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
