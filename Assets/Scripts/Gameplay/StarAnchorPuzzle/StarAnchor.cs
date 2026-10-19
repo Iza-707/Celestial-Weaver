@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class StarAnchor : MonoBehaviour, IInteractable
@@ -7,6 +8,10 @@ public class StarAnchor : MonoBehaviour, IInteractable
 
     [Header("Visual")]
     [SerializeField] private GameObject filledVisual;
+    [SerializeField] private ParticleSystem anchorGlow;
+
+    [Header("Star Tracking")]
+    [SerializeField] private ParticleSystem trackingParticles;
 
     private bool isFilled = false;
 
@@ -27,6 +32,30 @@ public class StarAnchor : MonoBehaviour, IInteractable
         }
     }
 
+    private void Update()
+    {
+        bool shouldTrack =
+            !isFilled &&
+            StarCarryManager.Instance != null &&
+            StarCarryManager.Instance.IsCarryingStar &&
+            StarCarryManager.Instance.CarriedStarID == requiredStarID;
+
+        if (trackingParticles == null)
+            return;
+
+        if (shouldTrack && !trackingParticles.isPlaying)
+        {
+            trackingParticles.Play();
+        }
+        else if (!shouldTrack && trackingParticles.isPlaying)
+        {
+            trackingParticles.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmitting
+            );
+        }
+    }
+
     public void Interact()
     {
         if (isFilled)
@@ -44,7 +73,6 @@ public class StarAnchor : MonoBehaviour, IInteractable
         string carriedStar =
             StarCarryManager.Instance.CarriedStarID;
 
-        // WRONG STAR
         if (carriedStar != requiredStarID)
         {
             Debug.Log(
@@ -59,6 +87,22 @@ public class StarAnchor : MonoBehaviour, IInteractable
 
         // CORRECT STAR
         isFilled = true;
+
+        if (trackingParticles != null)
+        {
+            trackingParticles.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmitting
+            );
+        }
+
+        if (anchorGlow != null)
+        {
+            anchorGlow.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmitting
+            );
+        }
 
         StarCarryManager.Instance.ClearStar();
 

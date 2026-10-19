@@ -44,6 +44,10 @@ public class StarPenController : MonoBehaviour
     private int drawTouchId = -1;
     private int eraseTouchId = -1;
 
+    // check if the application is running on a mobile platform
+    private bool IsMobilePlatform =>
+    Application.isMobilePlatform;
+
     
 
     private void Start()
@@ -84,7 +88,7 @@ public class StarPenController : MonoBehaviour
         }
 
         // Mobile / simulated touch
-        if (TouchSimulationToggle.IsSimulationEnabled)
+        if (IsMobilePlatform)
         {
             MobileDraw();
             MobileErase();
@@ -97,8 +101,13 @@ public class StarPenController : MonoBehaviour
         }
     }
 
+
     private void ToggleStarPen()
     {
+        // Prevent turning off the StarPen during constellation tracing.
+        if (constellationTracingMode && isStarPenActive)
+            return;
+
         // Desktop keyboard toggle
         if (Keyboard.current != null &&
             Keyboard.current.qKey.wasPressedThisFrame)
@@ -111,19 +120,18 @@ public class StarPenController : MonoBehaviour
                     : "Star-Pen Mode OFF"
             );
         }
-
-        // Mobile button toggle
-        if (MobileStarPenControls.Instance != null)
-        {
-            // Nothing here yet.
-            // Your StarPen button should call MobileToggleStarPen().
-        }
     }
+
+
 
     public void MobileToggleStarPen()
     {
         if (GameManager.Instance == null ||
             !GameManager.Instance.starPenUnlocked)
+            return;
+
+        // Prevent turning off the StarPen during constellation tracing.
+        if (constellationTracingMode && isStarPenActive)
             return;
 
         isStarPenActive = !isStarPenActive;
@@ -134,6 +142,7 @@ public class StarPenController : MonoBehaviour
                 : "Mobile Star-Pen OFF"
         );
     }
+
 
     // =========================================================
     // DESKTOP
@@ -222,8 +231,8 @@ public class StarPenController : MonoBehaviour
             if (touch.phase == TouchPhase.Moved ||
                 touch.phase == TouchPhase.Stationary)
             {
-                if (currentEnergy <= 0f)
-                    continue;
+                if (!constellationTracingMode && currentEnergy <= 0f)
+                continue;
 
                 Vector3 worldPosition =
                     Camera.main.ScreenToWorldPoint(

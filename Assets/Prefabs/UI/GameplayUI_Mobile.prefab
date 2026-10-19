@@ -1441,6 +1441,8 @@ GameObject:
   - component: {fileID: 9017943249535076154}
   - component: {fileID: 9193026742952005933}
   - component: {fileID: 8999474425775768766}
+  - component: {fileID: 3706701950589066754}
+  - component: {fileID: 7963754178524569649}
   m_Layer: 5
   m_Name: GameplayUI_Mobile
   m_TagString: Untagged
@@ -1581,6 +1583,33 @@ MonoBehaviour:
   starPenIndicator_Draw: {fileID: 1260861928101929414}
   starPenIndicator_Erase: {fileID: 6616567812838067889}
   lightEnergyGauge: {fileID: 504932277353804859}
+--- !u!114 &3706701950589066754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105327966809679816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d0926424d55134f9ff8625c6cb6f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobileStarPenControls
+  drawButton: {fileID: 8575274474348127130}
+  eraseButton: {fileID: 7045807796956550376}
+--- !u!114 &7963754178524569649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105327966809679816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d3d7ddd8e231447b9c9e9f1d4031c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StarCarryUI
+  holdingText: {fileID: 5571609582484536286}
 --- !u!1001 &3167881475684246680
 PrefabInstance:
   m_ObjectHideFlags: 0
