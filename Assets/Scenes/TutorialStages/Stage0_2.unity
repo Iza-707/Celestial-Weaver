@@ -16836,7 +16836,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1260861928101929414, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2780781817882740109, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358732291874309687, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -16856,9 +16864,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6616567812838067889, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8105327966809679816, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_Name
       value: GameplayUI_Mobile
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017943249535076154, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+      propertyPath: _simulateTouch
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

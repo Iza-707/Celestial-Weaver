@@ -1286,14 +1286,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756703124}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1280, y: 720, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1297.3247, y: 717.817, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1691261174}
   - {fileID: 1815180305}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1737191072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &774000700
 MonoBehaviour:
@@ -10588,6 +10588,7 @@ Transform:
   - {fileID: 1136959770}
   - {fileID: 92415267}
   - {fileID: 7089718809641163558}
+  - {fileID: 756703126}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753786339
@@ -12046,15 +12047,71 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: orionRestored
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: cancerRestored
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
       propertyPath: maxLightEnergy
-      value: 30
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: orionCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: taurusRestored
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: cancerCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: scorpioRestored
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
       propertyPath: starPenUnlocked
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: taurusCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: scorpioCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: ursaMajorRestored
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: ursaMinorRestored
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: cassiopeiaRestored
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
       propertyPath: hasReachedMainHall
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: ursaMajorCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: ursaMinorCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874151993409739460, guid: d1c453683942b8847a90dd95f3e526eb, type: 3}
+      propertyPath: cassiopeiaCompleted
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12078,4 +12135,3 @@ SceneRoots:
   - {fileID: 1737191072}
   - {fileID: 180807730}
   - {fileID: 1133678191}
-  - {fileID: 756703126}
