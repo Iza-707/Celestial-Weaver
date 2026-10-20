@@ -16025,13 +16025,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4100618061148767863, guid: 14c8e2e575724ea4f8df4038974a7097, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6121540618359801443, guid: 14c8e2e575724ea4f8df4038974a7097, type: 3}
       propertyPath: m_Name
       value: SceneUI
       objectReference: {fileID: 0}
     - target: {fileID: 6121540618359801443, guid: 14c8e2e575724ea4f8df4038974a7097, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16756,6 +16760,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 182714671292541609, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 314785585592197706, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -16878,6 +16886,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8105327966809679816, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957445113580534423, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
+      propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9017943249535076154, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
