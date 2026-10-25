@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class StarAnchor : MonoBehaviour, IInteractable
@@ -12,6 +11,11 @@ public class StarAnchor : MonoBehaviour, IInteractable
 
     [Header("Star Tracking")]
     [SerializeField] private ParticleSystem trackingParticles;
+
+    [Header("Sound")]
+    [SerializeField] private AudioClip placementSFX;
+    [Range(0f, 1f)]
+    [SerializeField] private float placementSFXVolume = 1f;
 
     private bool isFilled = false;
 
@@ -85,7 +89,7 @@ public class StarAnchor : MonoBehaviour, IInteractable
             return;
         }
 
-        // CORRECT STAR
+        // Correct star: fill this anchor and play the success sound.
         isFilled = true;
 
         if (trackingParticles != null)
@@ -113,5 +117,8 @@ public class StarAnchor : MonoBehaviour, IInteractable
 
         if (filledVisual != null)
             filledVisual.SetActive(true);
+
+        if (AudioManager.Instance != null && placementSFX != null)
+            AudioManager.Instance.PlaySFX(placementSFX, placementSFXVolume);
     }
 }
