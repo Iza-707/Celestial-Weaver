@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1994509691
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -413540754025404481, guid: 9e1a4ad3341317d4d9ffefee88409035, type: 3}
@@ -143,3 +143,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallenStar
   starID: 
+  pickupSFX: {fileID: 8300000, guid: 0ceae4b5ef2ea8e49b49fe173e44dc63, type: 3}
+  pickupSFXVolume: 1

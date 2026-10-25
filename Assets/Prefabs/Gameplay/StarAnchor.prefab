@@ -5119,6 +5119,8 @@ MonoBehaviour:
   filledVisual: {fileID: 1230182987683766556}
   anchorGlow: {fileID: 954101485933157055}
   trackingParticles: {fileID: 4208151193004382971}
+  placementSFX: {fileID: 8300000, guid: 936f3b55edf5db44487682e9d8ac8c2c, type: 3}
+  placementSFXVolume: 1
 --- !u!1 &8244445702921500249
 GameObject:
   m_ObjectHideFlags: 0
