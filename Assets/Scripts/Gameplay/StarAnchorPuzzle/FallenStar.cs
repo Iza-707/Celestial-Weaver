@@ -5,6 +5,11 @@ public class FallenStar : MonoBehaviour, IInteractable
     [Header("Star Identity")]
     [SerializeField] private string starID;
 
+    [Header("Sound")]
+    [SerializeField] private AudioClip pickupSFX;
+    [Range(0f, 1f)]
+    [SerializeField] private float pickupSFXVolume = 1f;
+
     public string StarID => starID;
 
     public string InteractionPrompt => "[E] Collect Star";
@@ -21,6 +26,9 @@ public class FallenStar : MonoBehaviour, IInteractable
         }
 
         StarCarryManager.Instance.PickUpStar(starID);
+
+        if (AudioManager.Instance != null && pickupSFX != null)
+            AudioManager.Instance.PlaySFX(pickupSFX, pickupSFXVolume);
 
         gameObject.SetActive(false);
     }
