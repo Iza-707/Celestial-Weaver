@@ -7,6 +7,20 @@ public class EndingStarInteractable : MonoBehaviour, IInteractable
 
     private Vector3 basePosition;
     private static Sprite cachedStarSprite;
+    private static bool endingAccessGranted;
+
+    /// <summary>
+    /// The ending scene can only be entered after interaction with the
+    /// unlocked Main Hall star. The permission is consumed on scene entry.
+    /// </summary>
+    public static bool ConsumeEndingAccessPermission()
+    {
+        if (!endingAccessGranted)
+            return false;
+
+        endingAccessGranted = false;
+        return true;
+    }
 
     public string InteractionPrompt => "[E] Follow the Last Constellation";
 
@@ -30,6 +44,8 @@ public class EndingStarInteractable : MonoBehaviour, IInteractable
             return;
         }
 
+        // Grant one-time access only after the completion gate succeeds.
+        endingAccessGranted = true;
         Time.timeScale = 1f;
         SceneManager.LoadScene(endingSceneName);
     }
