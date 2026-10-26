@@ -20,17 +20,20 @@ public class EndingSceneController : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        // Guard the scene itself as well as the Main Hall star.
-        if (GameManager.Instance == null ||
-            !GameManager.Instance.HaveAllCatalogueConstellationsBeenCompletedAndRestored())
+        // The Main Hall star checks all nine completion/restoration pairs
+        // before granting this one-time scene-entry permission. Consume that
+        // permission here rather than rechecking scene progress during the
+        // transition, which can otherwise cause an immediate redirect.
+        if (!EndingStarInteractable.ConsumeEndingAccessPermission())
         {
-            Debug.LogWarning("The ending scene is locked until all nine catalogue constellations have been restored and all catalogue levels completed.");
+            Debug.LogWarning("EndingScene blocked: enter through The Last Constellation star in Main Hall after completing all catalogue levels.");
             SceneManager.LoadScene(mainMenuScene);
             return;
         }
 
         EnsureEventSystem();
         BuildEndingUI();
+        Debug.Log("EndingScene entered through The Last Constellation. Building ending artwork and UI.");
     }
 
     private void EnsureEventSystem()
