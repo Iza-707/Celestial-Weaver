@@ -119,7 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-
 --- !u!1 &1001
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,9 +161,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43f8eada1a9c4ac6bde12d6173e04f3a, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndingSceneController
-  endingBackground: {fileID: 21300000, guid: d4e8cf0f6cf34d28865c8d09765b8d1c, type: 3}
+  endingBackground: {fileID: 21300000, guid: f81600643f2e46f4eb87d8f6c2c157e4, type: 3}
   mainMenuScene: MainMenu
   buttonAnchor: {x: 0.17, y: 0.16}
   buttonSize: {x: 290, y: 72}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1002}
