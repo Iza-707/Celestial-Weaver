@@ -17,7 +17,8 @@ public class PauseMenuController : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current != null &&
+            Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (isPaused)
                 ResumeGame();
@@ -43,9 +44,13 @@ public class PauseMenuController : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(
-            SceneManager.GetActiveScene().name
-        );
+
+        // StarCarryManager survives scene reloads, so explicitly discard
+        // any carried star before restarting the same level.
+        if (StarCarryManager.Instance != null)
+            StarCarryManager.Instance.ClearCarriedStar();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OpenSettings()
@@ -54,11 +59,12 @@ public class PauseMenuController : MonoBehaviour
         settingsPanel.SetActive(true);
     }
 
-        public void CloseSettings()
+    public void CloseSettings()
     {
         settingsPanel.SetActive(false);
         pausePanel.SetActive(true);
     }
+
     public void ExitToMainMenu()
     {
         Time.timeScale = 1f;

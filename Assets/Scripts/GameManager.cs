@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("Light Energy Progression")]
     public float maxLightEnergy = StartingMaxLightEnergy;
     public float constellationEnergyIncrease = 10f;
-    
+
     public const float StartingMaxLightEnergy = 30f;
 
     [Header("Constellation Progress")]
@@ -42,10 +42,27 @@ public class GameManager : MonoBehaviour
     public bool cepheusCompleted = false;
     public bool CygnusCompleted = false;
 
+    /// <summary>
+    /// True only after all nine catalogue constellations have been restored
+    /// and their levels have been completed by reaching the exits.
+    /// </summary>
+    public bool HaveAllCatalogueConstellationsBeenCompletedAndRestored()
+    {
+        return
+            cancerCompleted && cancerRestored &&
+            taurusCompleted && taurusRestored &&
+            scorpioCompleted && scorpioRestored &&
+            ursaMinorCompleted && ursaMinorRestored &&
+            ursaMajorCompleted && ursaMajorRestored &&
+            orionCompleted && orionRestored &&
+            cassiopeiaCompleted && cassiopeiaRestored &&
+            cepheusCompleted && cepheusRestored &&
+            CygnusCompleted && CygnusRestored;
+    }
+
     public void IncreaseMaxLightEnergy()
     {
         maxLightEnergy += constellationEnergyIncrease;
-
         Debug.Log("Maximum Light Energy increased to: " + maxLightEnergy);
     }
 
@@ -65,7 +82,6 @@ public class GameManager : MonoBehaviour
     {
         currentRespawnPosition = checkpoint.position;
         hasCheckpoint = true;
-
         Debug.Log("Checkpoint saved at " + currentRespawnPosition);
     }
 
@@ -85,13 +101,10 @@ public class GameManager : MonoBehaviour
         {
             case "CANCER":
                 return true;
-
             case "TAURUS":
                 return cancerCompleted;
-
             case "SCORPIO":
                 return taurusCompleted;
-
             default:
                 return false;
         }
@@ -104,49 +117,36 @@ public class GameManager : MonoBehaviour
             case "CANCER":
                 cancerRestored = true;
                 break;
-
             case "TAURUS":
                 taurusRestored = true;
                 break;
-
             case "SCORPIO":
                 scorpioRestored = true;
                 break;
-
             case "URSA MINOR":
                 ursaMinorRestored = true;
                 break;
-
             case "URSA MAJOR":
                 ursaMajorRestored = true;
                 break;
-
             case "ORION":
                 orionRestored = true;
                 break;
-
             case "CASSIOPEIA":
                 cassiopeiaRestored = true;
                 break;
-
             case "CEPHEUS":
                 cepheusRestored = true;
                 break;
-
             case "CYGNUS":
                 CygnusRestored = true;
                 break;
-
             default:
-                Debug.LogWarning(
-                    "Unknown constellation: " + constellationID
-                );
+                Debug.LogWarning("Unknown constellation: " + constellationID);
                 return;
         }
 
-        Debug.Log(
-            constellationID + " restored!"
-        );
+        Debug.Log(constellationID + " restored!");
     }
 
     public void CompleteLevel(string constellationID)
@@ -156,48 +156,35 @@ public class GameManager : MonoBehaviour
             case "CANCER":
                 cancerCompleted = true;
                 break;
-
             case "TAURUS":
                 taurusCompleted = true;
                 break;
-
             case "SCORPIO":
                 scorpioCompleted = true;
                 break;
-
             case "URSA MINOR":
                 ursaMinorCompleted = true;
                 break;
-
             case "URSA MAJOR":
                 ursaMajorCompleted = true;
                 break;
-
             case "ORION":
                 orionCompleted = true;
                 break;
-
             case "CASSIOPEIA":
                 cassiopeiaCompleted = true;
                 break;
-
             case "CEPHEUS":
                 cepheusCompleted = true;
                 break;
-
             case "CYGNUS":
                 CygnusCompleted = true;
                 break;
-
             default:
-                Debug.LogWarning(
-                    "Unknown level: " + constellationID
-                );
+                Debug.LogWarning("Unknown level: " + constellationID);
                 return;
         }
 
-        Debug.Log(
-            constellationID + " level completed!"
-        );
+        Debug.Log(constellationID + " level completed!");
     }
 }
