@@ -19,7 +19,8 @@ public class InteractionController : MonoBehaviour
 
         if (currentInteractable != null)
         {
-            if (Keyboard.current.eKey.wasPressedThisFrame)
+            if (Keyboard.current != null &&
+                Keyboard.current.eKey.wasPressedThisFrame)
             {
                 currentInteractable.Interact();
             }
