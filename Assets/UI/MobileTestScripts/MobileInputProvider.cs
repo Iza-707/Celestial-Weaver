@@ -15,6 +15,8 @@ public class MobileInputProvider : MonoBehaviour
 
     [Header("Joystick Touch Area")]
     [SerializeField] private RectTransform _moveTouchArea;
+    [SerializeField, Range(0.1f, 0.5f)] private float _touchAreaWidth = 0.28f;
+    [SerializeField, Range(0.1f, 0.75f)] private float _touchAreaHeight = 0.38f;
 
     public Vector2 MoveInput { get; private set; }
 
@@ -36,18 +38,22 @@ public class MobileInputProvider : MonoBehaviour
                 _moveTouchArea.SetParent(canvas.transform, false);
 
             _moveTouchArea.anchorMin = Vector2.zero;
-            _moveTouchArea.anchorMax = new Vector2(0.5f, 1f);
+            _moveTouchArea.anchorMax = new Vector2(_touchAreaWidth, _touchAreaHeight);
             _moveTouchArea.pivot = Vector2.zero;
             _moveTouchArea.offsetMin = Vector2.zero;
             _moveTouchArea.offsetMax = Vector2.zero;
+            _moveTouchArea.anchoredPosition = Vector2.zero;
 
             Graphic touchAreaGraphic = _moveTouchArea.GetComponent<Graphic>();
             if (touchAreaGraphic != null)
                 touchAreaGraphic.raycastTarget = false;
+
+            if (canvas != null && _moveJoystick != null)
+                _moveJoystick.transform.SetParent(canvas.transform, false);
         }
 
         if (_moveJoystick != null)
-            _moveJoystick.ShowFixed();
+            _moveJoystick.InitializeHomePosition();
     }
 
     private void OnDisable()
@@ -57,7 +63,7 @@ public class MobileInputProvider : MonoBehaviour
         MoveInput = Vector2.zero;
 
         if (_moveJoystick != null)
-            _moveJoystick.ResetKnob();
+            _moveJoystick.EndTouch();
     }
 
     private void OnDestroy()
@@ -88,6 +94,14 @@ public class MobileInputProvider : MonoBehaviour
                         )
                     {
                         _moveTouchId = id;
+                        if (_moveJoystick != null)
+                        {
+                            _moveJoystick.BeginTouch(pos, _joystickRadius);
+                            MoveInput = Vector2.ClampMagnitude(
+                                pos - _moveJoystick.GetCenter(),
+                                _joystickRadius
+                            ) / _joystickRadius;
+                        }
                     }
 
                     break;
@@ -100,11 +114,8 @@ public class MobileInputProvider : MonoBehaviour
                         if (_moveJoystick == null)
                             break;
 
-                        Vector2 joystickCenter =
-                            _moveJoystick.GetCenter();
-
                         Vector2 delta =
-                            pos - joystickCenter;
+                            pos - _moveJoystick.GetCenter();
 
                         Vector2 clamped =
                             Vector2.ClampMagnitude(
@@ -115,7 +126,9 @@ public class MobileInputProvider : MonoBehaviour
                         MoveInput =
                             clamped / _joystickRadius;
 
-                        _moveJoystick.SetKnob(clamped);
+                        _moveJoystick.SetKnobAtScreenPosition(
+                            _moveJoystick.GetCenter() + clamped
+                        );
                     }
 
                     break;
@@ -128,7 +141,7 @@ public class MobileInputProvider : MonoBehaviour
                         _moveTouchId = -1;
                         MoveInput = Vector2.zero;
 
-                        _moveJoystick.ResetKnob();
+                        _moveJoystick.EndTouch();
                     }
 
                     break;
@@ -141,7 +154,7 @@ public class MobileInputProvider : MonoBehaviour
             _moveTouchId = -1;
             MoveInput = Vector2.zero;
 
-            _moveJoystick.ResetKnob();
+            _moveJoystick.EndTouch();
         }
     }
 

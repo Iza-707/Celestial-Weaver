@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MobileActionButton : MonoBehaviour, IPointerDownHandler
@@ -25,6 +26,37 @@ public class MobileActionButton : MonoBehaviour, IPointerDownHandler
         player = FindAnyObjectByType<LyraController>();
 
         SetJumpMode();
+        ApplyMainHallLayout();
+    }
+
+    private void ApplyMainHallLayout()
+    {
+        if (SceneManager.GetActiveScene().name != "MainHall")
+            return;
+
+        Canvas canvas = GetComponentInParent<Canvas>();
+        if (canvas == null)
+            return;
+
+        RectTransform canvasRect = canvas.transform as RectTransform;
+        if (canvasRect != null)
+            canvasRect.localScale = Vector3.one;
+
+        RectTransform buttonRect = transform as RectTransform;
+        if (buttonRect == null)
+            return;
+
+        buttonRect.SetParent(canvas.transform, false);
+        buttonRect.anchorMin = new Vector2(
+            Screen.safeArea.xMax / Screen.width,
+            Screen.safeArea.yMin / Screen.height
+        );
+        buttonRect.anchorMax = buttonRect.anchorMin;
+        buttonRect.pivot = new Vector2(1f, 0f);
+        buttonRect.sizeDelta = new Vector2(160f, 160f);
+        buttonRect.anchoredPosition = new Vector2(-24f, 24f);
+        buttonRect.localScale = Vector3.one;
+        buttonRect.SetAsLastSibling();
     }
 
     public void SetInteractable(IInteractable interactable)

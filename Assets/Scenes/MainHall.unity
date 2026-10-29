@@ -11578,7 +11578,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 180807730}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 314785585592197706, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_Pivot.x
@@ -11694,11 +11694,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5553885540946778092, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1223
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 5553885540946778092, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -673
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 6012746584034137169, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: pauseMenu
@@ -11706,11 +11706,11 @@ PrefabInstance:
       objectReference: {fileID: 1403055072}
     - target: {fileID: 6410601852181578396, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 934
+      value: 316
       objectReference: {fileID: 0}
     - target: {fileID: 6410601852181578396, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 241
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6585855958760325506, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11774,15 +11774,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8344235154797649575, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 927
+      value: 316
       objectReference: {fileID: 0}
     - target: {fileID: 8344235154797649575, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 568
+      value: 141
       objectReference: {fileID: 0}
     - target: {fileID: 9017943249535076154, guid: 847cb4a469e28be4cb2528f1a3a8c013, type: 3}
       propertyPath: _simulateTouch
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

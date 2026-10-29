@@ -15,18 +15,40 @@ public class MobileStarPenControls : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-
-        DrawMode = false;
-        EraseMode = false;
+        if (Instance == null)
+        {
+            Instance = this;
+            DrawMode = false;
+            EraseMode = false;
+        }
+        else if (Instance != this)
+        {
+            Instance.ConfigureButtons(drawButton, eraseButton);
+            return;
+        }
 
         ConfigureButtons(drawButton, eraseButton);
     }
 
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
+
     public void ConfigureButtons(Button draw, Button erase)
     {
-        drawButton = draw;
-        eraseButton = erase;
+        if (Instance != null && Instance != this)
+        {
+            Instance.ConfigureButtons(draw, erase);
+            return;
+        }
+
+        if (draw != null)
+            drawButton = draw;
+
+        if (erase != null)
+            eraseButton = erase;
 
         if (drawButton != null && drawButton.onClick.GetPersistentEventCount() == 0)
             drawButton.onClick.AddListener(ToggleDraw);
@@ -39,16 +61,34 @@ public class MobileStarPenControls : MonoBehaviour
 
     public void ToggleDraw()
     {
+        if (Instance != null && Instance != this)
+        {
+            Instance.ToggleDraw();
+            return;
+        }
+
         SelectDrawMode(!DrawMode);
     }
 
     public void ToggleErase()
     {
+        if (Instance != null && Instance != this)
+        {
+            Instance.ToggleErase();
+            return;
+        }
+
         SelectEraseMode(!EraseMode);
     }
 
     public void SelectDrawMode(bool enabled = true)
     {
+        if (Instance != null && Instance != this)
+        {
+            Instance.SelectDrawMode(enabled);
+            return;
+        }
+
         DrawMode = enabled;
         if (enabled)
             EraseMode = false;
@@ -58,6 +98,12 @@ public class MobileStarPenControls : MonoBehaviour
 
     public void SelectEraseMode(bool enabled = true)
     {
+        if (Instance != null && Instance != this)
+        {
+            Instance.SelectEraseMode(enabled);
+            return;
+        }
+
         EraseMode = enabled;
         if (enabled)
             DrawMode = false;
