@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
@@ -43,6 +46,9 @@ public class StarPenController : MonoBehaviour
     // Mobile touch tracking
     private int drawTouchId = -1;
     private int eraseTouchId = -1;
+    private readonly List<RaycastResult> uiRaycastResults = new List<RaycastResult>();
+    private PointerEventData touchPointerEventData;
+    private const float EraseRadiusPixels = 24f;
 
     // check if the application is running on a mobile platform
     private bool IsMobilePlatform =>
@@ -79,7 +85,11 @@ public class StarPenController : MonoBehaviour
 
         ToggleStarPen();
 
-        if (!isStarPenActive)
+        bool touchModeActive = MobileStarPenControls.Instance != null &&
+            (MobileStarPenControls.Instance.DrawMode ||
+             MobileStarPenControls.Instance.EraseMode);
+
+        if (!isStarPenActive && !touchModeActive)
         {
             if (currentStroke != null)
                 EndStroke();
@@ -87,8 +97,7 @@ public class StarPenController : MonoBehaviour
             return;
         }
 
-        // Mobile / simulated touch
-        if (IsMobilePlatform)
+        if (IsMobilePlatform || Touch.activeTouches.Count > 0)
         {
             MobileDraw();
             MobileErase();
@@ -143,6 +152,14 @@ public class StarPenController : MonoBehaviour
         );
     }
 
+    public void ActivateFromPickup()
+    {
+        isStarPenActive = true;
+
+        if (MobileStarPenControls.Instance != null)
+            MobileStarPenControls.Instance.SelectDrawMode();
+    }
+
 
     // =========================================================
     // DESKTOP
@@ -152,6 +169,15 @@ public class StarPenController : MonoBehaviour
     {
         if (Mouse.current == null)
             return;
+
+        MobileStarPenControls controls = MobileStarPenControls.Instance;
+        if (controls != null ? !controls.DrawMode : !isStarPenActive)
+        {
+            if (currentStroke != null)
+                EndStroke();
+
+            return;
+        }
 
         bool isDrawing =
             Mouse.current.leftButton.isPressed;
@@ -184,17 +210,16 @@ public class StarPenController : MonoBehaviour
         if (Mouse.current == null)
             return;
 
-        if (!Mouse.current.rightButton.isPressed)
+        bool eraseMode = MobileStarPenControls.Instance != null &&
+            MobileStarPenControls.Instance.EraseMode;
+        bool erasePressed = eraseMode
+            ? Mouse.current.leftButton.isPressed
+            : Mouse.current.rightButton.isPressed;
+
+        if (!erasePressed)
             return;
 
-        Vector3 mousePosition =
-            Camera.main.ScreenToWorldPoint(
-                Mouse.current.position.ReadValue()
-            );
-
-        mousePosition.z = 0f;
-
-        EraseAtPosition(mousePosition);
+        EraseAtScreenPosition(Mouse.current.position.ReadValue());
     }
 
     // =========================================================
@@ -219,10 +244,18 @@ public class StarPenController : MonoBehaviour
         {
             if (touch.phase == TouchPhase.Began)
             {
-                if (drawTouchId == -1)
-                {
-                    drawTouchId = touch.touchId;
-                }
+                if (drawTouchId != -1 || IsTouchOverInteractiveUI(touch.screenPosition))
+                    continue;
+
+                drawTouchId = touch.touchId;
+
+                if (!constellationTracingMode && currentEnergy <= 0f)
+                    continue;
+
+                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(touch.screenPosition);
+                worldPosition.z = 0f;
+                StartStroke(worldPosition);
+                continue;
             }
 
             if (touch.touchId != drawTouchId)
@@ -232,7 +265,7 @@ public class StarPenController : MonoBehaviour
                 touch.phase == TouchPhase.Stationary)
             {
                 if (!constellationTracingMode && currentEnergy <= 0f)
-                continue;
+                    continue;
 
                 Vector3 worldPosition =
                     Camera.main.ScreenToWorldPoint(
@@ -254,6 +287,12 @@ public class StarPenController : MonoBehaviour
                 drawTouchId = -1;
             }
         }
+
+        if (drawTouchId != -1 && !IsTouchActive(drawTouchId))
+        {
+            EndStroke();
+            drawTouchId = -1;
+        }
     }
 
     private void MobileErase()
@@ -271,10 +310,13 @@ public class StarPenController : MonoBehaviour
         {
             if (touch.phase == TouchPhase.Began)
             {
-                if (eraseTouchId == -1)
-                {
-                    eraseTouchId = touch.touchId;
-                }
+                if (eraseTouchId != -1 || IsTouchOverInteractiveUI(touch.screenPosition))
+                    continue;
+
+                eraseTouchId = touch.touchId;
+
+                EraseAtScreenPosition(touch.screenPosition);
+                continue;
             }
 
             if (touch.touchId != eraseTouchId)
@@ -283,14 +325,7 @@ public class StarPenController : MonoBehaviour
             if (touch.phase == TouchPhase.Moved ||
                 touch.phase == TouchPhase.Stationary)
             {
-                Vector3 worldPosition =
-                    Camera.main.ScreenToWorldPoint(
-                        touch.screenPosition
-                    );
-
-                worldPosition.z = 0f;
-
-                EraseAtPosition(worldPosition);
+                EraseAtScreenPosition(touch.screenPosition);
             }
 
             if (touch.phase == TouchPhase.Ended ||
@@ -299,6 +334,42 @@ public class StarPenController : MonoBehaviour
                 eraseTouchId = -1;
             }
         }
+
+        if (eraseTouchId != -1 && !IsTouchActive(eraseTouchId))
+            eraseTouchId = -1;
+    }
+
+    private bool IsTouchOverInteractiveUI(Vector2 screenPosition)
+    {
+        EventSystem eventSystem = EventSystem.current;
+        if (eventSystem == null)
+            return false;
+
+        if (touchPointerEventData == null)
+            touchPointerEventData = new PointerEventData(eventSystem);
+
+        touchPointerEventData.position = screenPosition;
+        uiRaycastResults.Clear();
+        eventSystem.RaycastAll(touchPointerEventData, uiRaycastResults);
+
+        foreach (RaycastResult result in uiRaycastResults)
+        {
+            if (result.gameObject.GetComponentInParent<Selectable>() != null)
+                return true;
+        }
+
+        return false;
+    }
+
+    private bool IsTouchActive(int touchId)
+    {
+        foreach (var touch in Touch.activeTouches)
+        {
+            if (touch.touchId == touchId)
+                return true;
+        }
+
+        return false;
     }
 
     // =========================================================
@@ -537,25 +608,36 @@ public class StarPenController : MonoBehaviour
         strokeEnergySpent = 0f;
     }
 
-    private void EraseAtPosition(Vector3 worldPosition)
+    private void EraseAtScreenPosition(Vector2 screenPosition)
     {
-        float eraseRadius = 0.25f;
+        Camera camera = Camera.main;
+        if (camera == null)
+            return;
 
-        Collider2D[] hits =
-            Physics2D.OverlapCircleAll(
-                worldPosition,
-                eraseRadius
-            );
+        LightConstruct[] constructs =
+            FindObjectsByType<LightConstruct>(FindObjectsSortMode.None);
 
-        foreach (Collider2D hit in hits)
+        foreach (LightConstruct construct in constructs)
         {
-            if (hit.transform.name != "Light Construct")
+            LineRenderer line = construct.GetComponent<LineRenderer>();
+            if (line == null || line.positionCount == 0)
                 continue;
 
-            LightConstruct construct =
-                hit.GetComponent<LightConstruct>();
+            Vector3 firstPosition = camera.WorldToScreenPoint(line.GetPosition(0));
+            bool hitStroke = Vector2.Distance(screenPosition, firstPosition) <= EraseRadiusPixels;
 
-            if (construct == null)
+            for (int i = 1; i < line.positionCount && !hitStroke; i++)
+            {
+                Vector3 nextPosition = camera.WorldToScreenPoint(line.GetPosition(i));
+                hitStroke = DistanceToSegment(
+                    screenPosition,
+                    firstPosition,
+                    nextPosition
+                ) <= EraseRadiusPixels;
+                firstPosition = nextPosition;
+            }
+
+            if (!hitStroke)
                 continue;
 
             currentEnergy += construct.energySpent;
@@ -566,7 +648,19 @@ public class StarPenController : MonoBehaviour
                     MaxEnergy
                 );
 
-            Destroy(hit.gameObject);
+            Destroy(construct.gameObject);
         }
+    }
+
+    private float DistanceToSegment(Vector2 point, Vector2 start, Vector2 end)
+    {
+        Vector2 segment = end - start;
+        float segmentLengthSquared = segment.sqrMagnitude;
+        if (segmentLengthSquared <= Mathf.Epsilon)
+            return Vector2.Distance(point, start);
+
+        float t = Mathf.Clamp01(Vector2.Dot(point - start, segment) / segmentLengthSquared);
+        Vector2 closestPoint = start + segment * t;
+        return Vector2.Distance(point, closestPoint);
     }
 }

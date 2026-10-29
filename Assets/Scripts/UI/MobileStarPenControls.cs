@@ -20,24 +20,46 @@ public class MobileStarPenControls : MonoBehaviour
         DrawMode = false;
         EraseMode = false;
 
+        ConfigureButtons(drawButton, eraseButton);
+    }
+
+    public void ConfigureButtons(Button draw, Button erase)
+    {
+        drawButton = draw;
+        eraseButton = erase;
+
+        if (drawButton != null && drawButton.onClick.GetPersistentEventCount() == 0)
+            drawButton.onClick.AddListener(ToggleDraw);
+
+        if (eraseButton != null && eraseButton.onClick.GetPersistentEventCount() == 0)
+            eraseButton.onClick.AddListener(ToggleErase);
+
         UpdateButtonVisuals();
     }
 
     public void ToggleDraw()
     {
-        DrawMode = !DrawMode;
+        SelectDrawMode(!DrawMode);
+    }
 
-        if (DrawMode)
+    public void ToggleErase()
+    {
+        SelectEraseMode(!EraseMode);
+    }
+
+    public void SelectDrawMode(bool enabled = true)
+    {
+        DrawMode = enabled;
+        if (enabled)
             EraseMode = false;
 
         UpdateButtonVisuals();
     }
 
-    public void ToggleErase()
+    public void SelectEraseMode(bool enabled = true)
     {
-        EraseMode = !EraseMode;
-
-        if (EraseMode)
+        EraseMode = enabled;
+        if (enabled)
             DrawMode = false;
 
         UpdateButtonVisuals();
@@ -48,20 +70,28 @@ public class MobileStarPenControls : MonoBehaviour
         if (drawButton != null)
         {
             ColorBlock colors = drawButton.colors;
-            colors.normalColor = DrawMode
+            Color modeColor = DrawMode
                 ? Color.white
                 : new Color(1f, 1f, 1f, 0.5f);
 
+            colors.normalColor = modeColor;
+            colors.highlightedColor = modeColor;
+            colors.pressedColor = modeColor;
+            colors.selectedColor = modeColor;
             drawButton.colors = colors;
         }
 
         if (eraseButton != null)
         {
             ColorBlock colors = eraseButton.colors;
-            colors.normalColor = EraseMode
+            Color modeColor = EraseMode
                 ? Color.white
                 : new Color(1f, 1f, 1f, 0.5f);
 
+            colors.normalColor = modeColor;
+            colors.highlightedColor = modeColor;
+            colors.pressedColor = modeColor;
+            colors.selectedColor = modeColor;
             eraseButton.colors = colors;
         }
     }
