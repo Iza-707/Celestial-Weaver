@@ -35,6 +35,13 @@ public class LyraController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
+        bool restoredCheckpoint =
+            GameManager.Instance != null &&
+            GameManager.Instance.ApplySavedCheckpoint(transform);
+
+        if (!restoredCheckpoint && respawnPoint != null)
+            transform.position = respawnPoint.position;
+
     }
 
     void Update()

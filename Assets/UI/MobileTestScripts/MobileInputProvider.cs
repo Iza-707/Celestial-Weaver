@@ -53,7 +53,7 @@ public class MobileInputProvider : MonoBehaviour
         }
 
         if (_moveJoystick != null)
-            _moveJoystick.InitializeHomePosition();
+            _moveJoystick.ShowFixed();
     }
 
     private void OnDisable()
@@ -64,6 +64,12 @@ public class MobileInputProvider : MonoBehaviour
 
         if (_moveJoystick != null)
             _moveJoystick.EndTouch();
+    }
+
+    public bool IsTouchOverJoystick(Vector2 screenPosition)
+    {
+        return _moveJoystick != null &&
+            _moveJoystick.ContainsScreenPoint(screenPosition);
     }
 
     private void OnDestroy()
@@ -94,14 +100,6 @@ public class MobileInputProvider : MonoBehaviour
                         )
                     {
                         _moveTouchId = id;
-                        if (_moveJoystick != null)
-                        {
-                            _moveJoystick.BeginTouch(pos, _joystickRadius);
-                            MoveInput = Vector2.ClampMagnitude(
-                                pos - _moveJoystick.GetCenter(),
-                                _joystickRadius
-                            ) / _joystickRadius;
-                        }
                     }
 
                     break;
@@ -126,9 +124,7 @@ public class MobileInputProvider : MonoBehaviour
                         MoveInput =
                             clamped / _joystickRadius;
 
-                        _moveJoystick.SetKnobAtScreenPosition(
-                            _moveJoystick.GetCenter() + clamped
-                        );
+                        _moveJoystick.SetKnob(clamped);
                     }
 
                     break;

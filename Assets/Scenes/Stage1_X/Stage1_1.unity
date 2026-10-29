@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c4886e85b67af438e1bb8ad1cab7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConstellationManager
-  requiredStars: 4
+  requiredStars: 5
 --- !u!4 &92415267
 Transform:
   m_ObjectHideFlags: 0
@@ -2241,6 +2241,10 @@ PrefabInstance:
       propertyPath: interactionPrompt
       value: 
       objectReference: {fileID: 244792370}
+    - target: {fileID: 3905014909255386940, guid: 1f1eb53e99d6814468a88d6d256fcd28, type: 3}
+      propertyPath: respawnPoint
+      value:
+      objectReference: {fileID: 63197090}
     - target: {fileID: 1973711575734804085, guid: 1f1eb53e99d6814468a88d6d256fcd28, type: 3}
       propertyPath: lengthInSec
       value: 15

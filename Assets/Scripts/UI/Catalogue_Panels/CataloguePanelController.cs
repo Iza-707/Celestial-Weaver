@@ -32,6 +32,25 @@ public class CataloguePanelController : MonoBehaviour
 
         if (panel != null)
             panel.SetActive(false);
+
+        ConfigureTitleReadability();
+    }
+
+    private void ConfigureTitleReadability()
+    {
+        if (titleText == null)
+            return;
+
+        titleText.fontStyle |= FontStyles.Bold;
+        titleText.raycastTarget = false;
+
+        Shadow shadow = titleText.GetComponent<Shadow>();
+        if (shadow == null)
+            shadow = titleText.gameObject.AddComponent<Shadow>();
+
+        shadow.effectColor = new Color(0.04f, 0.02f, 0.12f, 0.95f);
+        shadow.effectDistance = new Vector2(2f, -2f);
+        shadow.useGraphicAlpha = true;
     }
 
     public void OpenCatalogue(string catalogueName)
@@ -138,6 +157,19 @@ public class CataloguePanelController : MonoBehaviour
                 levelLabels[i] != null)
             {
                 levelLabels[i].text = levels[i];
+
+                RectTransform labelRect =
+                    levelLabels[i].rectTransform;
+                labelRect.anchorMin = Vector2.zero;
+                labelRect.anchorMax = Vector2.one;
+                labelRect.offsetMin = Vector2.zero;
+                labelRect.offsetMax = Vector2.zero;
+
+                levelLabels[i].horizontalAlignment =
+                    HorizontalAlignmentOptions.Center;
+                levelLabels[i].verticalAlignment =
+                    VerticalAlignmentOptions.Middle;
+                levelLabels[i].raycastTarget = false;
             }
 
             levelButtons[i].interactable = unlocked[i];
@@ -225,6 +257,9 @@ public class CataloguePanelController : MonoBehaviour
         }
 
         Time.timeScale = 1f;
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.ClearCheckpoint();
 
         SceneManager.LoadScene(selectedScenes[index]);
     }

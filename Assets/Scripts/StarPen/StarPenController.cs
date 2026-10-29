@@ -46,6 +46,7 @@ public class StarPenController : MonoBehaviour
     // Mobile touch tracking
     private int drawTouchId = -1;
     private int eraseTouchId = -1;
+    private bool ignoreInputUntilReleased;
     private readonly List<RaycastResult> uiRaycastResults = new List<RaycastResult>();
     private PointerEventData touchPointerEventData;
     private const float EraseRadiusPixels = 24f;
@@ -82,6 +83,18 @@ public class StarPenController : MonoBehaviour
 
         if (!GameManager.Instance.starPenUnlocked)
             return;
+
+        if (ignoreInputUntilReleased)
+        {
+            bool mousePressed = Mouse.current != null &&
+                (Mouse.current.leftButton.isPressed ||
+                 Mouse.current.rightButton.isPressed);
+
+            if (mousePressed || Touch.activeTouches.Count > 0)
+                return;
+
+            ignoreInputUntilReleased = false;
+        }
 
         ToggleStarPen();
 
@@ -244,7 +257,9 @@ public class StarPenController : MonoBehaviour
         {
             if (touch.phase == TouchPhase.Began)
             {
-                if (drawTouchId != -1 || IsTouchOverInteractiveUI(touch.screenPosition))
+                if (drawTouchId != -1 ||
+                    IsTouchOverInteractiveUI(touch.screenPosition) ||
+                    IsTouchOverJoystick(touch.screenPosition))
                     continue;
 
                 drawTouchId = touch.touchId;
@@ -264,6 +279,12 @@ public class StarPenController : MonoBehaviour
             if (touch.phase == TouchPhase.Moved ||
                 touch.phase == TouchPhase.Stationary)
             {
+                if (IsTouchOverJoystick(touch.screenPosition))
+                {
+                    EndStroke();
+                    continue;
+                }
+
                 if (!constellationTracingMode && currentEnergy <= 0f)
                     continue;
 
@@ -361,6 +382,12 @@ public class StarPenController : MonoBehaviour
         return false;
     }
 
+    private bool IsTouchOverJoystick(Vector2 screenPosition)
+    {
+        return MobileInputProvider.Instance != null &&
+            MobileInputProvider.Instance.IsTouchOverJoystick(screenPosition);
+    }
+
     private bool IsTouchActive(int touchId)
     {
         foreach (var touch in Touch.activeTouches)
@@ -385,6 +412,19 @@ public class StarPenController : MonoBehaviour
         {
             traceController =
                 FindAnyObjectByType<ConstellationTraceController>();
+
+            isStarPenActive = true;
+
+            if (MobileStarPenControls.Instance != null)
+                MobileStarPenControls.Instance.SelectDrawMode();
+
+            if (traceController == null)
+            {
+                Debug.LogError(
+                    "Cannot start constellation tracing without a " +
+                    "ConstellationTraceController."
+                );
+            }
         }
         else
         {
@@ -397,8 +437,34 @@ public class StarPenController : MonoBehaviour
                 : "Star-Pen: Normal Mode"
         );
     }
+
+    public void IgnoreInputUntilReleased()
+    {
+        ignoreInputUntilReleased = true;
+        drawTouchId = -1;
+        eraseTouchId = -1;
+
+        if (currentStroke != null)
+            EndStroke();
+    }
+
     private void StartStroke(Vector3 screenWorldPosition)
     {
+        if (constellationTracingMode)
+        {
+            screenWorldPosition.z = 0f;
+
+            if (traceController == null ||
+                !traceController.TryGetSnappedPosition(
+                    screenWorldPosition,
+                    out Vector3 snappedPosition))
+            {
+                return;
+            }
+
+            screenWorldPosition = snappedPosition;
+        }
+
         GameObject strokeObject =
             new GameObject("Light Construct");
 
@@ -451,20 +517,6 @@ public class StarPenController : MonoBehaviour
 
         if (constellationTracingMode)
         {
-            screenWorldPosition.z = 0f;
-
-            if (traceController != null)
-            {
-                if (!traceController.TryGetSnappedPosition(
-                    screenWorldPosition,
-                    out Vector3 snappedPosition))
-                {
-                    return;
-                }
-
-                screenWorldPosition = snappedPosition;
-            }
-
             lastDrawPosition = screenWorldPosition;
         }
         else
@@ -516,9 +568,7 @@ public class StarPenController : MonoBehaviour
             drawPosition = screenWorldPosition;
 
             if (traceController != null)
-            {
                 traceController.CheckTracePosition(drawPosition);
-            }
         }
         else
         {

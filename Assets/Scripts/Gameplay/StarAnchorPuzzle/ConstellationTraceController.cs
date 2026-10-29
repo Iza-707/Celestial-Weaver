@@ -28,6 +28,15 @@ public class ConstellationTraceController : MonoBehaviour
         if (completed)
             return;
 
+        if (tracePoints == null || tracePoints.Length == 0)
+        {
+            Debug.LogError(
+                "Cannot trace " + constellationID +
+                " because no trace points are assigned."
+            );
+            return;
+        }
+
         currentPoint = 0;
         isTracing = true;
 
@@ -78,9 +87,26 @@ public class ConstellationTraceController : MonoBehaviour
         if (!isTracing || completed)
             return false;
 
+        if (tracePoints == null || tracePoints.Length == 0)
+        {
+            Debug.LogError(
+                "Cannot trace " + constellationID +
+                " because no trace points are assigned."
+            );
+            return false;
+        }
+
         // First point: player must actually start near the first star
         if (currentPoint == 0)
         {
+            if (tracePoints[0] == null)
+            {
+                Debug.LogError(
+                    "Trace point 0 is missing for " + constellationID + "."
+                );
+                return false;
+            }
+
             float distanceToStart = Vector2.Distance(
                 inputPosition,
                 tracePoints[0].position
@@ -114,7 +140,15 @@ public class ConstellationTraceController : MonoBehaviour
             segment.sqrMagnitude;
 
         if (segmentLengthSquared <= 0.001f)
+        {
+            if (Vector2.Distance(inputPosition, end) <= pathSnapDistance)
+            {
+                snappedPosition = end;
+                return true;
+            }
+
             return false;
+        }
 
         float t = Vector3.Dot(
             inputPosition - start,
@@ -147,39 +181,49 @@ public class ConstellationTraceController : MonoBehaviour
         if (!isTracing || completed)
             return;
 
+        if (tracePoints == null || tracePoints.Length == 0)
+        {
+            Debug.LogError(
+                "Cannot trace " + constellationID +
+                " because no trace points are assigned."
+            );
+            return;
+        }
+
         if (currentPoint >= tracePoints.Length)
         {
             CompleteTrace();
             return;
         }
 
-        float distance = Vector2.Distance(
-            position,
-            tracePoints[currentPoint].position
+        Transform target = tracePoints[currentPoint];
+        if (target == null)
+        {
+            Debug.LogError(
+                "Trace point " + currentPoint +
+                " is missing for " + constellationID + "."
+            );
+            return;
+        }
+
+        if (Vector2.Distance(position, target.position) > pointReachDistance)
+            return;
+
+        Debug.Log(
+            "Reached " +
+            constellationID +
+            " trace point " +
+            (currentPoint + 1) +
+            "/" +
+            tracePoints.Length
         );
 
-        if (distance <= pointReachDistance)
-        {
-            Debug.Log(
-                "Reached " +
-                constellationID +
-                " trace point " +
-                (currentPoint + 1) +
-                "/" +
-                tracePoints.Length
-            );
+        currentPoint++;
 
-            currentPoint++;
-            
-            if (AudioManager.Instance != null)
-            {
-                AudioManager.Instance.PlaySFX(tracePointSFX);
-            }
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(tracePointSFX);
 
-            if (currentPoint >= tracePoints.Length)
-            {
-                CompleteTrace();
-            }
-        }
+        if (currentPoint >= tracePoints.Length)
+            CompleteTrace();
     }
 }

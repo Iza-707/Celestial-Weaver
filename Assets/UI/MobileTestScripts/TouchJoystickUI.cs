@@ -5,47 +5,24 @@ public class TouchJoystickUI : MonoBehaviour
     [SerializeField] private RectTransform _background;
     [SerializeField] private RectTransform _knob;
     [SerializeField] private float _edgePadding = 12f;
-    [SerializeField] private float _maximumCenterOffset = 48f;
 
-    private Vector2 _homeCenterScreenPosition;
-    private bool _hasHomePosition;
-
-    public void InitializeHomePosition()
+    public void ShowFixed()
     {
         gameObject.SetActive(true);
 
-        Rect safeArea = Screen.safeArea;
-        Vector3[] corners = new Vector3[4];
-        _background.GetWorldCorners(corners);
-        Vector2 bottomLeft = RectTransformUtility.WorldToScreenPoint(GetCanvasCamera(), corners[0]);
-        Vector2 topRight = RectTransformUtility.WorldToScreenPoint(GetCanvasCamera(), corners[2]);
-        Vector2 halfSize = (topRight - bottomLeft) * 0.5f;
-
-        Vector2 homeCenter = new Vector2(
-            safeArea.xMin + halfSize.x + _edgePadding,
-            safeArea.yMin + halfSize.y + _edgePadding
-        );
-
-        SetCenterAtScreenPosition(homeCenter);
-        _homeCenterScreenPosition = GetCenter();
-        _hasHomePosition = true;
+        RectTransform joystickRect = transform as RectTransform;
+        if (joystickRect != null)
+        {
+            joystickRect.anchorMin = Vector2.zero;
+            joystickRect.anchorMax = Vector2.zero;
+            joystickRect.pivot = new Vector2(0.5f, 0.5f);
+            joystickRect.anchoredPosition = new Vector2(
+                _edgePadding + joystickRect.sizeDelta.x * Mathf.Abs(joystickRect.localScale.x) * 0.5f,
+                _edgePadding + joystickRect.sizeDelta.y * Mathf.Abs(joystickRect.localScale.y) * 0.5f
+            );
+        }
 
         ResetKnob();
-    }
-
-    public void BeginTouch(Vector2 screenPosition, float radius)
-    {
-        gameObject.SetActive(true);
-
-        Vector2 offsetFromHome = screenPosition - _homeCenterScreenPosition;
-        Vector2 centerPosition = _homeCenterScreenPosition +
-            Vector2.ClampMagnitude(offsetFromHome, _maximumCenterOffset);
-
-        SetCenterAtScreenPosition(centerPosition);
-
-        Vector2 delta = screenPosition - GetCenter();
-        Vector2 clampedDelta = Vector2.ClampMagnitude(delta, radius);
-        SetKnobAtScreenPosition(GetCenter() + clampedDelta);
     }
 
     public void EndTouch()
@@ -55,9 +32,6 @@ public class TouchJoystickUI : MonoBehaviour
 
     public void ResetKnob()
     {
-        if (_hasHomePosition)
-            SetCenterAtScreenPosition(_homeCenterScreenPosition);
-
         _knob.position = _background.position;
     }
 
@@ -69,43 +43,34 @@ public class TouchJoystickUI : MonoBehaviour
         );
     }
 
-    public void SetCenterAtScreenPosition(Vector2 screenPosition)
+    public void SetKnob(Vector2 screenDelta)
     {
-        RectTransform joystickRect = transform as RectTransform;
-        RectTransform parentRect = joystickRect.parent as RectTransform;
-        if (parentRect == null)
-            return;
-
-        Vector2 currentCenter = GetCenter();
-        Camera camera = GetCanvasCamera();
-
-        if (RectTransformUtility.ScreenPointToWorldPointInRectangle(
-                parentRect,
-                currentCenter,
-                camera,
-                out Vector3 currentWorldPosition) &&
-            RectTransformUtility.ScreenPointToWorldPointInRectangle(
-                parentRect,
-                screenPosition,
-                camera,
-                out Vector3 targetWorldPosition))
-        {
-            joystickRect.position += targetWorldPosition - currentWorldPosition;
-        }
-    }
-
-    public void SetKnobAtScreenPosition(Vector2 screenPosition)
-    {
+        Vector2 knobScreenPosition = GetCenter() + screenDelta;
         RectTransform knobParent = _knob.parent as RectTransform;
         if (knobParent != null &&
             RectTransformUtility.ScreenPointToWorldPointInRectangle(
                 knobParent,
-                screenPosition,
+                knobScreenPosition,
                 GetCanvasCamera(),
                 out Vector3 worldPosition))
         {
             _knob.position = worldPosition;
         }
+    }
+
+    public bool ContainsScreenPoint(Vector2 screenPosition)
+    {
+        Camera camera = GetCanvasCamera();
+        return RectTransformUtility.RectangleContainsScreenPoint(
+                _background,
+                screenPosition,
+                camera
+            ) ||
+            RectTransformUtility.RectangleContainsScreenPoint(
+                _knob,
+                screenPosition,
+                camera
+            );
     }
 
     private Camera GetCanvasCamera()

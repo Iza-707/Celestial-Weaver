@@ -12,42 +12,15 @@ public class MainMenuController : MonoBehaviour
 
     public void NewGame()
     {
-        PlayerPrefs.DeleteKey("LastGameplayScene");
-        PlayerPrefs.Save();
-
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.starPenUnlocked = false;
-            GameManager.Instance.hasReachedMainHall = false;
-
-            //Reset Light Energy Progression
-            GameManager.Instance.maxLightEnergy = 30f;
-            GameManager.Instance.maxLightEnergy = GameManager.StartingMaxLightEnergy;
-
-            // Reset constellation progression
-            GameManager.Instance.cancerRestored = false;
-            GameManager.Instance.taurusRestored = false;
-            GameManager.Instance.scorpioRestored = false;
-
-            GameManager.Instance.ursaMinorRestored = false;
-            GameManager.Instance.ursaMajorRestored = false;
-            GameManager.Instance.orionRestored = false;
-
-            GameManager.Instance.cassiopeiaRestored = false;
-            GameManager.Instance.cepheusRestored = false;
-            GameManager.Instance.CygnusRestored = false;
-
-            GameManager.Instance.cancerCompleted = false;
-            GameManager.Instance.taurusCompleted = false;
-            GameManager.Instance.scorpioCompleted = false;
-
-            GameManager.Instance.ursaMinorCompleted = false;
-            GameManager.Instance.ursaMajorCompleted = false;
-            GameManager.Instance.orionCompleted = false;
-
-            GameManager.Instance.cassiopeiaCompleted = false;
-            GameManager.Instance.cepheusCompleted = false;
-            GameManager.Instance.CygnusCompleted = false;
+            GameManager.Instance.ResetProgress();
+        }
+        else
+        {
+            PlayerPrefs.DeleteKey("PlayerData");
+            PlayerPrefs.DeleteKey("LastGameplayScene");
+            PlayerPrefs.Save();
         }
 
         SceneManager.LoadScene(newGameScene);

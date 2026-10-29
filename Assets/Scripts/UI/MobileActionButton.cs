@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MobileActionButton : MonoBehaviour, IPointerDownHandler
 {
+    private const float StandardButtonSize = 120f;
+
     public static MobileActionButton Instance;
 
     [Header("Button")]
@@ -18,6 +19,7 @@ public class MobileActionButton : MonoBehaviour, IPointerDownHandler
     private IInteractable currentInteractable;
     private LyraController player;
     private bool pressedOnPointerDown;
+    private Rect lastSafeArea;
 
     private void Awake()
     {
@@ -26,21 +28,16 @@ public class MobileActionButton : MonoBehaviour, IPointerDownHandler
         player = FindAnyObjectByType<LyraController>();
 
         SetJumpMode();
-        ApplyMainHallLayout();
+        ApplyStandardLayout();
     }
 
-    private void ApplyMainHallLayout()
+    private void ApplyStandardLayout()
     {
-        if (SceneManager.GetActiveScene().name != "MainHall")
-            return;
+        lastSafeArea = Screen.safeArea;
 
         Canvas canvas = GetComponentInParent<Canvas>();
         if (canvas == null)
             return;
-
-        RectTransform canvasRect = canvas.transform as RectTransform;
-        if (canvasRect != null)
-            canvasRect.localScale = Vector3.one;
 
         RectTransform buttonRect = transform as RectTransform;
         if (buttonRect == null)
@@ -53,10 +50,22 @@ public class MobileActionButton : MonoBehaviour, IPointerDownHandler
         );
         buttonRect.anchorMax = buttonRect.anchorMin;
         buttonRect.pivot = new Vector2(1f, 0f);
-        buttonRect.sizeDelta = new Vector2(160f, 160f);
+        buttonRect.sizeDelta = new Vector2(
+            StandardButtonSize,
+            StandardButtonSize
+        );
         buttonRect.anchoredPosition = new Vector2(-24f, 24f);
         buttonRect.localScale = Vector3.one;
         buttonRect.SetAsLastSibling();
+
+        if (icon != null)
+            icon.preserveAspect = true;
+    }
+
+    private void Update()
+    {
+        if (Screen.safeArea != lastSafeArea)
+            ApplyStandardLayout();
     }
 
     public void SetInteractable(IInteractable interactable)

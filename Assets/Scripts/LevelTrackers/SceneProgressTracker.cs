@@ -29,7 +29,7 @@ public class SceneProgressTracker : MonoBehaviour
         if (sceneName == "MainHall")
         {
             if (GameManager.Instance != null)
-                GameManager.Instance.hasReachedMainHall = true;
+                GameManager.Instance.MarkMainHallReached();
 
             return;
         }
@@ -39,12 +39,13 @@ public class SceneProgressTracker : MonoBehaviour
             return;
 
         // Save ANY gameplay scene.
-        PlayerPrefs.SetString(
-            "LastGameplayScene",
-            sceneName
-        );
-
-        PlayerPrefs.Save();
+        if (GameManager.Instance != null)
+            GameManager.Instance.SaveGameplayScene(sceneName);
+        else
+        {
+            PlayerPrefs.SetString("LastGameplayScene", sceneName);
+            PlayerPrefs.Save();
+        }
 
         Debug.Log(
             "Last gameplay scene saved: " +

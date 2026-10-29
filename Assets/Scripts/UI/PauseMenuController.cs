@@ -36,6 +36,12 @@ public class PauseMenuController : MonoBehaviour
 
     public void ResumeGame()
     {
+        StarPenController starPen =
+            FindAnyObjectByType<StarPenController>();
+
+        if (starPen != null)
+            starPen.IgnoreInputUntilReleased();
+
         isPaused = false;
         pausePanel.SetActive(false);
         Time.timeScale = 1f;

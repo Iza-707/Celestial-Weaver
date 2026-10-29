@@ -101,6 +101,10 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
             " constellation tracing begins!"
         );
 
+        StarPenUI starPenUI = FindAnyObjectByType<StarPenUI>();
+        if (starPenUI != null)
+            starPenUI.SetTracingUIVisible(false);
+
         LyraController lyra =
             FindAnyObjectByType<LyraController>();
 
@@ -269,6 +273,10 @@ public class ConstellationAltar : MonoBehaviour, IInteractable
 
         if (lyra != null)
             lyra.SetMovementLocked(false);
+
+        StarPenUI starPenUI = FindAnyObjectByType<StarPenUI>();
+        if (starPenUI != null)
+            starPenUI.SetTracingUIVisible(true);
 
         // Unlock the dungeon door
         DoorTransition door =

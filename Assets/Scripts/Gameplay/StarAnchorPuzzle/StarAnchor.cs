@@ -112,7 +112,7 @@ public class StarAnchor : MonoBehaviour, IInteractable
 
         if (ConstellationManager.Instance != null)
         {
-            ConstellationManager.Instance.StarPlaced();
+            ConstellationManager.Instance.StarPlaced(this);
         }
 
         if (filledVisual != null)

@@ -12,7 +12,7 @@ public class MainHallInitializer : MonoBehaviour
     private void Start()
     {
         if (GameManager.Instance != null)
-            GameManager.Instance.hasReachedMainHall = true;
+            GameManager.Instance.MarkMainHallReached();
 
         TrySpawnEndingStar();
     }
