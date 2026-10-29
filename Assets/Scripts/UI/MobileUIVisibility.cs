@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class MobileUIVisibility : MonoBehaviour
@@ -9,14 +8,16 @@ public class MobileUIVisibility : MonoBehaviour
     {
         if (mobileUI == null)
         {
-            Debug.LogWarning("MobileUIVisibility: Mobile UI is not assigned.", this);
+            Debug.LogError("MobileUIVisibility: Mobile UI is NOT assigned!", this);
             return;
         }
 
 #if UNITY_EDITOR
-        mobileUI.SetActive(TouchSimulationToggle.IsSimulationEnabled);
+        bool show = TouchSimulationToggle.IsSimulationEnabled;
 #else
-        mobileUI.SetActive(Application.isMobilePlatform);
+        bool show = Application.isMobilePlatform;
 #endif
+        mobileUI.SetActive(show);
+        Debug.Log("MobileUIVisibility: mobile UI active = " + show);
     }
 }
