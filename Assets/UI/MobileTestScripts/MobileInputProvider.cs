@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.UI;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
@@ -28,7 +29,23 @@ public class MobileInputProvider : MonoBehaviour
     {
         EnhancedTouchSupport.Enable();
 
-        // Show the joystick at its fixed UI position.
+        if (_moveTouchArea != null)
+        {
+            Canvas canvas = GetComponentInParent<Canvas>();
+            if (canvas != null)
+                _moveTouchArea.SetParent(canvas.transform, false);
+
+            _moveTouchArea.anchorMin = Vector2.zero;
+            _moveTouchArea.anchorMax = new Vector2(0.5f, 1f);
+            _moveTouchArea.pivot = Vector2.zero;
+            _moveTouchArea.offsetMin = Vector2.zero;
+            _moveTouchArea.offsetMax = Vector2.zero;
+
+            Graphic touchAreaGraphic = _moveTouchArea.GetComponent<Graphic>();
+            if (touchAreaGraphic != null)
+                touchAreaGraphic.raycastTarget = false;
+        }
+
         if (_moveJoystick != null)
             _moveJoystick.ShowFixed();
     }
@@ -36,6 +53,11 @@ public class MobileInputProvider : MonoBehaviour
     private void OnDisable()
     {
         EnhancedTouchSupport.Disable();
+        _moveTouchId = -1;
+        MoveInput = Vector2.zero;
+
+        if (_moveJoystick != null)
+            _moveJoystick.ResetKnob();
     }
 
     private void OnDestroy()
@@ -75,6 +97,9 @@ public class MobileInputProvider : MonoBehaviour
 
                     if (id == _moveTouchId)
                     {
+                        if (_moveJoystick == null)
+                            break;
+
                         Vector2 joystickCenter =
                             _moveJoystick.GetCenter();
 

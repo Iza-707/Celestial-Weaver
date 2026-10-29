@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MobileActionButton : MonoBehaviour
+public class MobileActionButton : MonoBehaviour, IPointerDownHandler
 {
     public static MobileActionButton Instance;
 
@@ -15,6 +16,7 @@ public class MobileActionButton : MonoBehaviour
 
     private IInteractable currentInteractable;
     private LyraController player;
+    private bool pressedOnPointerDown;
 
     private void Awake()
     {
@@ -40,6 +42,23 @@ public class MobileActionButton : MonoBehaviour
     }
 
     public void Press()
+    {
+        if (pressedOnPointerDown)
+        {
+            pressedOnPointerDown = false;
+            return;
+        }
+
+        PerformAction();
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        pressedOnPointerDown = true;
+        PerformAction();
+    }
+
+    private void PerformAction()
     {
         if (currentInteractable != null)
         {

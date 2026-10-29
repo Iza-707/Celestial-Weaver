@@ -6,7 +6,14 @@ public class StarPenPickup : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (GameManager.Instance == null)
+            return;
+
         GameManager.Instance.starPenUnlocked = true;
+
+        StarPenController starPen = FindAnyObjectByType<StarPenController>();
+        if (starPen != null)
+            starPen.ActivateFromPickup();
 
         Debug.Log("Star-Pen unlocked!");
 
